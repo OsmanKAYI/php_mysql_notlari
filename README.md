@@ -2,7 +2,8 @@
 
 ## Güvenlik
 
-https://www.youtube.com/watch?v=FNoAcuoLt-w
+[Tayfun Erbilen - TOKEN Neden Önemli?](https://www.youtube.com/watch?v=FNoAcuoLt-w)
+
 
 ## API Örnekleri
 
