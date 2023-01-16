@@ -1,4 +1,6 @@
 
+# Ubuntu 22.04 Kurulumu Sonrası Yapılacaklar
+
 ```BASH
 sudo apt update
 sudo apt upgrade
@@ -19,9 +21,9 @@ sudo chown -R $USER:www-data /var/www/html/
 mkdir /var/www/html/adminer
 wget -O /var/www/html/adminer/index.php https://www.adminer.org/latest.php
 
-sudo apt install php php-pear php-fpm php-dev php-zip php-curl php-xmlrpc php-sqlite3 php-gd php-mysql php-mbstring php-xml libapache2-mod-php -y
+## PHP Kurulumu (Aşağıda)
 
-sudo vi /etc/php/8.1/apache2/php.ini
+sudo vi /etc/php/xxxxx/apache2/php.ini
     display_startup_errors = On
     display_errors         = On
     short_open_tag         = On
@@ -48,15 +50,12 @@ sudo mysql -u root -p
 sudo apt install composer npm guake* pv meld vim axel net-tools caffein* vlc virtualbox chromium-browser magic-wormhole -y
 
 
-## vscode kurulumu
-sudo apt install software-properties-common apt-transport-https wget gpg
-wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg
-sudo install -D -o root -g root -m 644 packages.microsoft.gpg /etc/apt/keyrings/packages.microsoft.gpg
-sudo sh -c 'echo "deb [arch=amd64,arm64,armhf signed-by=/etc/apt/keyrings/packages.microsoft.gpg] https://packages.microsoft.com/repos/code stable main" > /etc/apt/sources.list.d/vscode.list'
-rm -f packages.microsoft.gpg
-
+## vscode kurulumu  KAYNAK: https://linuxhint.com/install-visual-studio-code-ubuntu22-04/
+sudo apt install software-properties-common apt-transport-https wget -y
+wget -O- https://packages.microsoft.com/keys/microsoft.asc | sudo gpg --dearmor | sudo tee /usr/share/keyrings/vscode.gpg
+echo deb [arch=amd64 signed-by=/usr/share/keyrings/vscode.gpg] https://packages.microsoft.com/repos/vscode stable main | sudo tee /etc/apt/sources.list.d/vscode.list
 sudo apt update
-sudo apt install code
+sudo apt install code -y
 
 sudo apt autoremove
 
@@ -73,8 +72,39 @@ mysql --version
 ```
 
 
+## PHP Kurulumu Yapılması
+```BASH
 
-### Diğer Programlar:
+## PHP Kurulumu KAYNAK: https://tecadmin.net/how-to-install-php-on-ubuntu-22-04/
+
+
+## PHP'nin farklı sürümleri için kurulum
+sudo apt install software-properties-common ca-certificates lsb-release apt-transport-https 
+LC_ALL=C.UTF-8 add-apt-repository ppa:ondrej/php 
+sudo apt update 
+sudo apt upgrade
+
+
+## 2 farklı PHP sürümü kurma ve bunları kullanma
+sudo apt install php7.4-fpm php7.4-dev php7.4-zip php7.4-curl php7.4-xmlrpc php7.4-sqlite3 php7.4-gd php7.4-mysql php7.4-mbstring php7.4-xml libapache2-mod-php7.4 -y
+
+sudo apt install php8.1-fpm php8.1-dev php8.1-zip php8.1-curl php8.1-xmlrpc php8.1-sqlite3 php8.1-gd php8.1-mysql php8.1-mbstring php8.1-xml libapache2-mod-php8.1 -y
+
+
+sudo a2dismod php8.1
+
+sudo a2enmod php7.4
+
+sudo service apache2 restart
+
+## CLI için PHP sürümü ayarlama
+sudo update-alternatives --config php
+sudo update-alternatives --set php /usr/bin/php7.4
+
+```
+
+
+## Diğer Programlar:
 - VLC Player
 - AnyDesk
 - VirtualBox
@@ -85,6 +115,4 @@ mysql --version
 - SublimeMerge
 - SublimeText
 - Brightness Control (Sadece Ubuntu 20'de çalışıyor)
-
-
 
