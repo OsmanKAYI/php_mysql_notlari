@@ -45,7 +45,7 @@ sudo mysql -u root -p
     flush privileges;
     exit;
 
-sudo apt install composer npm guake* meld vim axel net-tools caffein* vlc virtualbox chromium-browser -y
+sudo apt install composer npm guake* pv meld vim axel net-tools caffein* vlc virtualbox chromium-browser -y
 
 
 ## vscode kurulumu
