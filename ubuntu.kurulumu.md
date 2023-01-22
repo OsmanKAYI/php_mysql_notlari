@@ -116,3 +116,24 @@ sudo update-alternatives --set php /usr/bin/php7.4
 - SublimeText
 - Brightness Control (Sadece Ubuntu 20'de çalışıyor)
 
+
+- `sudo apt install gnome-sushi` <kbd>space</kbd> tuşu ile dosya ve klasör içeriğinin önizlemesini gösterir (MacOS'daki gibi)
+- `sudo snap refresh` Snap güncelleme uyarısı alındığında, açık tüm programlar kapatılır ve bu komut çalıştırılır
+
+
+### Ekran görüntüsü alma
+
+Shift+PrintScreen tuşuna aşağıdaki komut bağlanınca, bu tuşa basıldığında ekranın seçeceğimiz kısmın ekran görüntüsü diske kaydedilir.
+
+KAYNAK: https://askubuntu.com/a/1405337
+
+- `sudo apt install gnome-screenshot`
+- `sudo apt install xclip`
+
+Ardından, Ayarlar | Klavye | Kısayollar menüsünden yeni kısayol tanımlanır.
+KOMUT için aşağıdaki kod girilir:
+
+`sh -c 'gnome-screenshot -af /home/nuri/Pictures/$(date "+%Y.%m.%d-%H.%M.%S").png'`
+
+
+
