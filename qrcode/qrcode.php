@@ -1,4 +1,5 @@
 
+Örnek Kullanım: <a href='?mesaj=Hello World'>?mesaj=Hello World</a>
 <h1>PHP İle QR Code Üretme</h1>
 <?php
 require 'vendor/autoload.php';
@@ -13,6 +14,7 @@ $renderer = new ImageRenderer(
     new ImagickImageBackEnd()
 );
 $writer = new Writer($renderer);
-$writer->writeFile('Hello World!', 'qrcode.png');
+$MESAJ = (isset($_GET['mesaj'])) ? $_GET['mesaj'] : 'Hello World!';
+$writer->writeFile($MESAJ, 'qrcode.png');
 
 echo "<img src='qrcode.png'>";
