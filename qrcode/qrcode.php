@@ -15,6 +15,12 @@ $renderer = new ImageRenderer(
 );
 $writer = new Writer($renderer);
 $MESAJ = (isset($_GET['mesaj'])) ? $_GET['mesaj'] : 'Hello World!';
-$writer->writeFile($MESAJ, 'qrcode.png');
 
-echo "<img src='qrcode.png'>";
+$qr_image = base64_encode($writer->writeString($MESAJ));
+echo "<img src='data:image/png;base64, {$qr_image}' />";
+
+/*
+  // Sonucu RESİM DOSYASI olarak üretmek için:
+  $writer->writeFile($MESAJ, 'qrcode.png');
+  echo "<img src='qrcode.png'>";
+**/
