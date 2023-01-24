@@ -21,7 +21,7 @@ https://www.amazon.co.uk/gp/registry/wishlist/2ASV4RHBSM16H/026-9090951-0551667
 - https://observablehq.com/collection/@d3/d3-shape
 
 
-WebSocket
+## WebSocket
 - http://socketo.me/  (Ratchet WebSockets for PHP)
 
 
@@ -108,3 +108,20 @@ if ($post->delete()) {
 - https://github.com/ugurkilci/hafizilib/find/master 
 - https://github.com/ugurkilci/rss-php
 
+
+- https://tableconvert.com
+
+
+- https://quickref.me/vscode
+- https://quickref.me/markdown
+- https://quickref.me/git
+- https://quickref.me/html
+- https://quickref.me/css
+- https://quickref.me/emmet
+- https://quickref.me/mysql
+- https://quickref.me/redis
+- https://quickref.me/php
+
+
+## ÖĞREN!!!
+- https://mitmproxy.org/
