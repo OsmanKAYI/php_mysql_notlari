@@ -40,10 +40,10 @@
                 <td> <?= $user['id'] ?> </td>
                 <td> <?= $user['name'] ?> </td>
                 <td> <?= $user['email'] ?> </td>
-                <td class='text-end'> 
-                    <a href='update.php?id=<?= $user['id'] ?>' class='btn btn-success'>Update</a> 
+                <td class='text-end'>
+                    <a href='update.php?id=<?= $user['id'] ?>' class='btn btn-success'>Update</a>
                     <form action='db/action.php' method='post' class='d-inline'>
-                        <input type='hidden' name='id' value='".$user['id']."'>
+                        <input type='hidden' name='id' value='<?= $user['id']; ?>'>
                         <button class='btn btn-danger' type='submit' name='delete'>Delete</button>
                     </form>
                 </td>
