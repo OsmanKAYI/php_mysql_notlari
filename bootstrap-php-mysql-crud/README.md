@@ -148,22 +148,21 @@
 ```SQL
 
 DROP TABLE IF EXISTS `users`;
+
 CREATE TABLE `users` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(50) NOT NULL,
   `email` varchar(100) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_unicode_ci;
-/*
-INSERT INTO `users` (`id`, `name`, `email`) VALUES
-(1,	'Nuri AKMAN',	'nuriakman@gmail.com'),
-(2,	'Osman KAYI',	'osmankayi06@gmail.com');
-*/
 
+INSERT INTO `users` (`id`, `name`, `email`) VALUES
+  (1,'Nuri AKMAN','nuri@gmail.com'),
+  (2,'Osman KAYI','osman@gmail.com');
 ```
 
-
 ### VERİTABANI BAĞLANTISI - Database Connection
+
 ```PHP
 $servername  =  "localhost";
 $username  =  "root";
@@ -178,6 +177,7 @@ try  {
 ```  
 
 ### KAYIT EKLEME - CREATE/INSERT
+
 ```PHP
 $name  =  "Nuri";
 $email =  "nuri@gmail.com";
@@ -191,8 +191,9 @@ $stmt->execute();
 
 echo  "User created";
 ```
-  
- ### KAYIT LİSTELEME - SELECT/READ
+
+### KAYIT LİSTELEME - SELECT/READ
+
 ```PHP
 $stmt  =  $conn->prepare("SELECT id, name, email FROM users");
 $stmt->execute();
@@ -208,6 +209,7 @@ foreach($users  as  $user)  {
 ```
   
 ### KAYIT GÜNCELLEME - UPDATE
+
 ```PHP
 $name  =  "Nuri Akman";
 $email =  "nuriakman@gmail.com";
@@ -222,8 +224,9 @@ $stmt->bindParam(':email',  $email);
 $stmt->execute();
 echo  "User updated";
 ```
-  
-  ### KAYIT SİLME - DELETE
+
+### KAYIT SİLME - DELETE
+
 ```PHP
 $id   =  1;
 $sql  =  "DELETE  FROM users WHERE id = :id";
