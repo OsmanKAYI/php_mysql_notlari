@@ -238,3 +238,69 @@ $stmt->execute();
 echo  "User deleted";
 ```
 
+### PDO Kayıt çekme
+
+```PHP
+
+	$stmt1  =  $conn->query('SELECT id, name FROM users');
+	$stmt2  =  $conn->query('SELECT id, name FROM users');
+
+	$cevap1 = $stmt1->fetchAll(PDO::FETCH_KEY_PAIR);
+	$cevap2 = $stmt2->fetchAll(PDO::FETCH_ASSOC);
+
+  print_r($cevap1);
+  print_r($cevap2);
+
+	/*
+			Array
+			(
+			    [1] => nuri
+			    [2] => osman
+			    [3] => kemal
+			)
+
+			Array
+			(
+				    [0] => Array
+				        (
+				            [id] => 1
+				            [name] => nuri
+				        )
+
+				    [1] => Array
+				        (
+				            [id] => 2
+				            [name] => osman
+				        )
+
+				    [2] => Array
+				        (
+				            [id] => 3
+				            [name] => kemal
+				        )
+
+				)
+	*/
+
+
+```
+
+### Varsayılan (boş) MySQL şifresini değiştirme
+
+```BASH
+cd c:
+cd \
+cd xampp\mysql\bin
+mysql -u root -p
+  SET PASSWORD FOR 'root'@'localhost' = PASSWORD("root");
+  exit;
+```
+
+### Adminer Kurulumu
+
+- https://www.adminer.org/latest-mysql.php adresinden son sürümü indirilir
+- `c:\xampp\htdocs` dizini `altında adminer` adlı bir dizin oluşturulur
+- İndirlmiş olan dosya bu dizine taşınır
+- Taşınan dosyanın adı `index.php` olarak değiştirilir
+- Artık, `http://localhost/adminer` yazılarak uygulamaya giriş yapılabilir
+
