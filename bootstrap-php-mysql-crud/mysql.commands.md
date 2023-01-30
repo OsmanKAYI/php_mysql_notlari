@@ -1,5 +1,22 @@
 # SQL Komutları
 
+## Root kullanıcısı için şifre değiştirme
+
+```SQL
+mysql -u root -p
+  SET PASSWORD FOR 'root'@'localhost' = PASSWORD("root");
+  exit;
+```
+
+## MySQL Yeni kullanıcı ekleme
+```SQL
+CREATE USER 'dbadmin'@'localhost' IDENTIFIED BY 'dbadmin';
+GRANT ALL PRIVILEGES ON *.* TO 'dbadmin'@'localhost' WITH GRANT OPTION;
+FLUSH PRIVILEGES;
+```
+
+## Sık Kullanılan Komutlar
+
 ```SQL
 
 -- Yorum satırı
