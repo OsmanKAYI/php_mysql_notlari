@@ -15,6 +15,11 @@ GRANT ALL PRIVILEGES ON *.* TO 'dbadmin'@'localhost' WITH GRANT OPTION;
 FLUSH PRIVILEGES;
 ```
 
+## MySQL'e terminalden .SQL dosyası import etme
+
+`mysql -u root -p DATABASEADI < sql/dosyasi/yolu.sql`
+
+
 ## MySQL terminali içinde SQL komutlarının kullanımı
 
 - MySQL terminaline girebilmek için `mysql -u root -p` komutu yazılır
