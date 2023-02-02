@@ -19,6 +19,8 @@
     let KONUM_KOORDINATI = [39.938946, 32.865386];
     let ZOOM_SEVIYESI = 10;
     let KONUM_ADI = "Ankara Kalesi";
+
+    HARITA_MERKEZI = KONUM_KOORDINATI;
     var map = L.map('map').setView(KONUM_KOORDINATI, ZOOM_SEVIYESI);
 
     L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
