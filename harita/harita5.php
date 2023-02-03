@@ -9,6 +9,13 @@
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" />
   <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
 
+  <style>
+    #map {
+      width: 600px;
+      height: 400px;
+    }
+  </style>
+
 </head>
 <body>
 
@@ -46,12 +53,6 @@
 
   </script>
 
-  <style>
-    #map {
-      width: 600px;
-      height: 400px;
-    }
-  </style>
 
 </body>
 </html>
