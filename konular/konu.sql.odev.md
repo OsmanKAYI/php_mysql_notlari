@@ -96,7 +96,11 @@ hayir_oran = hayir / geçerli * 100
 
 - Geçerli+Geçersiz = Oy kullanan
 
-  
+<details>
+  <summary>Cevap</summary>
+
+```SQL
+select * from referandum
 
 -- select * from referandum where evet+hayir-gecerli <> 0
 
@@ -104,14 +108,7 @@ hayir_oran = hayir / geçerli * 100
 
 -- select * from referandum where gecerli+gecersiz-oykullanan != 0
 
-
-<details>
-  <summary>Soru</summary>
-
-```SQL
-select * from referandum
 ```
-
-  </details>
+</details>
 
 
