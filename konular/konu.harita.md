@@ -5,6 +5,7 @@
 - [Leaflet Örnekleri](https://leafletjs.com/examples.html)
 
 ### Haritada 1 nokta gösterimi
+
 ```PHP
 <!DOCTYPE html>
 <html lang="en">
@@ -17,6 +18,13 @@
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" />
   <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
 
+  <style>
+    #map {
+      width: 600px;
+      height: 400px;
+    }
+  </style>
+
 </head>
 <body>
 
@@ -25,9 +33,11 @@
   <script>
 
     let KONUM_KOORDINATI = [39.938946, 32.865386];
-    let ZOOM_SEVIYESI = 10;
+    let ZOOM_SEVIYESI = 14;
     let KONUM_ADI = "Ankara Kalesi";
-    var map = L.map('map').setView(KONUM_KOORDINATI, ZOOM_SEVIYESI);
+
+    HARITA_MERKEZI = KONUM_KOORDINATI;
+    var map = L.map('map').setView(HARITA_MERKEZI, ZOOM_SEVIYESI);
 
     L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
@@ -39,30 +49,32 @@
 
   </script>
 
-  <style>
-    #map {
-      width: 600px;
-      height: 400px;
-    }
-  </style>
-
 </body>
 </html>
+
 ```
 
 
 ### Haritada 5 nokta gösterimi
+
 ```PHP
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ankara - 5 POI</title>
+  <title>Harita Kullanımı</title>
   
   <!-- Önce leaflet.css, sonra leaflet.js olmalı -->
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" />
   <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
+
+  <style>
+    #map {
+      width: 600px;
+      height: 400px;
+    }
+  </style>
 
 </head>
 <body>
@@ -78,9 +90,10 @@
       ["TBMM",            39.911503, 32.850655]
     ];
 
-    let ANKARA = [39.925532, 32.836286];
+    let HARITA_MERKEZI = [39.925532, 32.836286];
+    let ZOOM_SEVIYESI = 10;
 
-    var map = L.map('map').setView(ANKARA, 10);
+    var map = L.map('map').setView(HARITA_MERKEZI, ZOOM_SEVIYESI);
 
     L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
@@ -100,14 +113,9 @@
 
   </script>
 
-  <style>
-    #map {
-      width: 600px;
-      height: 400px;
-    }
-  </style>
 
 </body>
 </html>
+
 ```
 

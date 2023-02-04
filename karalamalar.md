@@ -1,5 +1,20 @@
 # KARALAMALAR
 
+
+## Güvenlik
+
+- [Tayfun Erbilen - TOKEN Neden Önemli?](https://www.youtube.com/watch?v=FNoAcuoLt-w)
+
+
+## API
+
+- Kendi uygulamamızın Twit atabilmesi.
+- Kendi eticaret mağazamızdaki ürünleri Trendyol'da da yayınlama
+- Siparişi getiren kuryenin konumunun haritada gösterilmesi
+- Twitter, farklı platformlar için uygulama üretiyor. 
+- Her platform için Twitter uygulaması TEKRAR TEKRAR mı yazılıyor?
+
+
 Wishlist siteye eklenebilir! Askıda Bilet olarak eklenebilir
 https://www.amazon.co.uk/gp/registry/wishlist/2ASV4RHBSM16H/026-9090951-0551667
 

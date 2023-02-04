@@ -1,9 +1,10 @@
 
-## PHP ile Tarih kullanımı
+## PHP ile Tarih İşlemleri
 
 ### Saat Dilimi Ayarlama
+
 ```PHP
-echo date("d.m.Y H.i.s");  
+echo date("d.m.Y H.i.s");
 echo "<br>";
 
 date_default_timezone_set('Europe/Istanbul');
@@ -14,14 +15,16 @@ echo "<br>";
 ```
 
 ### Tarih İşlemleri
-```PHP
-$IslemZamani = date("Y-m-d H:i:s", strtotime('XXXXXX'));
 
-// strtotime parametresine yazılabilecekler:
+```PHP
+$SuAnkiZaman = date("Y-m-d H:i:s");
+$IslemZamani = date("Y-m-d H:i:s", ???);
+
+// ??? alanına yazılabilecekler:
 strtotime('now'); // Şimdi
 strtotime('2023-03-21'); // Tarih
 strtotime("+1 day"); // 1 gün sonrası
-strtotime("+1 week"); // 1 hatfa sonrası
+strtotime("+1 week"); // 1 hafta sonrası
 strtotime("+1 week 2 days 4 hours 2 seconds"); // ... zaman sonrası
 strtotime("next thursday"); // sonraki perşembe
 strtotime("last monday"); // Aktif ayın son pazartesi günü
@@ -33,7 +36,8 @@ strtotime('last sunday of 2019-08'); // 2019 Ağustos ayının son pazarı
 strtotime('last sunday of 2019-08 -2 day'); // 2019 Ağustos ayının son pazarının 2 gün öncesi
 ```
 
-### İki Tarih Arası Tarihler (Yöntem 1):
+### İki Tarih Arası Tarihleri Üretme (Yöntem 1):
+
 ```PHP
 $start_date = '2015-01-27';
 $end_date   = '2015-02-13';
@@ -44,7 +48,8 @@ while (strtotime($start_date) <= strtotime($end_date)) {
 }
 ```
 
-### İki Tarih Arası Tarihler (Yöntem 2):
+### İki Tarih Arası Tarihleri Üretme (Yöntem 2):
+
 ```PHP
 $start_date = new DateTime('2015-01-27');
 $end_date   = new DateTime('2015-02-13');
@@ -57,8 +62,8 @@ foreach ($period as $dt) {
 }
 ```
 
+### İki Tarih Arası Tarihleri Üretme (Yöntem 3):
 
-### İki Tarih Arası Tarihler (Yöntem 2):
 ```PHP
 $start_date = new DateTime('2015-01-27');
 $end_date   = new DateTime('2015-02-13');

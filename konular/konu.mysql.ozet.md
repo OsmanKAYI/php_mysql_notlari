@@ -1,29 +1,6 @@
-# MySQL İçinde SQL Komutları Kullanımı
+# MySQL Komutları
 
-## MySQL Root kullanıcısı için şifre değiştirme
-
-```SQL
-mysql -u root -p
-  SET PASSWORD FOR 'root'@'localhost' = PASSWORD("root");
-  exit;
-```
-
-## MySQL Yeni kullanıcı ekleme
-```SQL
-CREATE USER 'dbadmin'@'localhost' IDENTIFIED BY 'dbadmin';
-GRANT ALL PRIVILEGES ON *.* TO 'dbadmin'@'localhost' WITH GRANT OPTION;
-FLUSH PRIVILEGES;
-```
-
-## MySQL'e terminalden .SQL dosyası import etme
-
-`mysql -u root -p DATABASEADI < sql/dosyasi/yolu.sql`
-
-
-## MySQL terminali içinde SQL komutlarının kullanımı
-
-- MySQL terminaline girebilmek için `mysql -u root -p` komutu yazılır
-- Root kullanıcısının parolası girilerek terminal başlatılır
+## Sık Kullanılan MySQL Komutları
 
 
 ```SQL
@@ -72,9 +49,9 @@ INSERT INTO users (name, mail) VALUES
 ('kemal','kemal@gmail.com');
 
 INSERT INTO users 
-SET 
-	name='kadir', 
-	mail='kadir@gmail.com';
+  SET 
+    name='kadir', 
+    mail='kadir@gmail.com';
 
 SELECT * FROM users;
 
@@ -82,9 +59,11 @@ SELECT * FROM users WHERE name='kadir';
 
 UPDATE users SET mail='kadir@hotmail.com' WHERE name='kadir';
 
-UPDATE users SET mail='kadir@hotmail.com' WHERE id=4;
+UPDATE users SET 
+  mail='kadir@gmail.com', 
+  name='kadir altın' 
+WHERE id=4;
 
 DELETE FROM users WHERE id=4;
-
 
 ```

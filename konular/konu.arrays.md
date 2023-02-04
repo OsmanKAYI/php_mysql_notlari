@@ -2,6 +2,7 @@
 ## PHP ile Diziler
 
 ### Dizi Türleri ve Erişimi
+
 ```PHP
 // PHP Indexed Arrays
 $cars = array("Volvo", "BMW", "Toyota");
@@ -37,6 +38,7 @@ $cars[2][2] = "2";
 ```
 
 ### Dizi İçinde Gezinme
+
 ```PHP
 $Ulkeler = array('DE'=>'Almanya', 'FR'=>'Fransa', 'TR'=>'Türkiye');
 echo "<ul>";
