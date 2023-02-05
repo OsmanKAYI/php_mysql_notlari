@@ -29,14 +29,8 @@ if (file_exists($HaberDosyasi) and (filemtime($HaberDosyasi) > (time() - 60 * 5 
     foreach ($Haberler as $key => $haber) {
         $resim = $haber['thumbnail']['@attributes']['url'];
         $link = $haber['link'];
-        $saat = $haber['modified'];
-        if( substr($saat, 0, 5) != date("d.m") ) continue;
-        $x = substr($saat, 11, 5);
-        echo "<li><b>$x</b> <a href='{$link}'>{$haber['title']}</a></li>";
-        // echo "<a href='{$link}'><img src='$resim' width='150' align='top'></a>";
-        // echo "<b>" . $haber['title'] . "</b><br>";
-        // echo $haber['description'];
-        // echo "<br><br><br>";
+        $baslik = $haber['title'];
+        echo "<li><a href='{$link}'>{$baslik}</a></li>";
     }
     echo "</ul>";
 
