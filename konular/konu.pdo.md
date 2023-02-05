@@ -27,15 +27,16 @@ INSERT INTO `users` (`id`, `name`, `email`) VALUES
 $servername = "localhost";
 $username   = "root";
 $password   = "root";
-$dbname     = "OGRENCI";
+$dbname     = "ORNEKLER";
 
 try {
   $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
   // set the PDO error mode to exception
   $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-  echo "Connected successfully";
+  // echo "Connected successfully";
 } catch(PDOException $e) {
   echo "Connection failed: " . $e->getMessage();
+  die();
 }
 ```
 
@@ -74,13 +75,14 @@ echo "User created";
 ```PHP
 $name  = "Nuri Akman";
 $email = "nuri@gmail.com";
-$id    = 3;
+$id    = 4;
 
 $sql = "UPDATE users SET name = :name, email = :email WHERE id = :id";
 $stmt = $conn->prepare($sql);
 
 $stmt->bindParam(':name', $name);
 $stmt->bindParam(':email', $email);
+$stmt->bindParam(':id', $id);
 
 $stmt->execute();
 echo "User updated";
@@ -89,7 +91,7 @@ echo "User updated";
 ### KAYIT SİLME - DELETE
 
 ```PHP
-$id    = 3;
+$id    = 4;
 
 $sql = "DELETE FROM users WHERE id = :id";
 $stmt = $conn->prepare($sql);
@@ -108,7 +110,7 @@ echo "User deleted";
 $servername  = "localhost";
 $username    = "root";
 $password    = "root";
-$dbname      = "OGRENCI";
+$dbname      = "ORNEKLER";
 
 try  {
   $conn  =  new  PDO("mysql:host=$servername;dbname=$dbname",  $username,  $password);
