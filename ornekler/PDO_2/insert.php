@@ -26,4 +26,3 @@ if(isset($_POST['name'])){
     $stmt->execute();
     echo "User created";
 }
-
