@@ -4,7 +4,7 @@
 - [x] [İlk Yapılacaklar](./konular/konu.ilk.yapilacaklar.md)
 - [x] [Komut Satırı ile MySQL kullanımı](./konular/konu.mysql.cli.md)
 - [x] [Sık Kullanılan MySQL Komutları](./konular/konu.mysql.ozet.md)
-- [x] [MySQL için SQL Ödevi](./konular/konu.sql.odev.md)
+- [x] [Referandum Verisi Üzerinden SQL Ödevi](./konular/konu.sql.odev.md)
 - [ ] [PHP PDO CRUD Kullanımı](./konular/konu.pdo.md)
 - [ ] [Tarih İşlemleri](./konular/konu.date.md)
 - [ ] [Fonksiyon Kullanımı](./konular/konu.function.md)
@@ -29,3 +29,9 @@
 - [ ] [Ubuntu Kurulumu](./konular/konu.ubuntu.kurulumu.md)
 - [ ] [Adminer Oracle Bağlantısı](./konular/konu.adminer.oracle.md)
 - [ ] [Haritada İşaretçi Gösterimi](./konular/konu.harita.md)
+
+## Örnek Veritabanları
+- [x] [Referandum Sonuçları 2017](./ornek.veritabanlari/referandum.sql)
+- [x] [Üniversite Tercih Robotu Verileri 2019](./ornek.veritabanlari/okullar.sql)
+- [x] [Otomobil Fiyatları](./ornek.veritabanlari/otomobil_fiyatlari.sql)
+- [ ] [Wordle Oyunu için Türkçe Kelimeler](./ornek.veritabanlari/kelimeler.sql)
