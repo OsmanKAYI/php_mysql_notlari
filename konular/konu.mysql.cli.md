@@ -64,4 +64,11 @@ EXIT;
 
 `mysql -u root -p DATABASEADI < sql/dosyasi/yolu.sql`
 
+### MySQL için PATH Tanımı
+
+- Sistemde herhangi bir dizin içerisindeyken `mysql` veya `php` yazıldığında programların çalışabilmesi için `PATH` tanımı yapılmalıdır.
+- PATH tanımı Ortam Değişkenleri ekranından yapılır.
+- Bunun için `c:\xampp\mysql\bin` ve `c:\xampp\php` adreslerinin PATH'e eklenmesi gerekir.
+- [PATH tanım ekranından](https://www.java.com/tr/download/help/path_tr.html) ekleme yapılabilir.
+
 
