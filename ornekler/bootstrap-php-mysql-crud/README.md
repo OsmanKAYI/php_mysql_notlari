@@ -1,4 +1,3 @@
-
 # Bootstrap + PHP + MySQL ile CRUD örneği
 
 ## Bootstrap İşlemleri
