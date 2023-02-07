@@ -8,7 +8,7 @@ $UrunNo = 123456;
 setcookie("Urun", $UrunNo);  
 setcookie("Urun", $UrunNo, time()+3600); // 1 saat süreli
 setcookie("Urun", $UrunNo, time()+3600, "/urunler/", "example.com");
-setcookie( "Urun", $UrunNo, strtotime( '+30 days' ) ); // 30 gün süreli
+setcookie("Urun", $UrunNo, strtotime( '+30 days' ) ); // 30 gün süreli
 ```
 
 ### Cookie Değeri Güncelleme:
