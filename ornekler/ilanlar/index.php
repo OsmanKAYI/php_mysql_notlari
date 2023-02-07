@@ -3,3 +3,6 @@
 <p><a href='list.php'  > İlanları Listele   </a></p>
 <p><a href='insert.php'> İlan Ekle </a></p>
 
+<h3>Tüm İlanlar</h3>
+<?php require_once('topluharita.php'); ?>
+
