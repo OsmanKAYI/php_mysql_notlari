@@ -10,7 +10,7 @@
 - [ ] [Fonksiyon Kullanımı](./konular/konu.function.md)
 - [ ] [Diziler](./konular/konu.arrays.md)
 - [ ] [Çerezler](./konular/konu.cookie.md)
-- [ ] [Oturum Yönetimi](./konular/konu.session.md)
+- [x] [Oturum Yönetimi](./konular/konu.session.md)
 - [ ] [Composer Kullanımı](./konular/konu.composer.md)
 
 ## Örnekler
@@ -29,7 +29,7 @@
 ## Kapsam Dışı
 - [ ] [Ubuntu Kurulumu](./konular/konu.ubuntu.kurulumu.md)
 - [ ] [Adminer Oracle Bağlantısı](./konular/konu.adminer.oracle.md)
-- [ ] [Haritada İşaretçi Gösterimi](./konular/konu.harita.md)
+- [x] [Haritada İşaretçi Gösterimi](./konular/konu.harita.md)
 
 ## Örnek Veritabanları
 - [x] [Referandum Sonuçları 2017](./ornek.veritabanlari/referandum.sql)
