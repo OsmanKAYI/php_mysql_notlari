@@ -156,13 +156,23 @@ LIMIT 1;
 ### A, B ve C harfi ile başlayan şehirlerin hayır adedi
 
 <details>
-  <summary>Cevap</summary>
+  <summary>Cevap1</summary>
 
 ```SQL
 SELECT il, SUM(hayir) AS 'Hayır Adedi' FROM referandum 
 WHERE il LIKE 'A%' 
 OR il LIKE 'B%' 
 OR il LIKE 'C%'
+GROUP BY il;
+```
+</details>
+
+<details>
+  <summary>Cevap2</summary>
+
+```SQL
+SELECT il, SUM(hayir) AS 'Hayır Adedi' FROM referandum 
+WHERE LEFT(il,1) IN ('A', 'B', 'C') 
 GROUP BY il;
 ```
 </details>
