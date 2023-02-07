@@ -130,10 +130,20 @@ KAYNAK: https://askubuntu.com/a/1405337
 - `sudo apt install gnome-screenshot`
 - `sudo apt install xclip`
 
-Ardından, Ayarlar | Klavye | Kısayollar menüsünden yeni kısayol tanımlanır.
-KOMUT için aşağıdaki kod girilir:
+Ardından, 
+> Ayarlar | Klavye | Klavye Kısayolları | Kısayolları Gör ve Özelleştir | Özel Kısayollar | 
+menüsünden yeni kısayol tanımlanır. Resimler dizinine bu ekran görüntülerini kaydetmek için KOMUT kısmına aşağıdaki kod girilir: 
 
-`sh -c 'gnome-screenshot -af /home/nuri/Pictures/$(date "+%Y.%m.%d-%H.%M.%S").png'`
+`sh -c 'gnome-screenshot -af /home/$USER/Resimler/$(date "+%Y.%m.%d-%H.%M.%S").png'`
 
+![Klavye Kısayolu Ekleme](https://github.com/HayatOkulum/Archive/blob/main/Images/2023.02.08-00.08.24.png)
+
+Bu komutu önce terminalde deneyip kullanıcı hesabınızın erişim izni varmı test etmenizi öneriririm. Komutu terminalde test ettiğinizde resimler klasörüne görüntü kaydedilmemişse kullanıcı hesabınızın erişim izni yoktur, izin vermek için aşağıdaki komutu kullanabilirsiniz.
+
+`sudo chmod ugo+rwx /home/$USER/Resimler/*`
+
+Kaldırmayı düşünürseniz tekrar erişim engellemek için bu kodu kullanabilirsiniz.
+
+`sudo chmod ugo-rwx /home/$USER/Resimler/*`
 
 
