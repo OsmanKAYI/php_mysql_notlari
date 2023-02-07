@@ -1,4 +1,23 @@
-# setting.json Dosya İçeriği
+# VS Code Eklentileri
+
+### Faydalı VS Code Eklentileri Listesi
+
+- Auto Close Tag
+- Auto Rename Tag
+- Code Runner
+- Community Material Theme
+- Github Pull Requests and Issues
+- Live Server
+- Markdown Preview Enhanced
+- Material Icon Theme
+- PHP Snippets
+- Prettier - Code formatter
+- Linter
+- WakaTime
+- TODO Highlight
+- Todo Tree
+
+### setting.json Dosya İçeriği
 ```BASH
 {
     // The number of spaces a tab is equal to. This setting is overridden
