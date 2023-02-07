@@ -36,7 +36,13 @@
         <th>Telefon</th>
         <td><?php echo $row['telefon'];?></td> 
     </tr>
+    <tr>
+        <th>Konum</th>
+        <td><?php echo $row['konum'];?></td> 
+    </tr>
 </table>
+
+<?php require_once('harita.php'); ?>
 
 <p><a href='update.php?id=<?php echo $row['id'];?>'> İlan Düzenle </a></p>
 <p><a href='list.php'>Geri Dön</a></p>

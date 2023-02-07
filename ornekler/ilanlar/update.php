@@ -13,16 +13,18 @@
         $tarih   = $_POST['tarih'];
         $detay   = $_POST['detay'];
         $telefon = $_POST['telefon'];
+        $konum   = $_POST['konum'];
         $id      = $_GET['id'];
 
-        $sql = "UPDATE ilanlar SET baslik = :baslik, tarih = :tarih, detay = :detay, telefon = :telefon WHERE id = :id";
+        $sql = "UPDATE ilanlar SET baslik = :baslik, tarih = :tarih, detay = :detay, telefon = :telefon, konum = :konum WHERE id = :id";
         $stmt = $conn->prepare($sql);
 
         $stmt->bindParam(':baslik',  $baslik);
-        $stmt->bindParam(':tarih', $tarih);
-        $stmt->bindParam(':detay', $detay);
+        $stmt->bindParam(':tarih',   $tarih);
+        $stmt->bindParam(':detay',   $detay);
         $stmt->bindParam(':telefon', $telefon);
-        $stmt->bindParam(':id',    $id);
+        $stmt->bindParam(':konum',   $konum);
+        $stmt->bindParam(':id',      $id);
 
         // die(date("H:i:s"));
         $stmt->execute();
@@ -63,6 +65,10 @@
     <tr>
         <th>Telefon</th>
         <td><input type='text' name='telefon' value='<?php echo $row['telefon']; ?>'</td> 
+    </tr>
+    <tr>
+        <th>Konum</th>
+        <td><input type='text' name='konum' value='<?php echo $row['konum']; ?>'</td> 
     </tr>
     <tr>
         <td>

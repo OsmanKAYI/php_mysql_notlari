@@ -5,18 +5,20 @@ if(isset($_POST['baslik'])){
     require_once('db.php');
 
     $baslik  = $_POST['baslik'];
-    $tarih = $_POST['tarih'];
-    $detay = $_POST['detay'];
+    $tarih   = $_POST['tarih'];
+    $detay   = $_POST['detay'];
     $telefon = $_POST['telefon'];
+    $konum   = $_POST['konum'];
 
-    $sql = "INSERT INTO ilanlar (baslik, tarih, detay, telefon) VALUES (:baslik, :tarih, :detay, :telefon)";
+    $sql = "INSERT INTO ilanlar (baslik, tarih, detay, telefon, konum) VALUES (:baslik, :tarih, :detay, :telefon, :konum)";
     $stmt = $conn->prepare($sql);
-
+    
     $stmt->bindParam(':baslik',  $baslik);
-    $stmt->bindParam(':tarih', $tarih);
-    $stmt->bindParam(':detay', $detay);
+    $stmt->bindParam(':tarih',   $tarih);
+    $stmt->bindParam(':detay',   $detay);
     $stmt->bindParam(':telefon', $telefon);
-
+    $stmt->bindParam(':konum',   $konum);
+    
     $stmt->execute();
     echo "İlan eklendi";
 }
@@ -41,6 +43,10 @@ if(isset($_POST['baslik'])){
         <tr>
             <th>Telefon</th>
             <td><input type='text' name='telefon' ></td> 
+        </tr>
+        <tr>
+            <th>Konum</th>
+            <td><input type='text' name='konum' ></td> 
         </tr>
         <tr>
             <td colspan='2'> <center> <input type='submit' value='KAYDET'> </center> </td>
