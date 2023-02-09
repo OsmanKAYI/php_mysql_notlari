@@ -1,14 +1,12 @@
 # İlk Yapılacaklar
 
-## MySQL yönetimi için Adminer programı kurulumu
-- xammp/htdocs dizini aldında `adminer` adında bir klasör oluşturulur
-- https://www.adminer.org/latest.php veya https://www.adminer.org/latest-mysql.php dosyası indirilir
-- İndirilen dosyanın adı `index.php` olarak değiştirilir
-- index.php dosyası `xampp/htdocs/adminer` dizini içine taşınır
-- Adminer'e giriş için `localhost/adminer` yazılır
-- NOT: root kullanıcısının parolası BOŞ olduğunda adminere giriş yapılamaz. Parolayı değiştirmeniz gerekir.
+## xampp İnidirilmesi ve Kurulması
 
-## php.ini dosyasının sonuna eklenecekler
+- xampp setup dosyasını [buradan](https://www.apachefriends.org/download.html) indirin.
+- İndirilen dosyayı çalıştırın ve peşisıra `Next (İleri)` düğmesine basarak kurulumu tammalayalım (Herhangi bir özel ayar gerektirmez).
+- Kurulum varsayılan olarak `C:\xampp` dizinine yapılacaktır. 
+
+### php.ini dosyasının sonuna eklenecekler
 
 ```PHP
 display_startup_errors = On
@@ -22,13 +20,20 @@ mbstring.language          = Turkish
 mbstring.internal_encoding = UTF-8
 ```
 
-
-## my.ini dosyasında yapılacak değişiklikler
+### my.ini dosyasında yapılacak değişiklikler
 
 - `sql_mode=NO_ZERO_IN_DATE,NO_ZERO_DATE,NO_ENGINE_SUBSTITUTION` satırı `sql_mode=''` olarak değiştirilecek
 
+## MySQL yönetimi için Adminer programı kurulumu
 
-## MySQL Root kullanıcısı için şifre değiştirme
+- `xammp/htdocs` dizini altında `adminer` adında bir klasör oluşturulur.
+- https://www.adminer.org/latest.php veya https://www.adminer.org/latest-mysql.php dosyası indirilir.
+- İndirilen dosyanın adı `index.php` olarak değiştirilir.
+- `index.php` dosyası `xampp/htdocs/adminer` dizini içine taşınır.
+- Adminer'e giriş için `localhost/adminer` yazılır.
+- NOT: root kullanıcısının parolası BOŞ olduğunda adminere giriş yapılamaz. Parolayı değiştirmeniz gerekir.
+
+### MySQL Root kullanıcısı için şifre değiştirme
 
 ```SQL
 mysql -u root -p
@@ -36,10 +41,10 @@ mysql -u root -p
   exit;
 ```
 
-## MySQL Yeni kullanıcı ekleme
+### MySQL Yeni kullanıcı ekleme
+
 ```SQL
 CREATE USER 'dbadmin'@'localhost' IDENTIFIED BY 'dbadmin';
 GRANT ALL PRIVILEGES ON *.* TO 'dbadmin'@'localhost' WITH GRANT OPTION;
 FLUSH PRIVILEGES;
 ```
-
