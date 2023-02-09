@@ -12,7 +12,7 @@
 - [ ] [Çerezler](./konular/konu.cookie.md)
 - [x] [Oturum Yönetimi](./konular/konu.session.md)
 - [ ] [Composer Kullanımı](./konular/konu.composer.md)
-- [ ] [Git ve GitHub Kurulumu (Windows)](./konular/konu.git.github.windows.md)
+- [x] [Git ve GitHub Kurulumu (Windows)](./konular/konu.git.github.windows.md)
 
 ## Örnekler
 - [x] [İki Sayının Toplanması](./ornekler/toplama/)
