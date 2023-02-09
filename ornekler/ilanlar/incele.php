@@ -44,5 +44,5 @@
 
 <?php require_once('harita.php'); ?>
 
-<p><a href='update.php?id=<?php echo $row['id'];?>'> İlan Düzenle </a></p>
-<p><a href='list.php'>Geri Dön</a></p>
+<p><a href='güncelle.php?id=<?php echo $row['id'];?>'> İlan Düzenle </a></p>
+<p><a href='liste.php'>Geri Dön</a></p>

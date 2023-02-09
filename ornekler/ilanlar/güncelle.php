@@ -91,11 +91,11 @@
 </form>
 
 <p id='sildugmesi' style='display:none'>
-    <a href='delete.php?id=<?php echo $row['id']; ?>'>İlanı Sil</a>
+    <a href='sil.php?id=<?php echo $row['id']; ?>'>İlanı Sil</a>
 </p>
 
 
-<p><a href='list.php'  >Geri Dön </a></p>
+<p><a href='liste.php'>Geri Dön </a></p>
 
 <script>
     function gostergizle(){

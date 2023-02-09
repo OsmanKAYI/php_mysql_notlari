@@ -11,4 +11,4 @@ $stmt->bindParam(':id', $id);
 
 $stmt->execute();
 echo "İlan silindi";
-echo "<p><a href='list.php'>Listeye Dön</a></p>";
+echo "<p><a href='liste.php'>Listeye Dön</a></p>";
