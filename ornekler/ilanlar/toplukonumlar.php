@@ -20,7 +20,7 @@ foreach($rows as $row) {
    
 }
 
-// echo implode(",\n", $arrKonumlar);
+echo implode(",\n", $arrKonumlar);
 
 
 
