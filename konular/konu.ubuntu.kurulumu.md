@@ -47,7 +47,7 @@ sudo mysql -u root -p
     flush privileges;
     exit;
 
-sudo apt install composer npm guake* pv meld vim axel net-tools caffein* vlc virtualbox chromium-browser magic-wormhole -y
+sudo apt install composer npm guake* pv meld vim axel net-tools caffein* vlc virtualbox chromium-browser magic-wormhole gnome-sushi -y
 
 
 ## vscode kurulumu  KAYNAK: https://linuxhint.com/install-visual-studio-code-ubuntu22-04/
@@ -105,27 +105,28 @@ sudo update-alternatives --set php /usr/bin/php7.4
 ```
 
 
-## Diğer Programlar:
-- VLC Player
-- AnyDesk
-- VirtualBox
-- FlameShot
-- jDownloader
-- Postman
-- SoapUI
-- SublimeMerge
-- SublimeText
-- Brightness Control (Sadece Ubuntu 20'de çalışıyor)
+## Faydalı Diğer Programlar:
+- [VLC Player](https://www.videolan.org/vlc/index.tr.html)
+- [AnyDesk](https://anydesk.com/)
+- [VirtualBox](https://www.virtualbox.org/)
+- [FlameShot](https://flameshot.org/)
+- [jDownloader](https://jdownloader.org/)
+- [Postman](https://www.postman.com/)
+- [SoapUI](https://www.soapui.org/downloads/soapui/)
+- [SublimeMerge](https://www.sublimemerge.com/)
+- [SublimeText](https://www.sublimetext.com/)
+- [Brightness Control](https://linuxhint.com/control-screen-brightness-ubuntu/)
 
-
-- `sudo apt install gnome-sushi` <kbd>space</kbd> tuşu ile dosya ve klasör içeriğinin önizlemesini gösterir (MacOS'daki gibi)
+## Bilgiler
+- `gnome-sushi` Programı: <kbd>space</kbd> (boşluk çubuğu) tuşu ile dosya ve klasör içeriğinin önizlemesini gösterir (MacOS'daki gibi)
 - `sudo snap refresh` Snap güncelleme uyarısı alındığında, açık tüm programlar kapatılır ve bu komut çalıştırılır
 
 
-### Ekran görüntüsü alma
+## Ekran görüntüsü alma
 
-Shift+PrintScreen tuşuna aşağıdaki komut bağlanınca, bu tuşa basıldığında ekranın seçeceğimiz kısmın ekran görüntüsü diske kaydedilir.
+Shift+PrintScreen tuşuna aşağıdaki komut bağlanınca, bu tuşa basıldığında ekranın seçeceğimiz kısmın ekran görüntüsü diske kaydedilir. KAYNAK: https://askubuntu.com/a/1405337
 
+<<<<<<< HEAD
 KAYNAK: https://askubuntu.com/a/1405337
 
 - `sudo apt install gnome-screenshot`
@@ -134,6 +135,14 @@ KAYNAK: https://askubuntu.com/a/1405337
 Ardından, 
 > Ayarlar | Klavye | Klavye Kısayolları | Kısayolları Gör ve Özelleştir | Özel Kısayollar | 
 menüsünden yeni kısayol tanımlanır. Resimler dizinine bu ekran görüntülerini kaydetmek için KOMUT kısmına aşağıdaki kod girilir: 
+=======
+- **Kurulum için:**
+- `sudo apt install gnome-screenshot xclip -y` 
+- **Kurulum sonrasında:**
+- `Ayarlar | Klavye | Kısayollar` menüsünden yeni kısayol tanımlanır.
+- **Kısayolun KOMUT bölümüne** aşağıdaki kod girilir:
+- `sh -c 'gnome-screenshot -af /home/nuri/Pictures/$(date "+%Y.%m.%d-%H.%M.%S").png'`
+>>>>>>> 2fbef0d (Kurulum notları güncellendi)
 
 `sh -c 'gnome-screenshot -af /home/$USER/Resimler/$(date "+%Y.%m.%d-%H.%M.%S").png'`
 
