@@ -126,23 +126,12 @@ sudo update-alternatives --set php /usr/bin/php7.4
 
 Shift+PrintScreen tuşuna aşağıdaki komut bağlanınca, bu tuşa basıldığında ekranın seçeceğimiz kısmın ekran görüntüsü diske kaydedilir. KAYNAK: https://askubuntu.com/a/1405337
 
-<<<<<<< HEAD
-KAYNAK: https://askubuntu.com/a/1405337
-
 - `sudo apt install gnome-screenshot`
 - `sudo apt install xclip`
 
 Ardından, 
 > Ayarlar | Klavye | Klavye Kısayolları | Kısayolları Gör ve Özelleştir | Özel Kısayollar | 
 menüsünden yeni kısayol tanımlanır. Resimler dizinine bu ekran görüntülerini kaydetmek için KOMUT kısmına aşağıdaki kod girilir: 
-=======
-- **Kurulum için:**
-- `sudo apt install gnome-screenshot xclip -y` 
-- **Kurulum sonrasında:**
-- `Ayarlar | Klavye | Kısayollar` menüsünden yeni kısayol tanımlanır.
-- **Kısayolun KOMUT bölümüne** aşağıdaki kod girilir:
-- `sh -c 'gnome-screenshot -af /home/nuri/Pictures/$(date "+%Y.%m.%d-%H.%M.%S").png'`
->>>>>>> 2fbef0d (Kurulum notları güncellendi)
 
 `sh -c 'gnome-screenshot -af /home/$USER/Resimler/$(date "+%Y.%m.%d-%H.%M.%S").png'`
 
