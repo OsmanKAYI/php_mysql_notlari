@@ -140,3 +140,50 @@ if ($post->delete()) {
 
 ## ÖĞREN!!!
 - https://mitmproxy.org/
+
+
+## PHP ve PDO - Yöntem 1
+```PHP
+<?php
+// Example for using prepare statements directly, no shortcut SQL methods used
+
+$db->query_prepared('INSERT INTO profile( name, email, phone) VALUES( ?, ?, ? );', [$user, $address, $number]);
+
+$db->query_prepared('SELECT name, email FROM profile WHERE phone = ? OR id != ?', [$number, 5]);
+$result = $db->queryResult();
+$result = get_results(/* OBJECT|ARRAY_A|ARRAY_N|JSON */, $db); // Defaults to `OBJECT`
+
+foreach ($result as $row) {
+    echo $row->name.' '.$row->email;
+}
+```
+
+## PHP ve PDO - Yöntem 2 (Kısayol)
+```PHP
+// Example for using prepare statements indirectly, with above shortcut SQL methods
+
+$values = [];
+$values['name'] = $user;
+$values['email'] = $address;
+$values['phone'] = $number;
+$db->insert('profile', $values);
+$db->insert('profile', ['name' => 'john john', 'email' => 'john@email', 'phone' => 123456]);
+
+$result = $db->select('profile', 'phone', eq('email', $email), between('id', 1, $values));
+
+foreach ($result as $row) {
+    echo $row->phone;
+}
+
+$result = $db->select('profile', 'name, email',
+    $db->where( eq('phone', $number, _OR), neq('id', 5) ),
+    $db->orderBy('name'),
+    $db->limit(1)
+);
+
+foreach ($result as $row) {
+    echo $row->name.' '.$row->email;
+}
+
+$json = get_results(JSON, $db);
+```
