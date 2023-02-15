@@ -214,8 +214,8 @@ $json = get_results(JSON, $db);
 - https://furkangiray.com/css-metin-secmeyi-devre-disi-birakma/
 - https://furkangiray.com/css-scroll-behavior-ozelligi/
 - https://furkangiray.com/css-ile-yaziya-arka-plan-vermek/
-
-
+- https://www.digitalocean.com/community/tutorials/how-to-reset-your-mysql-or-mariadb-root-password-on-ubuntu-20-04
+- https://www.digitalocean.com/community/tutorials/how-to-import-and-export-databases-in-mysql-or-mariadb
 
 
 
