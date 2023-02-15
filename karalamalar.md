@@ -187,3 +187,37 @@ foreach ($result as $row) {
 
 $json = get_results(JSON, $db);
 ```
+
+
+# Bağlantılar
+
+- https://fslightbox.com/ Zoom Image ve Resim Galerisi https://furkangiray.com/fslighbox-js-kullanimi/
+- 
+
+
+# Dahil edilebilecek içerikler
+- https://furkangiray.com/xml-dosyasini-php-array-diziye-cevirme/
+- https://furkangiray.com/php-coklu-fotograf-yukleme/
+- https://furkangiray.com/php-ile-json-yapisi-olusturma/
+- https://furkangiray.com/form-butonu-ust-uste-tiklanmayi-kapatma/
+- https://furkangiray.com/tarih-secici-ekleme/ Ana sayfası: https://github.com/mikecoj/MCDatepicker
+- https://furkangiray.com/ana-sayfa-acilisina-modal-ekleme/
+- https://furkangiray.com/javascript-metni-kopyala-butonu/
+- https://furkangiray.com/dark-mode-gece-modu%f0%9f%8c%9a%f0%9f%8c%9d-gecisi/ Ana sayfası: https://darkmodejs.learn.uno/
+- https://furkangiray.com/owl-carousel-2-kullanimi/ Ana sayfası: https://owlcarousel2.github.io/OwlCarousel2/
+- https://furkangiray.com/jquery-ile-yukari-cik-butonu/
+- https://furkangiray.com/js-ile-yaziya-silme-yazma-animasyon/ Code pen sayfası: https://codepen.io/furkangiray/pen/XWdGZoB
+- https://furkangiray.com/htaccess-ile-dosya-uzantilarini-kaldirma/
+- https://furkangiray.com/belirli-bir-sure-sonra-yonlendirme/
+- https://furkangiray.com/whatsapp-sohbet-butonu-ekleme/
+- https://furkangiray.com/php-ile-form-mail-gonderimi/
+- https://furkangiray.com/css-metin-secmeyi-devre-disi-birakma/
+- https://furkangiray.com/css-scroll-behavior-ozelligi/
+- https://furkangiray.com/css-ile-yaziya-arka-plan-vermek/
+
+
+
+
+
+
+
