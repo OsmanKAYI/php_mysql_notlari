@@ -219,6 +219,7 @@ $json = get_results(JSON, $db);
 - https://github.com/spatie/array-to-xml
 
 
-
+## MindMap
+- https://tobloef.com/text2mindmap/
 
 
