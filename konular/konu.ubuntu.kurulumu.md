@@ -79,7 +79,7 @@ mysql --version
 
 
 ## PHP'nin farklı sürümleri için kurulum
-sudo apt install software-properties-common ca-certificates lsb-release apt-transport-https 
+sudo apt install software-properties-common ca-certificates lsb-release apt-transport-https -y
 LC_ALL=C.UTF-8
 sudo add-apt-repository ppa:ondrej/php 
 sudo apt update 
