@@ -48,6 +48,7 @@ sudo mysql -u root -p
     exit;
 
 sudo apt install composer npm guake* pv meld vim axel net-tools caffein* vlc virtualbox chromium-browser magic-wormhole gnome-sushi -y
+sudo apt install gnome-shell-extension-manager -y
 
 
 ## vscode kurulumu  KAYNAK: https://linuxhint.com/install-visual-studio-code-ubuntu22-04/
@@ -81,7 +82,7 @@ mysql --version
 ## PHP'nin farklı sürümleri için kurulum
 sudo apt install software-properties-common ca-certificates lsb-release apt-transport-https -y
 LC_ALL=C.UTF-8
-sudo add-apt-repository ppa:ondrej/php 
+sudo add-apt-repository -y ppa:ondrej/php 
 sudo apt update 
 sudo apt upgrade
 
