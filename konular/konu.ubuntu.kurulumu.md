@@ -7,6 +7,7 @@ sudo apt upgrade
 
 sudo ubuntu-drivers autoinstall # otomatik olarak driverları güncellemek için
 
+gsettings set org.gnome.shell.extensions.dash-to-dock dock-position 'LEFT' 
 gsettings set org.gnome.shell.extensions.dash-to-dock click-action 'minimize'
 gsettings set org.gnome.shell.extensions.dash-to-dock scroll-action 'cycle-windows'
 
