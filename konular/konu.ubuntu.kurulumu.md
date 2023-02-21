@@ -49,7 +49,7 @@ sudo mysql -u root -p
     flush privileges;
     exit;
 
-sudo apt install composer npm guake* pv meld vim axel net-tools caffein* vlc virtualbox chromium-browser magic-wormhole gnome-sushi -y
+sudo apt install composer npm guake* pv meld vim axel net-tools caffein* vlc virtualbox chromium-browser magic-wormhole gnome-sushi curl -y
 sudo apt install gnome-shell-extension-manager -y
 
 
