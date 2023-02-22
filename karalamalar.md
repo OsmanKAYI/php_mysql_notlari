@@ -223,3 +223,61 @@ $json = get_results(JSON, $db);
 - https://tobloef.com/text2mindmap/
 
 
+## Manipulating arrays and objects in JavaScript
+
+https://tr.javascript.info/
+
+https://developer.mozilla.org/en-US/docs/Web/JavaScript
+
+
+Komut|Açıklaması
+---|---
+Kaynak|https://www.youtube.com/watch?v=n3NKGsM3iEw
+Kaynak|https://www.freecodecamp.org/news/manipulating-arrays-in-javascript/
+`toString()`|converts an array to a string separated by a comma.
+`join()`|combines all array elements into a string.
+`concat`|combines two arrays together or add more items to an array and then return a new array.
+`push()`|adds item(s) to the end of an array and changes the original array.
+`pop()`|removes the last item of an array and returns it
+`shift()`|removes the first item of an array and returns it
+`unshift()`|adds an item(s) to the beginning of an array and changes the original array.
+`splice()`|changes an array, by adding, removing and inserting elements.
+`slice()`|copies a given part of an array and returns that copied part as a new array. It does not change the original array.
+`split()`|divides a string into substrings and returns them as an array.
+`indexOf()`|looks for an item in an array and returns the index where it was found else it returns -1
+`lastIndexOf()`|looks for an item from right to left and returns the last index where the item was found.
+`filter()`|creates a new array if the items of an array pass a certain condition.
+`map()`|creates a new array by manipulating the values in an array.
+`reduce()`|calculates a single value based on an array.
+`forEach()`|iterates through an array, it applies a function on all items in an array
+`every()`|checks if all items in an array pass the specified condition and return true if passed, else false.
+`some()`|checks if an item (one or more) in an array pass the specified condition and return true if passed, else false.
+`includes()`|checks if an array contains a certain item.
+
+
+## JavaScript String Methods/Functions You should Know
+
+Komut|Açıklaması
+---|---
+Kaynak|https://codequs.com/p/ryERJilLL
+`length`|It is used to count the number of characters in a string javascript.
+`toLocaleLowerCase()`|The javascript toLocaleLowerCase() is used to changed string into lower case.
+`toLocaleUpperCase()`|The javascript toLocaleUpperCase () is used to changed string into upper case.
+`indexOf()`|The indexof () method returns the first position of a specified value in a string.
+`slice()`|The slice () method removes the parts of a string and returns the extracted parts to a new string. Use the Start and End Ultimate to specify the part of the string that you want to remove.
+`includes()`| The includes() method is used to determine whether a string contains the characters of a specified string or not. If is exist return true or not return false.
+`concat()`| The concat() method is used for join two or more strings.
+`lastIndexOf()`| The lastIndexOf() the method returns the index of the last occurrence of a specified text in a string:
+`split`|The javascript split method, which is used to convert string to an array:
+`search()`|The javascript search () method searches a string for the specified value, and returns the status of the match.
+`substring()`|The Javascript substring() method is used to removes the characters from one string, between two specified indices, and returns the new substring.
+`substr()`|A string substr() method begins on the character in the specified position, and returns the specified number of characters.
+`replace()`|The Javascript replace() changes the defined value to an another value:
+`charAt()`|The Javascript charAt() is used to take a character to a described index location:
+`charCodeAt()`|The charCodeAt() method returns the Unicode of the character at a specified index in a string:
+`trim()`|The javascript trim() method removes whitespace from both sides of a given string:
+`match()`|The match() method searches a string for a match against a regular expression, and returns the matches, as an Array object.
+`toString()`|The javascript toString() method returns the value of a String object.
+`valueOf()`|The javascript valueOf() method, which is used to gets the primitive value of a String object.
+
+
