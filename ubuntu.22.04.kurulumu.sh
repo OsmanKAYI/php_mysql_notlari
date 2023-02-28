@@ -35,6 +35,10 @@ sudo systemctl enable mariadb
 # MySQL servisini yeniden başlat
 sudo service mariadb restart
 
+# MySQL Root kullanıcısı için şifreyi değiştir
+# sudo mysql_secure_installation
+mysql --user="root" --password="" --execute="SET PASSWORD FOR 'root'@'localhost' = PASSWORD('root');"
+
 # Sık kullanılan faydalı paketleri kur
 sudo apt install npm guake* pv meld vim axel net-tools caffein* vlc chromium-browser magic-wormhole gnome-sushi curl gnome-shell-extension-manager software-properties-common apt-transport-https wget -y
 
