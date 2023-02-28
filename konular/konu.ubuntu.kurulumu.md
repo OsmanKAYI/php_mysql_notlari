@@ -6,6 +6,7 @@
 wget https://raw.githubusercontent.com/OsmanKAYI/php_mysql_notlari/main/ubuntu.22.04.kurulumu.sh -O - | sh
 ```
 
+### Detaylı Anlatım
 ```bash
 # Depolarda yer alan paketlerin güncel listesini indir
 sudo apt update
