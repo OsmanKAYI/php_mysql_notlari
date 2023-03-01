@@ -77,7 +77,7 @@ sudo apt update
 
 
 ## PHP 8.1 Sürümünü kur
-sudo apt install php8.1-fpm php8.1-intl php8.1-imagick php8.1-dev php8.1-zip php8.1-curl php8.1-xmlrpc php8.1-sqlite3 php8.1-gd php8.1-mysql php8.1-mbstring php8.1-xml php8.1-pgsql libapache2-mod-php8.1 -y
+sudo apt install php8.1-fpm php8.1-intl php8.1-imagick php8.1-dev php8.1-zip php8.1-curl php8.1-xmlrpc php8.1-sqlite3 php8.1-gd php8.1-mysql php8.1-mbstring php8.1-xml php8.1-redis php8.1-pgsql libapache2-mod-php8.1 -y
 ## PHP composer paketini kur
 sudo apt install composer -y
 ## PHP'nin çalışmaya başlaması için Apache'yi yeniden başlat
@@ -108,10 +108,10 @@ mysql --version
 
 ```bash
 # PHP 7.4 Sürümünü kur
-sudo apt install php7.4-fpm php7.4-intl php7.4-imagick php7.4-dev php7.4-zip php7.4-curl php7.4-xmlrpc php7.4-sqlite3 php7.4-gd php7.4-mysql php7.4-mbstring php7.4-pgsql php7.4-xml libapache2-mod-php7.4 -y
+sudo apt install php7.4-fpm php7.4-intl php7.4-imagick php7.4-dev php7.4-zip php7.4-curl php7.4-xmlrpc php7.4-sqlite3 php7.4-gd php7.4-mysql php7.4-mbstring php7.4-pgsql php7.4-xml php7.4-redis libapache2-mod-php7.4 -y
 
 # PHP 8.1 Sürümünü kur
-sudo apt install php8.1-fpm php8.1-intl php8.1-imagick php8.1-dev php8.1-zip php8.1-curl php8.1-xmlrpc php8.1-sqlite3 php8.1-gd php8.1-mysql php8.1-mbstring php8.1-pgsql php8.1-xml libapache2-mod-php8.1 -y
+sudo apt install php8.1-fpm php8.1-intl php8.1-imagick php8.1-dev php8.1-zip php8.1-curl php8.1-xmlrpc php8.1-sqlite3 php8.1-gd php8.1-mysql php8.1-mbstring php8.1-pgsql php8.1-xml php8.1-redis libapache2-mod-php8.1 -y
 
 # PHP 8.1'i devre dışı bırak
 sudo a2dismod php8.1
@@ -141,6 +141,7 @@ php8.1-pgsql
 php8.1-gd
 php8.1-mbstring
 php8.1-xml
+php8.1-redis 
 libapache2-mod-php8.1
 
 ## Faydalı Paketler: TODO: Açıklanacak
