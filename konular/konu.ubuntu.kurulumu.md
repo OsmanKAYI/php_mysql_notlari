@@ -14,16 +14,8 @@ sudo apt update
 # Mevcut paketlerin yenisi varsa yükle
 sudo apt upgrade
 
-sudo ubuntu-drivers autoinstall # otomatik olarak driverları güncellemek için
-
-gsettings set org.gnome.shell.extensions.dash-to-dock dock-position 'LEFT'
-gsettings set org.gnome.shell.extensions.dash-to-dock click-action 'minimize'
-gsettings set org.gnome.shell.extensions.dash-to-dock scroll-action 'cycle-windows'
-
-# GIT kurulumu ve ayarları
-sudo apt install git -y
-git config --global user.email "nuriakman@gmail.com"
-git config --global user.name "Nuri Akman"
+# Sürücülerin (driver) güncel dosyalarını yükle
+sudo ubuntu-drivers autoinstall
 
 # Apache kurulumu
 sudo apt install apache2 apache2-utils -y
@@ -38,7 +30,7 @@ sudo adduser $USER www-data
 # Apache'nin varsayılan dizinine aktif kullanıcıyı yetkilendir
 sudo chown -R $USER:www-data /var/www/html/
 
-# Adminer'in en son sürümünü kur
+# Adminer'in en son sürümünü /adminer adresine kur
 mkdir /var/www/html/adminer
 wget -O /var/www/html/adminer/index.php https://www.adminer.org/latest.php
 
@@ -49,17 +41,15 @@ sudo systemctl enable mariadb
 # MySQL servisini yeniden başlat
 sudo service mariadb restart
 
-
 # MySQL Root kullanıcısı için şifreyi değiştir
 # sudo mysql_secure_installation
-mysql --user="root" --password="" --execute="SET PASSWORD FOR 'root'@'localhost' = PASSWORD('root');"
+sudo mysql --user="root" --password="" --execute="SET PASSWORD FOR 'root'@'localhost' = PASSWORD('root');"
 
 # Sık kullanılan faydalı paketleri kur
-sudo apt install npm guake* pv meld vim axel net-tools caffein* vlc chromium-browser magic-wormhole gnome-sushi curl gnome-shell-extension-manager software-properties-common apt-transport-https wget -y
+sudo apt install git npm guake guake-indicator pv meld vim axel xclip net-tools caffeine vlc chromium-browser magic-wormhole gnome-sushi curl gnome-shell-extension-manager software-properties-common apt-transport-https wget curl -y
 
 # Sistem genelinde karakter set olarak UTF8 kullan
 LC_ALL=C.UTF-8
-
 
 # vscode kurulumu
 ## vscode için güvenilir depolara vscode'un kendi deposunu ve imzasını ekle
@@ -70,19 +60,19 @@ sudo apt update
 ## vscode paketini kur
 sudo apt install code -y
 
+# Dilediğimiz herhangi bir PHP sürümünü yükleyebilmek için
 # PHP  için güvenilir depolara PHP'nin kendi deposunu ekle
 sudo add-apt-repository -y ppa:ondrej/php
 ## Depolarda yer alan paketlerin güncel listesini indir
 sudo apt update
 
-
 ## PHP 8.1 Sürümünü kur
-sudo apt install php8.1-fpm php8.1-intl php8.1-imagick php8.1-dev php8.1-zip php8.1-curl php8.1-xmlrpc php8.1-sqlite3 php8.1-gd php8.1-mysql php8.1-mbstring php8.1-xml php8.1-redis php8.1-pgsql libapache2-mod-php8.1 -y
+sudo apt install php8.1-common php8.1-curl php8.1-dev  php8.1-gd php8.1-imagick php8.1-intl php8.1-mbstring php8.1-mcrypt php8.1-memcache php8.1-memcached php8.1-mysql php8.1-pgsql php8.1-redis php8.1-soap php8.1-sqlite3 php8.1-xdebug php8.1-xml php8.1-xmlrpc php8.1-zip libapache2-mod-php8.1 -y
+
 ## PHP composer paketini kur
 sudo apt install composer -y
 ## PHP'nin çalışmaya başlaması için Apache'yi yeniden başlat
 sudo service apache2 restart
-
 
 
 # Fare için ayarlar
@@ -92,9 +82,24 @@ gsettings set org.gnome.shell.extensions.dash-to-dock click-action 'minimize'
 gsettings set org.gnome.shell.extensions.dash-to-dock scroll-action 'cycle-windows'
 
 ## Kurulum sonrasında varsa gereksiz paketleri temizle
-sudo apt autoremove
+sudo apt autoremove -y
+
+# GIT ayarları
+git config --global user.email 'nuriakman@gmail.com'
+git config --global user.name 'Nuri Akman'
+
+echo "\n\n\n"
+echo "\nŞu komutları kendiniz için uyarlayınız:\n"
+echo "\ngit config --global user.email 'nuriakman@gmail.com'"
+echo "\ngit config --global user.name 'Nuri Akman'"
+
+echo "\n\n\n=== KURULUM TAMAMLANDI ===\n\n\n"
+
+```
 
 ## Doğru kurulum yapıldığının test edilmesi
+
+```BASH
 npm -v
 node -v
 php -v
@@ -108,10 +113,10 @@ mysql --version
 
 ```bash
 # PHP 7.4 Sürümünü kur
-sudo apt install php7.4-fpm php7.4-intl php7.4-imagick php7.4-dev php7.4-zip php7.4-curl php7.4-xmlrpc php7.4-sqlite3 php7.4-gd php7.4-mysql php7.4-mbstring php7.4-pgsql php7.4-xml php7.4-redis libapache2-mod-php7.4 -y
+sudo apt install php7.4-intl php7.4-imagick php7.4-dev php7.4-zip php7.4-curl php7.4-xmlrpc php7.4-sqlite3 php7.4-gd php7.4-mysql php7.4-mbstring php7.4-pgsql php7.4-xml php7.4-redis libapache2-mod-php7.4 -y
 
 # PHP 8.1 Sürümünü kur
-sudo apt install php8.1-fpm php8.1-intl php8.1-imagick php8.1-dev php8.1-zip php8.1-curl php8.1-xmlrpc php8.1-sqlite3 php8.1-gd php8.1-mysql php8.1-mbstring php8.1-pgsql php8.1-xml php8.1-redis libapache2-mod-php8.1 -y
+sudo apt install php8.1-intl php8.1-imagick php8.1-dev php8.1-zip php8.1-curl php8.1-xmlrpc php8.1-sqlite3 php8.1-gd php8.1-mysql php8.1-mbstring php8.1-pgsql php8.1-xml php8.1-redis libapache2-mod-php8.1 -y
 
 # PHP 8.1'i devre dışı bırak
 sudo a2dismod php8.1
@@ -126,41 +131,35 @@ sudo update-alternatives --set php /usr/bin/php7.4
 
 ```
 
-## Sık kullanılan PHP extension'ları: TODO: Açıklanacak
+## Sık kullanılan PHP extension'ları:
 
-php8.1-fpm
-php8.1-intl
-php8.1-imagick
-php8.1-dev
-php8.1-zip
-php8.1-curl
-php8.1-xmlrpc
-php8.1-mysql
-php8.1-sqlite3
-php8.1-pgsql
-php8.1-gd
-php8.1-mbstring
-php8.1-xml
-php8.1-redis 
-libapache2-mod-php8.1
+PHP eklentilerin açıklamalarını şuradan okuyabilirsiniz: https://zeropointdevelopment.com/required-php-extensions-for-wordpress-wpquickies/
 
 ## Faydalı Paketler: TODO: Açıklanacak
 
-composer
-npm
-guake*
-pv
-meld
-vim
-axel
-net-tools
-caffein*
-vlc
-virtualbox
-chromium-browser
-magic-wormhole
-gnome-sushi
-curl
+| Paket                         | Açıklama                      |
+| ----------------------------- | ----------------------------- |
+| git                           | git                           |
+| npm                           | npm                           |
+| guake                         | guake                         |
+| guake-indicator               | guake-indicator               |
+| pv                            | pv                            |
+| meld                          | meld                          |
+| vim                           | vim                           |
+| axel                          | axel                          |
+| xclip                         | xclip                         |
+| net-tools                     | net-tools                     |
+| caffeine                      | caffeine                      |
+| vlc                           | vlc                           |
+| chromium-browser              | chromium-browser              |
+| magic-wormhole                | magic-wormhole                |
+| gnome-sushi                   | gnome-sushi                   |
+| curl                          | curl                          |
+| gnome-shell-extension-manager | gnome-shell-extension-manager |
+| software-properties-common    | software-properties-common    |
+| apt-transport-https           | apt-transport-https           |
+| wget                          | wget                          |
+| curl                          | curl                          |
 
 ## Faydalı Diğer Programlar:
 
@@ -203,6 +202,18 @@ Bu komutu önce terminalde deneyip kullanıcı hesabınızın erişim izni varm�
 Kaldırmayı düşünürseniz tekrar erişim engellemek için bu kodu kullanabilirsiniz.
 
 `sudo chmod ugo-rwx /home/$USER/Resimler/*`
+
+## Terminal'de komut çıktısının clipboard/pano'ya kopyalanması
+
+```BASH
+# xclip ile KOPYALA:
+# xclip -sel clip
+
+# xclip ile YAPIŞTIR:
+# xclip -sel clip -o
+cat dosyaadi | xclip -sel clip
+
+```
 
 ## Eğitmen Ayarları
 
