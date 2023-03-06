@@ -13,6 +13,7 @@
 - [x] [Oturum Yönetimi](./konular/konu.session.md)
 - [ ] [Composer Kullanımı](./konular/konu.composer.md)
 - [x] [Git ve GitHub Kurulumu (Windows)](./konular/konu.git.github.windows.md)
+- [ ] [Redis Kullanımı](./konular/konu.redis.md)
 
 ## Örnekler
 - [x] [İki Sayının Toplanması](./ornekler/toplama/)
