@@ -46,7 +46,7 @@ sudo service mariadb restart
 sudo mysql --user="root" --password="" --execute="SET PASSWORD FOR 'root'@'localhost' = PASSWORD('root');"
 
 # Sık kullanılan faydalı paketleri kur
-sudo apt install git npm guake guake-indicator pv meld vim axel ncdu xclip net-tools caffeine vlc chromium-browser magic-wormhole gnome-sushi curl gnome-shell-extension-manager software-properties-common apt-transport-https wget curl -y
+sudo apt install git npm guake guake-indicator pv meld vim axel ncdu xclip net-tools caffeine vlc chromium-browser magic-wormhole gnome-sushi hwinfo gnome-shell-extension-manager software-properties-common apt-transport-https wget curl -y
 
 # Sistem genelinde karakter set olarak UTF8 kullan
 LC_ALL=C.UTF-8
