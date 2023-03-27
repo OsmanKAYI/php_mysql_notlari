@@ -154,7 +154,7 @@ PHP eklentilerin açıklamalarını şuradan okuyabilirsiniz: https://zeropointd
 | chromium-browser              | chromium-browser              |
 | magic-wormhole                | magic-wormhole                |
 | gnome-sushi                   | gnome-sushi                   |
-| curl                          | curl                          |
+| hwinfo                        | hwinfo                        |
 | gnome-shell-extension-manager | gnome-shell-extension-manager |
 | software-properties-common    | software-properties-common    |
 | apt-transport-https           | apt-transport-https           |
