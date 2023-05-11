@@ -11,3 +11,14 @@ $users = $stmt->fetchAll(PDO::FETCH_ASSOC);
 foreach($users as $user) {
     echo " {$user['id']} : {$user['name']}, {$user['email']} <br>";
 }
+
+/* if you will work with thousands of rows, use the following to fetch
+
+$stmt = $conn->prepare("SELECT * FROM bigTable");
+$stmt->execute();
+$stmt->setFetchMode(PDO::FETCH_ASSOC);
+
+while($user = $stmt->fetch()) {
+    echo " {$user['id']} : {$user['name']}, {$user['email']} <br>";
+}
+*/
