@@ -29,12 +29,12 @@ if ($redis->exists($cache_key)) {
 } else {
     $pdo = new PDO('mysql:host=' . $mysql_host . '; dbname=' . $database_name, $database_user, $database_password);
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    $KOMUT = $pdo->prepare($sql);
-    $KOMUT->execute();
+    $SORGU = $pdo->prepare($sql);
+    $SORGU->execute();
     // echo "Veriler, Veritabanıdan alınmıştır";
 
     $data = [];
-    while ($row = $KOMUT->fetch(PDO::FETCH_ASSOC)) {
+    while ($row = $SORGU->fetch(PDO::FETCH_ASSOC)) {
        $data[] = $row;
     }
     $redis->set($cache_key, serialize($data));

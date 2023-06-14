@@ -59,9 +59,9 @@ try {
 
 require_once('db.php');
 
-$KOMUT = $DB->prepare("SELECT id, name, email FROM users");
-$KOMUT->execute();
-$users = $KOMUT->fetchAll(PDO::FETCH_ASSOC);
+$SORGU = $DB->prepare("SELECT id, name, email FROM users");
+$SORGU->execute();
+$users = $SORGU->fetchAll(PDO::FETCH_ASSOC);
 //echo '<pre>'; print_r($users);
 
 foreach($users as $user) {
@@ -76,11 +76,11 @@ foreach($users as $user) {
 
 require_once('db.php');
 
-$KOMUT = $DB->prepare("SELECT * FROM bigTable");
-$KOMUT->execute();
-$KOMUT->setFetchMode(PDO::FETCH_ASSOC);
+$SORGU = $DB->prepare("SELECT * FROM bigTable");
+$SORGU->execute();
+$SORGU->setFetchMode(PDO::FETCH_ASSOC);
 
-while($user = $KOMUT->fetch()) {
+while($user = $SORGU->fetch()) {
     echo " {$user['id']} : {$user['name']}, {$user['email']} <br>";
 }
 ```
@@ -97,12 +97,12 @@ $name  = "Nuri";
 $email = "nuri@hotmail.com";
 
 $sql = "INSERT INTO users (name, email) VALUES (:name, :email)";
-$KOMUT = $DB->prepare($sql);
+$SORGU = $DB->prepare($sql);
 
-$KOMUT->bindParam(':name', $name);
-$KOMUT->bindParam(':email', $email);
+$SORGU->bindParam(':name', $name);
+$SORGU->bindParam(':email', $email);
 
-$KOMUT->execute();
+$SORGU->execute();
 echo "User created";
 
 ```
@@ -118,11 +118,11 @@ require_once('db.php');
 $id    = 4;
 
 $sql = "DELETE FROM users WHERE id = :id";
-$KOMUT = $DB->prepare($sql);
+$SORGU = $DB->prepare($sql);
 
-$KOMUT->bindParam(':id', $id);
+$SORGU->bindParam(':id', $id);
 
-$KOMUT->execute();
+$SORGU->execute();
 echo "User deleted";
 ```
 
@@ -139,14 +139,14 @@ $email = "nuri@gmail.com";
 $id    = 4;
 
 $sql = "UPDATE users SET name = :name, email = :email WHERE id = :id";
-$KOMUT = $DB->prepare($sql);
+$SORGU = $DB->prepare($sql);
 
-$KOMUT->bindParam(':name', $name);
-$KOMUT->bindParam(':email', $email);
-$KOMUT->bindParam(':id', $id);
+$SORGU->bindParam(':name', $name);
+$SORGU->bindParam(':email', $email);
+$SORGU->bindParam(':id', $id);
 
 // die(date("H:i:s"));
-$KOMUT->execute();
+$SORGU->execute();
 echo "User updated";
 
 ```

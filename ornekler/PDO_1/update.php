@@ -8,12 +8,12 @@ $email = "nuri@gmail.com";
 $id    = 4;
 
 $sql = "UPDATE users SET name = :name, email = :email WHERE id = :id";
-$KOMUT = $DB->prepare($sql);
+$SORGU = $DB->prepare($sql);
 
-$KOMUT->bindParam(':name', $name);
-$KOMUT->bindParam(':email', $email);
-$KOMUT->bindParam(':id', $id);
+$SORGU->bindParam(':name', $name);
+$SORGU->bindParam(':email', $email);
+$SORGU->bindParam(':id', $id);
 
 // die(date("H:i:s"));
-$KOMUT->execute();
+$SORGU->execute();
 echo "User updated";

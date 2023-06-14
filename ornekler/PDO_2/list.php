@@ -4,9 +4,9 @@
 
 require_once('db.php');
 
-$KOMUT = $DB->prepare("SELECT id, name, email FROM users");
-$KOMUT->execute();
-$users = $KOMUT->fetchAll(PDO::FETCH_ASSOC);
+$SORGU = $DB->prepare("SELECT id, name, email FROM users");
+$SORGU->execute();
+$users = $SORGU->fetchAll(PDO::FETCH_ASSOC);
 //echo '<pre>'; print_r($users);
 
 foreach($users as $user) {

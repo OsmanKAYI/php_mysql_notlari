@@ -18,11 +18,11 @@ if(isset($_POST['name'])){
     $email = $_POST['email'];
 
     $sql = "INSERT INTO users (name, email) VALUES (:name, :email)";
-    $KOMUT = $DB->prepare($sql);
+    $SORGU = $DB->prepare($sql);
 
-    $KOMUT->bindParam(':name',  $name);
-    $KOMUT->bindParam(':email', $email);
+    $SORGU->bindParam(':name',  $name);
+    $SORGU->bindParam(':email', $email);
 
-    $KOMUT->execute();
+    $SORGU->execute();
     echo "User created";
 }

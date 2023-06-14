@@ -18,14 +18,14 @@
         $email = $_POST['email'];
 
         $sql = "INSERT INTO users (name, email) VALUES (:name, :email)";
-        $KOMUT = $DB->prepare($sql);
+        $SORGU = $DB->prepare($sql);
 
-        $KOMUT->bindParam(':name',  $name);
-        $KOMUT->bindParam(':email', $email);
-        //$KOMUT->bindParam(':name',  $_POST['name']);
-        //$KOMUT->bindParam(':email', $_POST['email']);
+        $SORGU->bindParam(':name',  $name);
+        $SORGU->bindParam(':email', $email);
+        //$SORGU->bindParam(':name',  $_POST['name']);
+        //$SORGU->bindParam(':email', $_POST['email']);
 
-        $KOMUT->execute();
+        $SORGU->execute();
         echo "User created";
         header('location: ../index.php');
     }
@@ -44,13 +44,13 @@
 
         $id = $_POST['id'];
         $sql = "UPDATE users SET name = :name, email = :email WHERE id = :id";
-        $KOMUT = $DB->prepare($sql);
+        $SORGU = $DB->prepare($sql);
 
-        $KOMUT->bindParam(':id', $id);
-        $KOMUT->bindParam(':name',  $name);
-        $KOMUT->bindParam(':email', $email);
+        $SORGU->bindParam(':id', $id);
+        $SORGU->bindParam(':name',  $name);
+        $SORGU->bindParam(':email', $email);
 
-        $KOMUT->execute();
+        $SORGU->execute();
         echo "User updated";
         header('location: ../index.php');
     }
@@ -58,11 +58,11 @@
     if(isset($_POST['delete'])) {
         $id = $_POST['id'];
         $sql = "DELETE FROM users WHERE id = :id";
-        $KOMUT = $DB->prepare($sql);
+        $SORGU = $DB->prepare($sql);
 
-        $KOMUT->bindParam(':id', $id);
+        $SORGU->bindParam(':id', $id);
 
-        $KOMUT->execute();
+        $SORGU->execute();
         echo "User deleted";
         header('location: ../index.php');
     }

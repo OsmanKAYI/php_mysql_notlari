@@ -5,13 +5,13 @@
     $id    = $_GET['id'];
 
     $sql = "SELECT * FROM ilanlar WHERE id = :id";
-    $KOMUT = $DB->prepare($sql);
+    $SORGU = $DB->prepare($sql);
     
-    $KOMUT->bindParam(':id', $id);
+    $SORGU->bindParam(':id', $id);
     
-    $KOMUT->execute();
+    $SORGU->execute();
 
-    $rows = $KOMUT->fetchAll(PDO::FETCH_ASSOC);
+    $rows = $SORGU->fetchAll(PDO::FETCH_ASSOC);
     $row  = $rows[0];
 
     // echo "<pre>"; print_r($users);

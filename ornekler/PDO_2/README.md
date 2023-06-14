@@ -59,9 +59,9 @@ try {
 
 require_once('db.php');
 
-$KOMUT = $DB->prepare("SELECT id, name, email FROM users");
-$KOMUT->execute();
-$users = $KOMUT->fetchAll(PDO::FETCH_ASSOC);
+$SORGU = $DB->prepare("SELECT id, name, email FROM users");
+$SORGU->execute();
+$users = $SORGU->fetchAll(PDO::FETCH_ASSOC);
 //echo '<pre>'; print_r($users);
 
 foreach($users as $user) {
@@ -98,12 +98,12 @@ if(isset($_POST['name'])){
     $email = $_POST['email'];
 
     $sql = "INSERT INTO users (name, email) VALUES (:name, :email)";
-    $KOMUT = $DB->prepare($sql);
+    $SORGU = $DB->prepare($sql);
 
-    $KOMUT->bindParam(':name',  $name);
-    $KOMUT->bindParam(':email', $email);
+    $SORGU->bindParam(':name',  $name);
+    $SORGU->bindParam(':email', $email);
 
-    $KOMUT->execute();
+    $SORGU->execute();
     echo "User created";
 }
 ```
@@ -119,11 +119,11 @@ require_once('db.php');
 $id    = $_GET['id'];
 
 $sql = "DELETE FROM users WHERE id = :id";
-$KOMUT = $DB->prepare($sql);
+$SORGU = $DB->prepare($sql);
 
-$KOMUT->bindParam(':id', $id);
+$SORGU->bindParam(':id', $id);
 
-$KOMUT->execute();
+$SORGU->execute();
 echo "User deleted";
 echo "<p><a href='list.php'>Listeye Dön</a></p>";
 ```
@@ -147,27 +147,27 @@ echo "<p><a href='list.php'>Listeye Dön</a></p>";
         $id    = $_GET['id'];
 
         $sql = "UPDATE users SET name = :name, email = :email WHERE id = :id";
-        $KOMUT = $DB->prepare($sql);
+        $SORGU = $DB->prepare($sql);
 
-        $KOMUT->bindParam(':name',  $name);
-        $KOMUT->bindParam(':email', $email);
-        $KOMUT->bindParam(':id',    $id);
+        $SORGU->bindParam(':name',  $name);
+        $SORGU->bindParam(':email', $email);
+        $SORGU->bindParam(':id',    $id);
 
         // die(date("H:i:s"));
-        $KOMUT->execute();
+        $SORGU->execute();
         echo "User updated";
     }
 
     $id    = $_GET['id'];
 
     $sql = "SELECT * FROM users WHERE id = :id";
-    $KOMUT = $DB->prepare($sql);
+    $SORGU = $DB->prepare($sql);
 
-    $KOMUT->bindParam(':id', $id);
+    $SORGU->bindParam(':id', $id);
 
-    $KOMUT->execute();
+    $SORGU->execute();
 
-    $users = $KOMUT->fetchAll(PDO::FETCH_ASSOC);
+    $users = $SORGU->fetchAll(PDO::FETCH_ASSOC);
     $user  = $users[0];
 
     // echo "<pre>"; print_r($users);

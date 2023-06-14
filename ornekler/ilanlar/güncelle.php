@@ -17,30 +17,30 @@
         $id      = $_GET['id'];
 
         $sql = "UPDATE ilanlar SET baslik = :baslik, tarih = :tarih, detay = :detay, telefon = :telefon, konum = :konum WHERE id = :id";
-        $KOMUT = $DB->prepare($sql);
+        $SORGU = $DB->prepare($sql);
 
-        $KOMUT->bindParam(':baslik',  $baslik);
-        $KOMUT->bindParam(':tarih',   $tarih);
-        $KOMUT->bindParam(':detay',   $detay);
-        $KOMUT->bindParam(':telefon', $telefon);
-        $KOMUT->bindParam(':konum',   $konum);
-        $KOMUT->bindParam(':id',      $id);
+        $SORGU->bindParam(':baslik',  $baslik);
+        $SORGU->bindParam(':tarih',   $tarih);
+        $SORGU->bindParam(':detay',   $detay);
+        $SORGU->bindParam(':telefon', $telefon);
+        $SORGU->bindParam(':konum',   $konum);
+        $SORGU->bindParam(':id',      $id);
 
         // die(date("H:i:s"));
-        $KOMUT->execute();
+        $SORGU->execute();
         echo "İlan güncellendi";
     }
 
     $id    = $_GET['id'];
 
     $sql = "SELECT * FROM ilanlar WHERE id = :id";
-    $KOMUT = $DB->prepare($sql);
+    $SORGU = $DB->prepare($sql);
     
-    $KOMUT->bindParam(':id', $id);
+    $SORGU->bindParam(':id', $id);
     
-    $KOMUT->execute();
+    $SORGU->execute();
 
-    $rows = $KOMUT->fetchAll(PDO::FETCH_ASSOC);
+    $rows = $SORGU->fetchAll(PDO::FETCH_ASSOC);
     $row  = $rows[0];
 
     // echo "<pre>"; print_r($rows);

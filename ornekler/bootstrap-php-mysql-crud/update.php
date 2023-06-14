@@ -14,10 +14,10 @@
             echo "ID is required"; exit;
         }
         include('db/connection.php');
-        $KOMUT = $DB->prepare("SELECT id, name, email FROM users WHERE id = :id");
-        $KOMUT->bindParam(':id', $_GET['id']);
-        $KOMUT->execute();
-        $user = $KOMUT->fetch(PDO::FETCH_ASSOC);
+        $SORGU = $DB->prepare("SELECT id, name, email FROM users WHERE id = :id");
+        $SORGU->bindParam(':id', $_GET['id']);
+        $SORGU->execute();
+        $user = $SORGU->fetch(PDO::FETCH_ASSOC);
     ?>
     <h2 class="mt-5">Update user</h2>
     <form action="db/action.php" method="post" class="border p-5">

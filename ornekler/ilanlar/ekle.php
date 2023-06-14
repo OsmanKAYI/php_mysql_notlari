@@ -11,15 +11,15 @@ if(isset($_POST['baslik'])){
     $konum   = $_POST['konum'];
 
     $sql = "INSERT INTO ilanlar (baslik, tarih, detay, telefon, konum) VALUES (:baslik, :tarih, :detay, :telefon, :konum)";
-    $KOMUT = $DB->prepare($sql);
+    $SORGU = $DB->prepare($sql);
     
-    $KOMUT->bindParam(':baslik',  $baslik);
-    $KOMUT->bindParam(':tarih',   $tarih);
-    $KOMUT->bindParam(':detay',   $detay);
-    $KOMUT->bindParam(':telefon', $telefon);
-    $KOMUT->bindParam(':konum',   $konum);
+    $SORGU->bindParam(':baslik',  $baslik);
+    $SORGU->bindParam(':tarih',   $tarih);
+    $SORGU->bindParam(':detay',   $detay);
+    $SORGU->bindParam(':telefon', $telefon);
+    $SORGU->bindParam(':konum',   $konum);
     
-    $KOMUT->execute();
+    $SORGU->execute();
     echo "İlan eklendi";
 }
 ?>

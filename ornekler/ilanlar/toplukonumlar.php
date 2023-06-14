@@ -2,9 +2,9 @@
 
 require_once('db.php');
 
-$KOMUT = $DB->prepare("SELECT id, baslik, konum FROM ilanlar WHERE konum <> '' ");
-$KOMUT->execute();
-$rows = $KOMUT->fetchAll(PDO::FETCH_ASSOC);
+$SORGU = $DB->prepare("SELECT id, baslik, konum FROM ilanlar WHERE konum <> '' ");
+$SORGU->execute();
+$rows = $SORGU->fetchAll(PDO::FETCH_ASSOC);
 // echo '<pre>'; print_r($rows);
 
 $arrKonumlar = array();

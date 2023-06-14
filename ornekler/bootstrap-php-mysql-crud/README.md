@@ -181,12 +181,12 @@ try  {
 $name  =  "Nuri";
 $email =  "nuri@gmail.com";
 $sql   =  "INSERT INTO users (name, email) VALUES (:name, :email)";
-$KOMUT  =  $DB->prepare($sql);
+$SORGU  =  $DB->prepare($sql);
 
-$KOMUT->bindParam(':name',  $name);
-$KOMUT->bindParam(':email',  $email);
+$SORGU->bindParam(':name',  $name);
+$SORGU->bindParam(':email',  $email);
 
-$KOMUT->execute();
+$SORGU->execute();
 
 echo  "User created";
 ```
@@ -194,10 +194,10 @@ echo  "User created";
 ### KAYIT LİSTELEME - SELECT/READ
 
 ```PHP
-$KOMUT  =  $DB->prepare("SELECT id, name, email FROM users");
-$KOMUT->execute();
+$SORGU  =  $DB->prepare("SELECT id, name, email FROM users");
+$SORGU->execute();
 
-$users  =  $KOMUT->fetchAll(PDO::FETCH_ASSOC);
+$users  =  $SORGU->fetchAll(PDO::FETCH_ASSOC);
 //echo '<pre>'; print_r($users);
 
 foreach($users  as  $user)  {
@@ -215,12 +215,12 @@ $email =  "nuriakman@gmail.com";
 $id    =  1;
 
 $sql   =  "UPDATE users SET  name  = :name, email = :email WHERE id = :id";
-$KOMUT  =  $DB->prepare($sql);
+$SORGU  =  $DB->prepare($sql);
 
-$KOMUT->bindParam(':name',  $name);
-$KOMUT->bindParam(':email',  $email);
+$SORGU->bindParam(':name',  $name);
+$SORGU->bindParam(':email',  $email);
 
-$KOMUT->execute();
+$SORGU->execute();
 echo  "User updated";
 ```
 
@@ -229,11 +229,11 @@ echo  "User updated";
 ```PHP
 $id   =  1;
 $sql  =  "DELETE  FROM users WHERE id = :id";
-$KOMUT =  $DB->prepare($sql);
+$SORGU =  $DB->prepare($sql);
 
-$KOMUT->bindParam(':id',  $id);
+$SORGU->bindParam(':id',  $id);
 
-$KOMUT->execute();
+$SORGU->execute();
 echo  "User deleted";
 ```
 
