@@ -167,13 +167,13 @@ $servername  =  "localhost";
 $username  =  "root";
 $password  =  "rootroot";
 try  {
-  $conn  =  new  PDO("mysql:host=$servername;dbname=test",  $username,  $password);
-  $conn->setAttribute(PDO::ATTR_ERRMODE,  PDO::ERRMODE_EXCEPTION);
+  $DB  =  new  PDO("mysql:host=$servername;dbname=test",  $username,  $password);
+  $DB->setAttribute(PDO::ATTR_ERRMODE,  PDO::ERRMODE_EXCEPTION);
   echo "Connected successfully";
 }  catch(PDOException  $e)  {
   echo  "Connection failed: "  .  $e->getMessage();
 }
-```  
+```
 
 ### KAYIT EKLEME - CREATE/INSERT
 
@@ -181,7 +181,7 @@ try  {
 $name  =  "Nuri";
 $email =  "nuri@gmail.com";
 $sql   =  "INSERT INTO users (name, email) VALUES (:name, :email)";
-$stmt  =  $conn->prepare($sql);
+$stmt  =  $DB->prepare($sql);
 
 $stmt->bindParam(':name',  $name);
 $stmt->bindParam(':email',  $email);
@@ -194,7 +194,7 @@ echo  "User created";
 ### KAYIT LİSTELEME - SELECT/READ
 
 ```PHP
-$stmt  =  $conn->prepare("SELECT id, name, email FROM users");
+$stmt  =  $DB->prepare("SELECT id, name, email FROM users");
 $stmt->execute();
 
 $users  =  $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -206,7 +206,7 @@ foreach($users  as  $user)  {
   echo  $user['email']  ;
 }
 ```
-  
+
 ### KAYIT GÜNCELLEME - UPDATE
 
 ```PHP
@@ -215,7 +215,7 @@ $email =  "nuriakman@gmail.com";
 $id    =  1;
 
 $sql   =  "UPDATE users SET  name  = :name, email = :email WHERE id = :id";
-$stmt  =  $conn->prepare($sql);
+$stmt  =  $DB->prepare($sql);
 
 $stmt->bindParam(':name',  $name);
 $stmt->bindParam(':email',  $email);
@@ -229,7 +229,7 @@ echo  "User updated";
 ```PHP
 $id   =  1;
 $sql  =  "DELETE  FROM users WHERE id = :id";
-$stmt =  $conn->prepare($sql);
+$stmt =  $DB->prepare($sql);
 
 $stmt->bindParam(':id',  $id);
 
@@ -241,8 +241,8 @@ echo  "User deleted";
 
 ```PHP
 
-	$stmt1  =  $conn->query('SELECT id, name FROM users');
-	$stmt2  =  $conn->query('SELECT id, name FROM users');
+	$stmt1  =  $DB->query('SELECT id, name FROM users');
+	$stmt2  =  $DB->query('SELECT id, name FROM users');
 
 	$cevap1 = $stmt1->fetchAll(PDO::FETCH_KEY_PAIR);
 	$cevap2 = $stmt2->fetchAll(PDO::FETCH_ASSOC);
@@ -302,4 +302,3 @@ mysql -u root -p
 - İndirlmiş olan dosya bu dizine taşınır
 - Taşınan dosyanın adı `index.php` olarak değiştirilir
 - Artık, `http://localhost/adminer` yazılarak uygulamaya giriş yapılabilir
-

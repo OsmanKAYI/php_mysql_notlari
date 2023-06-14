@@ -30,7 +30,7 @@
 
     <?php
         include('db/connection.php');
-        $stmt = $conn->prepare("SELECT id, name, email FROM users");
+        $stmt = $DB->prepare("SELECT id, name, email FROM users");
         $stmt->execute();
         $users = $stmt->fetchAll(PDO::FETCH_ASSOC);
         //echo '<pre>'; print_r($users);

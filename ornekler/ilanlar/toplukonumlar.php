@@ -2,7 +2,7 @@
 
 require_once('db.php');
 
-$stmt = $conn->prepare("SELECT id, baslik, konum FROM ilanlar WHERE konum <> '' ");
+$stmt = $DB->prepare("SELECT id, baslik, konum FROM ilanlar WHERE konum <> '' ");
 $stmt->execute();
 $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 // echo '<pre>'; print_r($rows);

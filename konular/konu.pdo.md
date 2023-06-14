@@ -30,9 +30,9 @@ $password   = "root";
 $dbname     = "ORNEKLER";
 
 try {
-  $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+  $DB = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
   // set the PDO error mode to exception
-  $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+  $DB->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
   // echo "Connected successfully";
 } catch(PDOException $e) {
   echo "Connection failed: " . $e->getMessage();
@@ -43,7 +43,7 @@ try {
 ### KAYIT LİSTELEME - SELECT/READ
 
 ```PHP
-$stmt = $conn->prepare("SELECT id, name, email FROM users");
+$stmt = $DB->prepare("SELECT id, name, email FROM users");
 $stmt->execute();
 $users = $stmt->fetchAll(PDO::FETCH_ASSOC);
 //echo '<pre>'; print_r($users);
@@ -60,7 +60,7 @@ $name  = "Nuri";
 $email = "nuri@hotmail.com";
 
 $sql = "INSERT INTO users (name, email) VALUES (:name, :email)";
-$stmt = $conn->prepare($sql);
+$stmt = $DB->prepare($sql);
 
 $stmt->bindParam(':name', $name);
 $stmt->bindParam(':email', $email);
@@ -68,7 +68,6 @@ $stmt->bindParam(':email', $email);
 $stmt->execute();
 echo "User created";
 ```
-
 
 ### KAYIT GÜNCELLEME - UPDATE
 
@@ -78,7 +77,7 @@ $email = "nuri@gmail.com";
 $id    = 4;
 
 $sql = "UPDATE users SET name = :name, email = :email WHERE id = :id";
-$stmt = $conn->prepare($sql);
+$stmt = $DB->prepare($sql);
 
 $stmt->bindParam(':name', $name);
 $stmt->bindParam(':email', $email);
@@ -94,7 +93,7 @@ echo "User updated";
 $id    = 4;
 
 $sql = "DELETE FROM users WHERE id = :id";
-$stmt = $conn->prepare($sql);
+$stmt = $DB->prepare($sql);
 
 $stmt->bindParam(':id', $id);
 
@@ -113,20 +112,20 @@ $password    = "root";
 $dbname      = "ORNEKLER";
 
 try  {
-  $conn  =  new  PDO("mysql:host=$servername;dbname=$dbname",  $username,  $password);
-  $conn->setAttribute(PDO::ATTR_ERRMODE,  PDO::ERRMODE_EXCEPTION);
-  $conn->exec("SET names utf8  "); // utf8mb4
-  $conn->exec("SET sql_mode='' ");
+  $DB  =  new  PDO("mysql:host=$servername;dbname=$dbname",  $username,  $password);
+  $DB->setAttribute(PDO::ATTR_ERRMODE,  PDO::ERRMODE_EXCEPTION);
+  $DB->exec("SET names utf8  "); // utf8mb4
+  $DB->exec("SET sql_mode='' ");
   // echo "Connected successfully";
 }  catch(PDOException  $e)  {
   echo  "Connection failed: "  .  $e->getMessage();
   die();
 }
 
-$stmt1  =  $conn->query('SELECT id, name FROM users');
-$stmt2  =  $conn->query('SELECT id, name FROM users');
-$stmt3  =  $conn->query('SELECT id, name FROM users');
-$stmt4  =  $conn->query('SELECT id, name FROM users');
+$stmt1  =  $DB->query('SELECT id, name FROM users');
+$stmt2  =  $DB->query('SELECT id, name FROM users');
+$stmt3  =  $DB->query('SELECT id, name FROM users');
+$stmt4  =  $DB->query('SELECT id, name FROM users');
 
 $cevap1 = $stmt1->fetchAll(PDO::FETCH_KEY_PAIR);
 $cevap2 = $stmt2->fetchAll(PDO::FETCH_ASSOC);

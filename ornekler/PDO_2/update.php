@@ -14,7 +14,7 @@
         $id    = $_GET['id'];
 
         $sql = "UPDATE users SET name = :name, email = :email WHERE id = :id";
-        $stmt = $conn->prepare($sql);
+        $stmt = $DB->prepare($sql);
 
         $stmt->bindParam(':name',  $name);
         $stmt->bindParam(':email', $email);
@@ -28,7 +28,7 @@
     $id    = $_GET['id'];
 
     $sql = "SELECT * FROM users WHERE id = :id";
-    $stmt = $conn->prepare($sql);
+    $stmt = $DB->prepare($sql);
     
     $stmt->bindParam(':id', $id);
     

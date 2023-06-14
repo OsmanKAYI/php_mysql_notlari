@@ -17,7 +17,7 @@
         $id      = $_GET['id'];
 
         $sql = "UPDATE ilanlar SET baslik = :baslik, tarih = :tarih, detay = :detay, telefon = :telefon, konum = :konum WHERE id = :id";
-        $stmt = $conn->prepare($sql);
+        $stmt = $DB->prepare($sql);
 
         $stmt->bindParam(':baslik',  $baslik);
         $stmt->bindParam(':tarih',   $tarih);
@@ -34,7 +34,7 @@
     $id    = $_GET['id'];
 
     $sql = "SELECT * FROM ilanlar WHERE id = :id";
-    $stmt = $conn->prepare($sql);
+    $stmt = $DB->prepare($sql);
     
     $stmt->bindParam(':id', $id);
     

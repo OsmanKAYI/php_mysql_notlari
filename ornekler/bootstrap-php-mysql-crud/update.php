@@ -14,7 +14,7 @@
             echo "ID is required"; exit;
         }
         include('db/connection.php');
-        $stmt = $conn->prepare("SELECT id, name, email FROM users WHERE id = :id");
+        $stmt = $DB->prepare("SELECT id, name, email FROM users WHERE id = :id");
         $stmt->bindParam(':id', $_GET['id']);
         $stmt->execute();
         $user = $stmt->fetch(PDO::FETCH_ASSOC);

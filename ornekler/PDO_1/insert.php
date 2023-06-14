@@ -7,7 +7,7 @@ $name  = "Nuri";
 $email = "nuri@hotmail.com";
 
 $sql = "INSERT INTO users (name, email) VALUES (:name, :email)";
-$stmt = $conn->prepare($sql);
+$stmt = $DB->prepare($sql);
 
 $stmt->bindParam(':name', $name);
 $stmt->bindParam(':email', $email);

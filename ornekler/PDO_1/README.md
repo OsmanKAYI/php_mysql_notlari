@@ -42,9 +42,9 @@ $password   = "root";
 $dbname     = "ORNEKLER";
 
 try {
-  $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+  $DB = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
   // set the PDO error mode to exception
-  $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+  $DB->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
   // echo "Connected successfully";
 } catch(PDOException $e) {
   echo "Connection failed: " . $e->getMessage();
@@ -59,7 +59,7 @@ try {
 
 require_once('db.php');
 
-$stmt = $conn->prepare("SELECT id, name, email FROM users");
+$stmt = $DB->prepare("SELECT id, name, email FROM users");
 $stmt->execute();
 $users = $stmt->fetchAll(PDO::FETCH_ASSOC);
 //echo '<pre>'; print_r($users);
@@ -76,7 +76,7 @@ foreach($users as $user) {
 
 require_once('db.php');
 
-$stmt = $conn->prepare("SELECT * FROM bigTable");
+$stmt = $DB->prepare("SELECT * FROM bigTable");
 $stmt->execute();
 $stmt->setFetchMode(PDO::FETCH_ASSOC);
 
@@ -97,7 +97,7 @@ $name  = "Nuri";
 $email = "nuri@hotmail.com";
 
 $sql = "INSERT INTO users (name, email) VALUES (:name, :email)";
-$stmt = $conn->prepare($sql);
+$stmt = $DB->prepare($sql);
 
 $stmt->bindParam(':name', $name);
 $stmt->bindParam(':email', $email);
@@ -118,7 +118,7 @@ require_once('db.php');
 $id    = 4;
 
 $sql = "DELETE FROM users WHERE id = :id";
-$stmt = $conn->prepare($sql);
+$stmt = $DB->prepare($sql);
 
 $stmt->bindParam(':id', $id);
 
@@ -139,7 +139,7 @@ $email = "nuri@gmail.com";
 $id    = 4;
 
 $sql = "UPDATE users SET name = :name, email = :email WHERE id = :id";
-$stmt = $conn->prepare($sql);
+$stmt = $DB->prepare($sql);
 
 $stmt->bindParam(':name', $name);
 $stmt->bindParam(':email', $email);

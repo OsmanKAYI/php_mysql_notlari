@@ -5,7 +5,7 @@
     $id    = $_GET['id'];
 
     $sql = "SELECT * FROM ilanlar WHERE id = :id";
-    $stmt = $conn->prepare($sql);
+    $stmt = $DB->prepare($sql);
     
     $stmt->bindParam(':id', $id);
     

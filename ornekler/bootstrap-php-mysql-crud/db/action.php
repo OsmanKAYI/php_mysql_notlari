@@ -18,7 +18,7 @@
         $email = $_POST['email'];
 
         $sql = "INSERT INTO users (name, email) VALUES (:name, :email)";
-        $stmt = $conn->prepare($sql);
+        $stmt = $DB->prepare($sql);
 
         $stmt->bindParam(':name',  $name);
         $stmt->bindParam(':email', $email);
@@ -44,7 +44,7 @@
 
         $id = $_POST['id'];
         $sql = "UPDATE users SET name = :name, email = :email WHERE id = :id";
-        $stmt = $conn->prepare($sql);
+        $stmt = $DB->prepare($sql);
 
         $stmt->bindParam(':id', $id);
         $stmt->bindParam(':name',  $name);
@@ -58,7 +58,7 @@
     if(isset($_POST['delete'])) {
         $id = $_POST['id'];
         $sql = "DELETE FROM users WHERE id = :id";
-        $stmt = $conn->prepare($sql);
+        $stmt = $DB->prepare($sql);
 
         $stmt->bindParam(':id', $id);
 

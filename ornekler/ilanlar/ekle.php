@@ -11,7 +11,7 @@ if(isset($_POST['baslik'])){
     $konum   = $_POST['konum'];
 
     $sql = "INSERT INTO ilanlar (baslik, tarih, detay, telefon, konum) VALUES (:baslik, :tarih, :detay, :telefon, :konum)";
-    $stmt = $conn->prepare($sql);
+    $stmt = $DB->prepare($sql);
     
     $stmt->bindParam(':baslik',  $baslik);
     $stmt->bindParam(':tarih',   $tarih);

@@ -4,7 +4,7 @@
 
 require_once('db.php');
 
-$stmt = $conn->prepare("SELECT * FROM ilanlar");
+$stmt = $DB->prepare("SELECT * FROM ilanlar");
 $stmt->execute();
 $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 //echo '<pre>'; print_r($rows);
