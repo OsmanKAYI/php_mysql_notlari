@@ -6,9 +6,9 @@ require_once('db.php');
 $id    = 4;
 
 $sql = "DELETE FROM users WHERE id = :id";
-$stmt = $DB->prepare($sql);
+$KOMUT = $DB->prepare($sql);
 
-$stmt->bindParam(':id', $id);
+$KOMUT->bindParam(':id', $id);
 
-$stmt->execute();
+$KOMUT->execute();
 echo "User deleted";

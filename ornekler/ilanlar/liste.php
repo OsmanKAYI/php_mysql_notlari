@@ -4,9 +4,9 @@
 
 require_once('db.php');
 
-$stmt = $DB->prepare("SELECT * FROM ilanlar");
-$stmt->execute();
-$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+$KOMUT = $DB->prepare("SELECT * FROM ilanlar");
+$KOMUT->execute();
+$rows = $KOMUT->fetchAll(PDO::FETCH_ASSOC);
 //echo '<pre>'; print_r($rows);
 
 foreach($rows as $row) {

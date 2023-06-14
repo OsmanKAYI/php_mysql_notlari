@@ -3,9 +3,9 @@
 require_once('db.php');
 
 
-$stmt = $DB->prepare("SELECT id, name, email FROM users");
-$stmt->execute();
-$users = $stmt->fetchAll(PDO::FETCH_ASSOC);
+$KOMUT = $DB->prepare("SELECT id, name, email FROM users");
+$KOMUT->execute();
+$users = $KOMUT->fetchAll(PDO::FETCH_ASSOC);
 //echo '<pre>'; print_r($users);
 
 foreach($users as $user) {
@@ -14,11 +14,11 @@ foreach($users as $user) {
 
 /* if you will work with thousands of rows, use the following to fetch
 
-$stmt = $DB->prepare("SELECT * FROM bigTable");
-$stmt->execute();
-$stmt->setFetchMode(PDO::FETCH_ASSOC);
+$KOMUT = $DB->prepare("SELECT * FROM bigTable");
+$KOMUT->execute();
+$KOMUT->setFetchMode(PDO::FETCH_ASSOC);
 
-while($user = $stmt->fetch()) {
+while($user = $KOMUT->fetch()) {
     echo " {$user['id']} : {$user['name']}, {$user['email']} <br>";
 }
 */

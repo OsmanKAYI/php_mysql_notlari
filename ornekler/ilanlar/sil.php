@@ -5,10 +5,10 @@ require_once('db.php');
 $id    = $_GET['id'];
 
 $sql = "DELETE FROM ilanlar WHERE id = :id";
-$stmt = $DB->prepare($sql);
+$KOMUT = $DB->prepare($sql);
 
-$stmt->bindParam(':id', $id);
+$KOMUT->bindParam(':id', $id);
 
-$stmt->execute();
+$KOMUT->execute();
 echo "İlan silindi";
 echo "<p><a href='liste.php'>Listeye Dön</a></p>";

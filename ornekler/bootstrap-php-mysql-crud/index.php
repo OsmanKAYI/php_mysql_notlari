@@ -30,9 +30,9 @@
 
     <?php
         include('db/connection.php');
-        $stmt = $DB->prepare("SELECT id, name, email FROM users");
-        $stmt->execute();
-        $users = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        $KOMUT = $DB->prepare("SELECT id, name, email FROM users");
+        $KOMUT->execute();
+        $users = $KOMUT->fetchAll(PDO::FETCH_ASSOC);
         //echo '<pre>'; print_r($users);
 
         foreach($users as $user) { ?>

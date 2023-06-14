@@ -6,10 +6,10 @@ require_once('db.php');
 $id    = $_GET['id'];
 
 $sql = "DELETE FROM users WHERE id = :id";
-$stmt = $DB->prepare($sql);
+$KOMUT = $DB->prepare($sql);
 
-$stmt->bindParam(':id', $id);
+$KOMUT->bindParam(':id', $id);
 
-$stmt->execute();
+$KOMUT->execute();
 echo "User deleted";
 echo "<p><a href='list.php'>Listeye Dön</a></p>";
