@@ -1,6 +1,6 @@
-# İlk Yapılacaklar
+# İlk Yapılacaklar (Windows Kullanıcıları İçin)
 
-## xampp İnidirilmesi ve Kurulması
+## xampp İndirilmesi ve Kurulması
 
 - xampp setup dosyasını [buradan](https://www.apachefriends.org/download.html) indirin.
 - İndirilen dosyayı çalıştırın ve peşisıra `Next (İleri)` düğmesine basarak kurulumu tammalayalım (Herhangi bir özel ayar gerektirmez).
