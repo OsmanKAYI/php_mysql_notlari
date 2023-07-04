@@ -40,14 +40,19 @@ sudo apt install git npm guake guake-indicator pv meld vim ncdu axel xclip net-t
 # Sistem genelinde karakter set olarak UTF8 kullan
 LC_ALL=C.UTF-8
 
-# vscode kurulumu
+# vscode kurulumu   Kaynak: https://code.visualstudio.com/docs/setup/linux
+sudo apt-get install wget gpg
 ## vscode için güvenilir depolara vscode'un kendi deposunu ve imzasını ekle
-wget -O- https://packages.microsoft.com/keys/microsoft.asc | sudo gpg --dearmor | sudo tee /usr/share/keyrings/vscode.gpg
-echo deb [arch=amd64 signed-by=/usr/share/keyrings/vscode.gpg] https://packages.microsoft.com/repos/vscode stable main | sudo tee /etc/apt/sources.list.d/vscode.list
+wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg
+sudo install -D -o root -g root -m 644 packages.microsoft.gpg /etc/apt/keyrings/packages.microsoft.gpg
+sudo sh -c 'echo "deb [arch=amd64,arm64,armhf signed-by=/etc/apt/keyrings/packages.microsoft.gpg] https://packages.microsoft.com/repos/code stable main" > /etc/apt/sources.list.d/vscode.list'
+rm -f packages.microsoft.gpg
+
+sudo apt install apt-transport-https
 ## Depolarda yer alan paketlerin güncel listesini indir
 sudo apt update
 ## vscode paketini kur
-sudo apt install code -y
+sudo apt install code # or code-insiders
 
 # Dilediğimiz herhangi bir PHP sürümünü yükleyebilmek için
 # PHP  için güvenilir depolara PHP'nin kendi deposunu ekle
