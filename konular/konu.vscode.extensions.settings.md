@@ -1,4 +1,22 @@
-# VS Code Eklentileri
+# VS Code
+
+- Visual Studio Code, also commonly referred to as VSCode, is a source-code editor made by Microsoft with the Electron Framework, for Windows, Linux and macOS. Features include support for debugging, syntax highlighting, intelligent code completion, snippets, code refactoring, and embedded Git.
+
+## VS Code Kurulumu
+
+**Windows**
+
+- VS Code [indirin](https://code.visualstudio.com/docs/?dv=win32user).
+- Standart kurulum aşamalarını takip edin.
+
+**Linux**
+
+```BASH
+sudo apt install software-properties-common apt-transport-https wget -y
+wget -O- https://packages.microsoft.com/keys/microsoft.asc | sudo gpg --dearmor | sudo tee /usr/share/keyrings/vscode.gpg
+echo deb [arch=amd64 signed-by=/usr/share/keyrings/vscode.gpg] https://packages.microsoft.com/repos/vscode stable main | sudo tee /etc/apt/sources.list.d/vscode.list
+sudo apt install code -y
+```
 
 ## Faydalı VS Code Eklentileri Listesi
 
@@ -77,7 +95,7 @@
 
 #### setting.json Dosya İçeriği
 
-```BASH
+```CONFIG
 ///////////////////////// VISUAL STUDIO CODE /////////////////////////
 ///////////////////////// VISUAL STUDIO CODE /////////////////////////
 ///////////////////////// VISUAL STUDIO CODE /////////////////////////
@@ -94,12 +112,17 @@
   // will be detected based on the file contents. Set to false to keep
   // the values you've explicitly set, above.
   "editor.detectIndentation": false,
-
-  // The window zoom level configuration (default is 0)
-  "window.zoomLevel": 0,
-
-  // Font size configuration
   "editor.fontSize": 18,
+
+  // Shows the nested current scopes during the scroll at the top of the editor.
+  "editor.stickyScroll.enabled": true,
+
+  // Defines the border of focused and unfocused tabs and background of focused tab
+  "workbench.colorCustomizations": {
+    "tab.activeBorder": "#ff0000",
+    "tab.unfocusedActiveBorder": "#000000",
+    "tab.activeBackground": "#009688"
+  },
 
   ///////////////////////// Code Runner /////////////////////////
   ///////////////////////// Code Runner /////////////////////////
@@ -147,6 +170,15 @@
     }
   ],
 
+  ///////////////////////// Incrementor /////////////////////////
+  ///////////////////////// Incrementor /////////////////////////
+  ///////////////////////// Incrementor /////////////////////////
+  "incrementor.enums.values": [
+    ["false", "true"],
+    ["let", "const"],
+    ["public", "private", "protected"]
+  ],
+
   ///////////////////////// indent-rainbow /////////////////////////
   ///////////////////////// indent-rainbow /////////////////////////
   ///////////////////////// indent-rainbow /////////////////////////
@@ -187,6 +219,14 @@
   "inlineFold.unfoldOnLineSelect": true,
   "inlineFold.autoFold": true,
 
+  ///////////////////////// Marp for VS Code /////////////////////////
+  ///////////////////////// Marp for VS Code /////////////////////////
+  ///////////////////////// Marp for VS Code /////////////////////////
+  "markdown.marp.themes": [
+    "https://example.com/foo/bar/custom-theme.css",
+    "./themes/your-theme.css"
+  ],
+
   ///////////////////////// Matertial Icon Theme /////////////////////////
   ///////////////////////// Matertial Icon Theme /////////////////////////
   ///////////////////////// Matertial Icon Theme /////////////////////////
@@ -202,7 +242,6 @@
   "terminal.integrated.defaultProfile.windows": "Git Bash",
   "workbench.startupEditor": "none",
   "editor.mouseWheelZoom": true,
-  "editor.multiCursorModifier": "ctrlCmd",
 
   ///////////////////////// PHP Debug /////////////////////////
   ///////////////////////// PHP Debug /////////////////////////
@@ -247,13 +286,14 @@
       //other styling properties goes here ...
     }
   ],
-  "todohighlight.keywordsPattern": "TODO:|FIXME:|\\(([^)]+)\\)", //highlight `TODO:`,`FIXME:` or content between parentheses
+  "todohighlight.keywordsPattern": "TODO:|FIXME", //highlight `TODO:`,`FIXME`
+  //add following :|\\(([^)]+)\\) code after FIXME to highlight the content between parentheses
   "todohighlight.defaultStyle": {
     "color": "red",
-    "backgroundColor": "#ffab00",
+    "backgroundColor": "#00BCD4",
     "overviewRulerColor": "#ffab00",
     "cursor": "pointer",
-    "border": "1px solid #eee",
+    "border": "1px solid #006064",
     "borderRadius": "2px",
     "isWholeLine": true
     //other styling properties goes here ...
@@ -309,7 +349,24 @@
   "liveServer.settings.donotShowInfoMsg": true,
   "editor.formatOnType": true,
   "editor.formatOnPaste": true,
-  "projectManager.git.baseFolders": ["folder/to/path1", "folder/to/path2"],
-  "editor.formatOnSave": true
+  "projectManager.git.baseFolders": ["/home/osman/source", "/var/www/html"],
+  "editor.formatOnSave": true,
+  "[html]": {
+    "editor.defaultFormatter": "vscode.html-language-features"
+  },
+  "[vue]": {
+    "editor.defaultFormatter": "Vue.volar"
+  },
+  "git.openRepositoryInParentFolders": "always",
+  "editor.multiCursorModifier": "ctrlCmd",
+  "editor.unicodeHighlight.nonBasicASCII": false,
+  "notebook.cellToolbarLocation": {
+    "default": "right",
+    "jupyter-notebook": "right"
+  },
+  "explorer.confirmDragAndDrop": false,
+  "vetur.validation.template": false,
+  "git.suggestSmartCommit": false,
+  "chronicler.ffmpeg-binary": "/usr/bin/ffmpeg"
 }
 ```
