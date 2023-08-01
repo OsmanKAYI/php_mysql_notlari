@@ -1,7 +1,9 @@
 # PHP ile Web Programlamaya Giriş
 
 ## Konular
+
 - [ ] [İlk Yapılacaklar](./konular/konu.ilk.yapilacaklar.md)
+- [ ] [VS Code](./konular/konu.vscode.extensions.settings.md)
 - [ ] [Komut Satırı ile MySQL kullanımı](./konular/konu.mysql.cli.md)
 - [ ] [Sık Kullanılan MySQL Komutları](./konular/konu.mysql.ozet.md)
 - [ ] [Referandum Verisi Üzerinden SQL Ödevi](./konular/konu.sql.odev.md)
@@ -16,6 +18,7 @@
 - [ ] [Redis Kullanımı](./konular/konu.redis.md)
 
 ## Örnekler
+
 - [ ] [İki Sayının Toplanması](./ornekler/toplama/)
 - [ ] [PHP PDO CRUD Aşama 1](./ornekler/PDO_1/)
 - [ ] [PHP PDO CRUD Aşama 2](./ornekler/PDO_2/)
@@ -25,15 +28,18 @@
 - [ ] [Resim Yükleme](./ornekler/resim_yukleme/)
 
 ## Composer Örnekleri
+
 - [ ] [Barcode Üretimi](./ornekler/barcode/)
 - [ ] [QR Code Üretimi](./ornekler/qrcode/)
 
 ## Kapsam Dışı
+
 - [ ] [Ubuntu Kurulumu](./konular/konu.ubuntu.kurulumu.md)
 - [ ] [Adminer Oracle Bağlantısı](./konular/konu.adminer.oracle.md)
 - [ ] [Haritada İşaretçi Gösterimi](./konular/konu.harita.md)
 
 ## Örnek Veritabanları
+
 - [ ] [Referandum Sonuçları 2017](./ornek.veritabanlari/referandum.sql)
 - [ ] [Üniversite Tercih Robotu Verileri 2019](./ornek.veritabanlari/okullar.sql)
 - [ ] [Otomobil Fiyatları](./ornek.veritabanlari/otomobil_fiyatlari.sql)
