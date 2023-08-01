@@ -185,6 +185,8 @@ GROUP BY il;
   <summary>Cevap</summary>
 
 ```SQL
+ALTER TABLE referandum
+ADD oykullanmayan NOT NULL,
 UPDATE referandum SET oykullanmayan = kayitli - oykullanan;
 ```
 </details>
