@@ -186,7 +186,8 @@ GROUP BY il;
 
 ```SQL
 ALTER TABLE referandum
-ADD oykullanmayan NOT NULL,
+ADD oykullanmayan decimal(7,4) NOT NULL;
+
 UPDATE referandum SET oykullanmayan = kayitli - oykullanan;
 ```
 </details>
