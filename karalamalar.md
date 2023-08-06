@@ -5,6 +5,17 @@
 
 - [Tayfun Erbilen - TOKEN Neden Önemli?](https://www.youtube.com/watch?v=FNoAcuoLt-w)
 
+## ALGORİTMA
+- [JavaScript ile Kolay Algoritmalar](https://www.youtube.com/playlist?list=PL0Au88Qum4UmiN0WHD6NKrZNpQqiUwwqe)
+
+## Yapılacak İşler
+
+- https://wizardzines.com/comics/ Bu sayfadan işe yarar olanların listesini çıkarılacak. Özellikle DNS!
+- Notlara DNS başlığı eklenmeli ve şu sayfaya yer verilmeli: https://messwithdns.net/
+
+## Telegram API'si ile mesaj gönderme
+
+- Bu konu notlara eklenmeli!
 
 ## API
 
@@ -17,6 +28,10 @@
 
 Wishlist siteye eklenebilir! Askıda Bilet olarak eklenebilir
 https://www.amazon.co.uk/gp/registry/wishlist/2ASV4RHBSM16H/026-9090951-0551667
+
+## VueJS
+- https://laracasts.com/series/learn-vue-3-step-by-step
+- https://laracasts.com/series/whats-new-in-vue-3
 
 ## Enteresan! Topologically sort
 - https://github.com/marcelklehr/toposort
