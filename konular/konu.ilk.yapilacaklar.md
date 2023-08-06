@@ -26,15 +26,13 @@ mbstring.internal_encoding = UTF-8
 
 ## MySQL yönetimi için Adminer programı kurulumu
 
+- `xammp/htdocs` dizini altındaki her şey silinir
 - `xammp/htdocs` dizini altında `adminer` adında bir klasör oluşturulur.
-- https://www.adminer.org/latest.php veya https://www.adminer.org/latest-mysql.php dosyası indirilir.
-- İndirilen dosyanın adı `index.php` olarak değiştirilir.
-- `index.php` dosyası `xampp/htdocs/adminer` dizini içine taşınır.
-- Adminer'e giriş için `localhost/adminer` yazılır.
-- NOT: root kullanıcısının parolası BOŞ olduğunda adminere giriş yapılamaz. Parolayı değiştirmeniz gerekir.
+- https://www.adminer.org/latest.php dosyası indirilir ve `index.php` adı ile `adminer` dizini içine kaydedilir.
 
 ### MySQL Root kullanıcısı için şifre değiştirme
-
+- `xampp/mysql/bin` dizinine geçiş yapılır.
+- Aşağıdaki komnutlar sırası ile yazılarak MySQL Root kullanıcısının şifresinin değiştirilmesi sağlanır
 ```SQL
 mysql -u root -p
   SET PASSWORD FOR 'root'@'localhost' = PASSWORD("root");
