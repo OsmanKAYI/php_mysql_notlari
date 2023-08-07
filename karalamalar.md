@@ -10,6 +10,7 @@
 
 ## Yapılacak İşler
 
+### DNS
 - https://wizardzines.com/comics/ Bu sayfadan işe yarar olanların listesini çıkarılacak. Özellikle DNS!
 - Notlara DNS başlığı eklenmeli ve şu sayfaya yer verilmeli: https://messwithdns.net/
 
@@ -207,7 +208,9 @@ $json = get_results(JSON, $db);
 # Bağlantılar
 
 - https://fslightbox.com/ Zoom Image ve Resim Galerisi https://furkangiray.com/fslighbox-js-kullanimi/
-- 
+- https://grid.malven.co/
+- https://flexbox.malven.co/
+- https://www.svgrepo.com/
 
 
 # Dahil edilebilecek içerikler
@@ -232,6 +235,8 @@ $json = get_results(JSON, $db);
 - https://www.digitalocean.com/community/tutorials/how-to-reset-your-mysql-or-mariadb-root-password-on-ubuntu-20-04
 - https://www.digitalocean.com/community/tutorials/how-to-import-and-export-databases-in-mysql-or-mariadb
 - https://github.com/spatie/array-to-xml
+- https://github.com/suleymanozcan/PHP_PDO_Ornekleri
+- https://github.com/suleymanozcan/PHP_PDO_Htaccess_Trigger_Ornekleri
 
 
 ## MindMap
