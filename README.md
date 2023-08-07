@@ -44,3 +44,4 @@
 - [ ] [Üniversite Tercih Robotu Verileri 2019](./ornek.veritabanlari/okullar.sql)
 - [ ] [Otomobil Fiyatları](./ornek.veritabanlari/otomobil_fiyatlari.sql)
 - [ ] [Wordle Oyunu için Türkçe Kelimeler](./ornek.veritabanlari/kelimeler.sql)
+- [ ] [Türkiye İl, İlçe, Mahalle, Sokak, Cadde Bilgisi](https://github.com/life/il-ilce-mahalle-sokak-cadde-sql)
