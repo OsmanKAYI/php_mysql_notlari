@@ -16,6 +16,11 @@ systemctl restart apache2
 ```PHP
 <?php
 
+$mysql_host        = "localhost";
+$database_name     = "test";
+$database_user     = "root";
+$database_password = "root";
+
 $redis = new Redis();
 $redis->connect('127.0.0.1', 6379);
 // $redis->auth('REDIS_PASSWORD'); // Redis için parola belirlendiyse buraya yazılır
