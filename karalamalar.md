@@ -3,6 +3,8 @@
 ## Anlatılmasında fayda olan konular
 
 - https://www.npmjs.com/package/json-server
+- https://github.com/nuriakman/test/blob/master/db.json
+- https://my-json-server.typicode.com/nuriakman/test
 
 ## Tavsiye Video Eğitim Setleri
 
