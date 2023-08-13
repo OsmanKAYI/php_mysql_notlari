@@ -13,6 +13,10 @@
 - https://www.koderhq.com/tutorial/vue/
 - https://www.koderhq.com/tutorial/php/
 
+## Tavsiye Edilecek Siteler
+
+- https://www.javatpoint.com/linux-tutorial 
+
 
 ## Güvenlik
 
