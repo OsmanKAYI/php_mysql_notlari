@@ -1,5 +1,16 @@
 # KARALAMALAR
 
+## Anlatılmasında fayda olan konular
+
+- https://www.npmjs.com/package/json-server
+
+## Tavsiye Video Eğitim Setleri
+
+- https://laracasts.com/series/learn-vue-3-step-by-step
+- https://laracasts.com/series/php-for-beginners-2023-edition
+- https://www.koderhq.com/tutorial/vue/
+- https://www.koderhq.com/tutorial/php/
+
 
 ## Güvenlik
 
