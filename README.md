@@ -37,6 +37,7 @@
 - [ ] [Ubuntu Kurulumu](./konular/konu.ubuntu.kurulumu.md)
 - [ ] [Adminer Oracle Bağlantısı](./konular/konu.adminer.oracle.md)
 - [ ] [Haritada İşaretçi Gösterimi](./konular/konu.harita.md)
+- [ ] [Telegram Botu'u ile mesaj gönderme](./konular/konu.telegram.md)
 
 ## Örnek Veritabanları
 
