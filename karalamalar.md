@@ -17,6 +17,9 @@
 
 - https://www.javatpoint.com/linux-tutorial 
 
+## Ödev: Tercih Robotu
+
+- Veritabanı için kaynak: [YÖK](https://www.osym.gov.tr/TR,25658/2023-yuksekogretim-kurumlari-sinavi-yks-yuksekogretim-programlari-ve-kontenjanlari-kilavuzu.html)
 
 ## Güvenlik
 
