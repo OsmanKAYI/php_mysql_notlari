@@ -2,12 +2,13 @@
 
 ## Özet:
 
-- BotFather aracılığıyla bir Telegram BOT'u oluşturun (örneğin: x_bot)
-- Oluşturulan bot'un <TOKEN>bilgisini alın (örneğin: 6468124398:AAGEYxUoCMg39WVUZVwHfAumfBZj2Dxm27o)
-- Bir Genel (herkese açık, gizli olmayan) Telegram kanalı oluşturun (örneğin: PhpDenemeGrubu)
-- x_bot'u kanalınıza ekleyin (gerekiyorsa yönetici olarak belirleyin)
-- sendMessage metodu ile botunuzun gruba mesaj gönderimini sağlayın
-  (örneğin: https://api.telegram.org/bot<TOKEN>/sendMessage?chat_id=@PhpDenemeGrubu&text=Selam)
+- BotFather aracılığıyla `/newbot` komutu ile bir Telegram BOT'u oluşturun (örneğin: x_bot)
+- Oluşturulan bot'un `TOKEN` bilgisini alın (örneğin: `6468124398:AAGEYxUoCMg39WVUZVwHfAumfBZj2Dxm27o`)
+- Genele açık (gizli olmayan!) bir Telegram kanalı oluşturun (örneğin: PhpDenemeGrubu)
+- x_bot'u telegram kanalınıza/grubunuza ekleyin.
+- sendMessage metodu ile botunuzun gruba mesaj gönderimini sağlayın.
+- Mesaj göndermeyi tarayıcınızın adres satırından da şu şekilde yapabilirsiniz:
+- https://api.telegram.org/bot6468124398:AAGEYxUoCMg39WVUZVwHfAumfBZj2Dxm27o/sendMessage?chat_id=@PhpDenemeGrubu&text=Selam
 
 
 ## 1.) Botumuzu Oluşturalım
