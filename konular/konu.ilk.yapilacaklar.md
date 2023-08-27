@@ -2,9 +2,9 @@
 
 ## xampp İndirilmesi ve Kurulması
 
-- xampp 8.2.4 sürümünün setup dosyasını [buradan](https://www.apachefriends.org/download.html) indirin.
+- xampp 7.4.33 sürümünün setup dosyasını [buradan](https://sourceforge.net/projects/xampp/files/XAMPP%20Windows/7.4.33/xampp-windows-x64-7.4.33-0-VC15.zip/download) indirin.
 - İndirilen dosyayı çalıştırın ve `Next (İleri)` düğmesine basarak kurulumu tammalayalım (Herhangi bir özel ayar gerektirmez).
-- Kurulum varsayılan olarak `C:\xampp` dizinine yapılacaktır. 
+- Kurulum varsayılan olarak `C:\xampp` dizinine yapılacaktır.
 
 ### php.ini dosyasının sonuna eklenecekler
 
@@ -24,7 +24,9 @@ mbstring.internal_encoding = UTF-8
 ```
 
 ### my.ini dosyasında yapılacak değişiklikler
+
 `xampp/mysql/my.ini` dosyası içindeki
+
 - `sql_mode=NO_ZERO_IN_DATE,NO_ZERO_DATE,NO_ENGINE_SUBSTITUTION` satırı `sql_mode=''` olarak değiştirilecek
 
 ## MySQL yönetimi için Adminer programı kurulumu
@@ -36,7 +38,7 @@ mbstring.internal_encoding = UTF-8
 ### MySQL Root kullanıcısı için şifre değiştirme
 
 - `xampp/mysql/bin` dizinine geçiş yapılır
-- Aşağıdaki komnutlar sırası ile yazılarak MySQL Root kullanıcısının şifresinin değiştirilmesi sağlanır
+- Aşağıdaki komutlar sırası ile yazılarak MySQL Root kullanıcısının şifresinin değiştirilmesi sağlanır
 
 ```SQL
 mysql -u root -p
