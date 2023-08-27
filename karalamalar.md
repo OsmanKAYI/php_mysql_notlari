@@ -15,7 +15,7 @@
 
 ## Tavsiye Edilecek Siteler
 
-- https://www.javatpoint.com/linux-tutorial 
+- https://www.javatpoint.com/linux-tutorial
 
 ## Ödev: Tercih Robotu
 
@@ -26,38 +26,38 @@
 - [Tayfun Erbilen - TOKEN Neden Önemli?](https://www.youtube.com/watch?v=FNoAcuoLt-w)
 
 ## ALGORİTMA
+
 - [JavaScript ile Kolay Algoritmalar](https://www.youtube.com/playlist?list=PL0Au88Qum4UmiN0WHD6NKrZNpQqiUwwqe)
 
 ## Yapılacak İşler
 
 ### DNS
+
 - https://wizardzines.com/comics/ Bu sayfadan işe yarar olanların listesini çıkarılacak. Özellikle DNS!
 - Notlara DNS başlığı eklenmeli ve şu sayfaya yer verilmeli: https://messwithdns.net/
-
-## Telegram API'si ile mesaj gönderme
-
-- Bu konu notlara eklenmeli!
 
 ## API
 
 - Kendi uygulamamızın Twit atabilmesi.
 - Kendi eticaret mağazamızdaki ürünleri Trendyol'da da yayınlama
 - Siparişi getiren kuryenin konumunun haritada gösterilmesi
-- Twitter, farklı platformlar için uygulama üretiyor. 
+- Twitter, farklı platformlar için uygulama üretiyor.
 - Her platform için Twitter uygulaması TEKRAR TEKRAR mı yazılıyor?
-
 
 Wishlist siteye eklenebilir! Askıda Bilet olarak eklenebilir
 https://www.amazon.co.uk/gp/registry/wishlist/2ASV4RHBSM16H/026-9090951-0551667
 
 ## VueJS
+
 - https://laracasts.com/series/learn-vue-3-step-by-step
 - https://laracasts.com/series/whats-new-in-vue-3
 
 ## Enteresan! Topologically sort
+
 - https://github.com/marcelklehr/toposort
 
 ## Sparkline Grafikleri
+
 - Fiyat sayfasında kullanılabilir???
 - https://omnipotent.net/jquery.sparkline/#s-docs
 - https://github.com/fnando/sparkline
@@ -65,24 +65,25 @@ https://www.amazon.co.uk/gp/registry/wishlist/2ASV4RHBSM16H/026-9090951-0551667
 - http://benpickles.github.io/peity/
 
 ## Grafik Kütüphaneleri
+
 - https://vue-chartjs.org/
 - https://www.chartjs.org/
 - https://echarts.apache.org/en/index.html
 - https://gionkunz.github.io/chartist-js/
 - https://observablehq.com/collection/@d3/d3-shape
 
-
 ## WebSocket
-- http://socketo.me/  (Ratchet WebSockets for PHP)
 
+- http://socketo.me/ (Ratchet WebSockets for PHP)
 
 # DB Sockets
+
 - https://github.com/ezSQL/ezsql 859
 - https://github.com/ADOdb/ADOdb 394
 - https://github.com/SergeyTsalkov/meekrodb 292
 
-
 ## FAYDALI COMPOSER PAKETLERİ
+
 - https://github.com/PHPOffice
 - https://github.com/dompdf/dompdf
 - https://github.com/spipu/html2pdf
@@ -90,43 +91,46 @@ https://www.amazon.co.uk/gp/registry/wishlist/2ASV4RHBSM16H/026-9090951-0551667
 - https://github.com/PHPMailer/PHPMailer
 - https://github.com/swiftmailer/swiftmailer
 - https://github.com/WordPress/Requests (curl alternatifi)
-  - https://requests.ryanmccue.info/docs/usage.html  
-
+  - https://requests.ryanmccue.info/docs/usage.html
 
 ## JSON Veri Kaynağı
+
 - https://github.com/rinvex/countries/tree/master/resources/flags (Ülke Bayrakları .SVG Formatında)
 - https://github.com/rinvex/countries (JSON formatta Ülke Bilgileri)
   - https://github.com/rinvex/countries/blob/master/resources/data/shortlist.json
   - https://github.com/rinvex/countries/blob/master/resources/data/longlist.json
   - https://github.com/rinvex/countries/blob/master/resources/data/tr.json
 
-
-
 ## PHP Composer Paketleri Kullanım Örnekleri
+
 - https://simplepie.org/wiki/setup/sample_page
 - https://php-download.com/package/simplepie/simplepie/example
-- https://php-download.com/package/phpoffice/phpspreadsheet/example	
+- https://php-download.com/package/phpoffice/phpspreadsheet/example
 - https://php-download.com/package/phpmailer/phpmailer/example
 - https://github.com/PHPMailer/PHPMailer/blob/master/examples/gmail.phps
 - https://php-download.com/package/phpoffice/phpword/example
-- https://php-download.com/package/swiftmailer/swiftmailer/example   gmail
+- https://php-download.com/package/swiftmailer/swiftmailer/example gmail
 - https://symfony.com/doc/current/mailer.html
 
-
 ## Örnek Uygulamalar
+
 ### ezSQL
+
 - https://github.com/yakuter/yPhoneBook
 - https://github.com/umitkayacan/ezSQL
 - https://www.krenger.ch/blog/html-table-with-ezsql/#more-1544 (TABLE Örneği)
+
 ### Diğer
+
 - https://github.com/umitkayacan/PHP-to-Excel
 - https://github.com/umitkayacan/Json-Turce-Karakter-Sorunu
-- https://github.com/bx16soupapes/ezSQL_sqlite3   ezSQL ile sqlite örneği
+- https://github.com/bx16soupapes/ezSQL_sqlite3 ezSQL ile sqlite örneği
 - https://github.com/umitkayacan/ezSQL-Icin-Sinirsiz-Kategorileme
 - https://medium.com/@sezerfidanci/php-slim-framework-ile-restful-api-yap%C4%B1m%C4%B1-87c82cc27933
   - https://github.com/SezerFidanci/slim-framework-rest-api
 
 ## CORS Engelleme
+
 ```PHP
 // Headers for GET Request
 header("Access-Control-Allow-Origin: *");
@@ -145,9 +149,9 @@ if ($post->delete()) {
 ```
 
 ## text Dosya Veritabanı
+
 - https://github.com/unfinishedtomato/bilisim-terimleri-sozlugu
 - https://github.com/ugurkilci/tiyatrobot/blob/master/tiyatrobot%20(1).sql
-
 
 - https://github.com/selimhallac/garantibankasi-web-ekstre-hesap-hareketleri
 - https://github.com/selimhallac/halkbank-hesap-hareketleri-web-servis
@@ -155,13 +159,10 @@ if ($post->delete()) {
 - https://github.com/selimhallac/ziraatbankasi-web-eksktre-hesap-hareketleri
 - https://github.com/selimhallac/ziraat-bankasi
 
-
-- https://github.com/ugurkilci/hafizilib/find/master 
+- https://github.com/ugurkilci/hafizilib/find/master
 - https://github.com/ugurkilci/rss-php
 
-
 - https://tableconvert.com
-
 
 - https://quickref.me/vscode
 - https://quickref.me/markdown
@@ -173,12 +174,12 @@ if ($post->delete()) {
 - https://quickref.me/redis
 - https://quickref.me/php
 
-
 ## ÖĞREN!!!
+
 - https://mitmproxy.org/
 
-
 ## PHP ve PDO - Yöntem 1
+
 ```PHP
 <?php
 // Example for using prepare statements directly, no shortcut SQL methods used
@@ -195,6 +196,7 @@ foreach ($result as $row) {
 ```
 
 ## PHP ve PDO - Yöntem 2 (Kısayol)
+
 ```PHP
 // Example for using prepare statements indirectly, with above shortcut SQL methods
 
@@ -224,7 +226,6 @@ foreach ($result as $row) {
 $json = get_results(JSON, $db);
 ```
 
-
 # Bağlantılar
 
 - https://fslightbox.com/ Zoom Image ve Resim Galerisi https://furkangiray.com/fslighbox-js-kullanimi/
@@ -232,8 +233,8 @@ $json = get_results(JSON, $db);
 - https://flexbox.malven.co/
 - https://www.svgrepo.com/
 
-
 # Dahil edilebilecek içerikler
+
 - https://furkangiray.com/xml-dosyasini-php-array-diziye-cevirme/
 - https://furkangiray.com/php-coklu-fotograf-yukleme/
 - https://furkangiray.com/php-ile-json-yapisi-olusturma/
@@ -258,10 +259,9 @@ $json = get_results(JSON, $db);
 - https://github.com/suleymanozcan/PHP_PDO_Ornekleri
 - https://github.com/suleymanozcan/PHP_PDO_Htaccess_Trigger_Ornekleri
 
-
 ## MindMap
-- https://tobloef.com/text2mindmap/
 
+- https://tobloef.com/text2mindmap/
 
 ## Manipulating arrays and objects in JavaScript
 
@@ -269,55 +269,51 @@ https://tr.javascript.info/
 
 https://developer.mozilla.org/en-US/docs/Web/JavaScript
 
-
-Komut|Açıklaması
----|---
-Kaynak|https://www.youtube.com/watch?v=n3NKGsM3iEw
-Kaynak|https://www.freecodecamp.org/news/manipulating-arrays-in-javascript/
-`toString()`|converts an array to a string separated by a comma.
-`join()`|combines all array elements into a string.
-`concat`|combines two arrays together or add more items to an array and then return a new array.
-`push()`|adds item(s) to the end of an array and changes the original array.
-`pop()`|removes the last item of an array and returns it
-`shift()`|removes the first item of an array and returns it
-`unshift()`|adds an item(s) to the beginning of an array and changes the original array.
-`splice()`|changes an array, by adding, removing and inserting elements.
-`slice()`|copies a given part of an array and returns that copied part as a new array. It does not change the original array.
-`split()`|divides a string into substrings and returns them as an array.
-`indexOf()`|looks for an item in an array and returns the index where it was found else it returns -1
-`lastIndexOf()`|looks for an item from right to left and returns the last index where the item was found.
-`filter()`|creates a new array if the items of an array pass a certain condition.
-`map()`|creates a new array by manipulating the values in an array.
-`reduce()`|calculates a single value based on an array.
-`forEach()`|iterates through an array, it applies a function on all items in an array
-`every()`|checks if all items in an array pass the specified condition and return true if passed, else false.
-`some()`|checks if an item (one or more) in an array pass the specified condition and return true if passed, else false.
-`includes()`|checks if an array contains a certain item.
-
+| Komut           | Açıklaması                                                                                                          |
+| --------------- | ------------------------------------------------------------------------------------------------------------------- |
+| Kaynak          | https://www.youtube.com/watch?v=n3NKGsM3iEw                                                                         |
+| Kaynak          | https://www.freecodecamp.org/news/manipulating-arrays-in-javascript/                                                |
+| `toString()`    | converts an array to a string separated by a comma.                                                                 |
+| `join()`        | combines all array elements into a string.                                                                          |
+| `concat`        | combines two arrays together or add more items to an array and then return a new array.                             |
+| `push()`        | adds item(s) to the end of an array and changes the original array.                                                 |
+| `pop()`         | removes the last item of an array and returns it                                                                    |
+| `shift()`       | removes the first item of an array and returns it                                                                   |
+| `unshift()`     | adds an item(s) to the beginning of an array and changes the original array.                                        |
+| `splice()`      | changes an array, by adding, removing and inserting elements.                                                       |
+| `slice()`       | copies a given part of an array and returns that copied part as a new array. It does not change the original array. |
+| `split()`       | divides a string into substrings and returns them as an array.                                                      |
+| `indexOf()`     | looks for an item in an array and returns the index where it was found else it returns -1                           |
+| `lastIndexOf()` | looks for an item from right to left and returns the last index where the item was found.                           |
+| `filter()`      | creates a new array if the items of an array pass a certain condition.                                              |
+| `map()`         | creates a new array by manipulating the values in an array.                                                         |
+| `reduce()`      | calculates a single value based on an array.                                                                        |
+| `forEach()`     | iterates through an array, it applies a function on all items in an array                                           |
+| `every()`       | checks if all items in an array pass the specified condition and return true if passed, else false.                 |
+| `some()`        | checks if an item (one or more) in an array pass the specified condition and return true if passed, else false.     |
+| `includes()`    | checks if an array contains a certain item.                                                                         |
 
 ## JavaScript String Methods/Functions You should Know
 
-Komut|Açıklaması
----|---
-Kaynak|https://codequs.com/p/ryERJilLL
-`length`|It is used to count the number of characters in a string javascript.
-`toLocaleLowerCase()`|The javascript toLocaleLowerCase() is used to changed string into lower case.
-`toLocaleUpperCase()`|The javascript toLocaleUpperCase () is used to changed string into upper case.
-`indexOf()`|The indexof () method returns the first position of a specified value in a string.
-`slice()`|The slice () method removes the parts of a string and returns the extracted parts to a new string. Use the Start and End Ultimate to specify the part of the string that you want to remove.
-`includes()`| The includes() method is used to determine whether a string contains the characters of a specified string or not. If is exist return true or not return false.
-`concat()`| The concat() method is used for join two or more strings.
-`lastIndexOf()`| The lastIndexOf() the method returns the index of the last occurrence of a specified text in a string:
-`split`|The javascript split method, which is used to convert string to an array:
-`search()`|The javascript search () method searches a string for the specified value, and returns the status of the match.
-`substring()`|The Javascript substring() method is used to removes the characters from one string, between two specified indices, and returns the new substring.
-`substr()`|A string substr() method begins on the character in the specified position, and returns the specified number of characters.
-`replace()`|The Javascript replace() changes the defined value to an another value:
-`charAt()`|The Javascript charAt() is used to take a character to a described index location:
-`charCodeAt()`|The charCodeAt() method returns the Unicode of the character at a specified index in a string:
-`trim()`|The javascript trim() method removes whitespace from both sides of a given string:
-`match()`|The match() method searches a string for a match against a regular expression, and returns the matches, as an Array object.
-`toString()`|The javascript toString() method returns the value of a String object.
-`valueOf()`|The javascript valueOf() method, which is used to gets the primitive value of a String object.
-
-
+| Komut                 | Açıklaması                                                                                                                                                                                   |
+| --------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Kaynak                | https://codequs.com/p/ryERJilLL                                                                                                                                                              |
+| `length`              | It is used to count the number of characters in a string javascript.                                                                                                                         |
+| `toLocaleLowerCase()` | The javascript toLocaleLowerCase() is used to changed string into lower case.                                                                                                                |
+| `toLocaleUpperCase()` | The javascript toLocaleUpperCase () is used to changed string into upper case.                                                                                                               |
+| `indexOf()`           | The indexof () method returns the first position of a specified value in a string.                                                                                                           |
+| `slice()`             | The slice () method removes the parts of a string and returns the extracted parts to a new string. Use the Start and End Ultimate to specify the part of the string that you want to remove. |
+| `includes()`          | The includes() method is used to determine whether a string contains the characters of a specified string or not. If is exist return true or not return false.                               |
+| `concat()`            | The concat() method is used for join two or more strings.                                                                                                                                    |
+| `lastIndexOf()`       | The lastIndexOf() the method returns the index of the last occurrence of a specified text in a string:                                                                                       |
+| `split`               | The javascript split method, which is used to convert string to an array:                                                                                                                    |
+| `search()`            | The javascript search () method searches a string for the specified value, and returns the status of the match.                                                                              |
+| `substring()`         | The Javascript substring() method is used to removes the characters from one string, between two specified indices, and returns the new substring.                                           |
+| `substr()`            | A string substr() method begins on the character in the specified position, and returns the specified number of characters.                                                                  |
+| `replace()`           | The Javascript replace() changes the defined value to an another value:                                                                                                                      |
+| `charAt()`            | The Javascript charAt() is used to take a character to a described index location:                                                                                                           |
+| `charCodeAt()`        | The charCodeAt() method returns the Unicode of the character at a specified index in a string:                                                                                               |
+| `trim()`              | The javascript trim() method removes whitespace from both sides of a given string:                                                                                                           |
+| `match()`             | The match() method searches a string for a match against a regular expression, and returns the matches, as an Array object.                                                                  |
+| `toString()`          | The javascript toString() method returns the value of a String object.                                                                                                                       |
+| `valueOf()`           | The javascript valueOf() method, which is used to gets the primitive value of a String object.                                                                                               |
