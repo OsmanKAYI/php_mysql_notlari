@@ -134,7 +134,7 @@ WHERE il NOT IN ('Diyarbakır', 'Adana');
   <summary>Cevap</summary>
 
 ```SQL
-SELECT count(1) FROM referandum GROUP BY il;
+SELECT il AS "İL" , count(1) AS "İLÇE ADEDİ" FROM referandum GROUP BY il;
 ```
 </details>
 
