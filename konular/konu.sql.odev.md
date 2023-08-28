@@ -153,7 +153,7 @@ LIMIT 1;
 ```
 </details>
 
-### A, B ve C harfi ile başlayan şehirlerin hayır adedi
+### A, B ve C harfi ile başlayan şehirlerin hayır adedi toplamı
 
 <details>
   <summary>Cevap1</summary>
