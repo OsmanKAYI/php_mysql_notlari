@@ -6,7 +6,7 @@
 - [x] [VS Code](./konular/konu.vscode.extensions.settings.md)
 - [x] [Komut Satırı ile MySQL kullanımı](./konular/konu.mysql.cli.md)
 - [x] [Sık Kullanılan MySQL Komutları](./konular/konu.mysql.ozet.md)
-- [ ] [Referandum Verisi Üzerinden SQL Ödevi](./konular/konu.sql.odev.md)
+- [x] [Referandum Verisi Üzerinden SQL Ödevi](./konular/konu.sql.odev.md)
 - [ ] [PHP PDO CRUD Kullanımı](./konular/konu.pdo.md)
 - [ ] [Tarih İşlemleri](./konular/konu.date.md)
 - [ ] [Fonksiyon Kullanımı](./konular/konu.function.md)
