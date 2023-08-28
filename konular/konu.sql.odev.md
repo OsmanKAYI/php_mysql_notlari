@@ -10,6 +10,7 @@
 ```SQL
 DELETE FROM referandum WHERE ilce='';
 ```
+
 </details>
 
 ### İl ve ilçeye göre sıralı liste
@@ -20,6 +21,7 @@ DELETE FROM referandum WHERE ilce='';
 ```SQL
 SELECT il, ilce FROM referandum ORDER BY il, ilce;
 ```
+
 </details>
 
 ### Türkiye toplam seçmen adedi
@@ -30,6 +32,7 @@ SELECT il, ilce FROM referandum ORDER BY il, ilce;
 ```SQL
 SELECT SUM(kayitli) FROM referandum;
 ```
+
 </details>
 
 ### Türkiye toplam geçerli oy adedi
@@ -40,6 +43,7 @@ SELECT SUM(kayitli) FROM referandum;
 ```SQL
 SELECT SUM(gecerli) AS 'GEÇERLİ OY' FROM referandum;
 ```
+
 </details>
 
 ### Türkiye geneli özet (toplam seçmen, toplam geçerli, vb.)
@@ -48,15 +52,16 @@ SELECT SUM(gecerli) AS 'GEÇERLİ OY' FROM referandum;
   <summary>Cevap</summary>
 
 ```SQL
-SELECT 
+SELECT
     SUM(kayitli) AS 'Kayıtlı Seçmen Sayısı',
     SUM(oykullanan) AS 'Oy Kullanan Seçmen Sayısı',
     SUM(gecerli) AS 'Geçerli Oy Sayısı',
     SUM(gecersiz) AS 'Geçersiz Oy Sayısı',
     SUM(evet) AS 'Evet Sayısı',
-    SUM(hayir) AS 'Hayır Sayısı' 
+    SUM(hayir) AS 'Hayır Sayısı'
 FROM referandum;
 ```
+
 </details>
 
 ### İlçe nüfusu 1500 kişiden daha az ilçeler
@@ -67,6 +72,7 @@ FROM referandum;
 ```SQL
 SELECT * FROM referandum WHERE kayitli < 1500;
 ```
+
 </details>
 
 ## Zorluk Seviyesi 2
@@ -77,11 +83,12 @@ SELECT * FROM referandum WHERE kayitli < 1500;
   <summary>Cevap</summary>
 
 ```SQL
-SELECT il, SUM(gecersiz) AS 'Geçersiz Oy Sayısı' FROM referandum 
-GROUP BY il 
-ORDER BY 2 DESC 
+SELECT il, SUM(gecersiz) AS 'Geçersiz Oy Sayısı' FROM referandum
+GROUP BY il
+ORDER BY 2 DESC
 LIMIT 1;
 ```
+
 </details>
 
 ### En fazla geçerli oy kullanan ilk 3 il
@@ -90,11 +97,12 @@ LIMIT 1;
   <summary>Cevap</summary>
 
 ```SQL
-SELECT il, SUM(gecerli) AS 'Geçerli Oy Sayısı' FROM referandum 
-GROUP BY il 
-ORDER BY 2 DESC 
+SELECT il, SUM(gecerli) AS 'Geçerli Oy Sayısı' FROM referandum
+GROUP BY il
+ORDER BY 2 DESC
 LIMIT 3;
 ```
+
 </details>
 
 ### Ankara, İstanbul ve İzmirdeki geçersiz oylar toplamı
@@ -103,29 +111,64 @@ LIMIT 3;
   <summary>Cevap1</summary>
 
 ```SQL
-SELECT SUM(gecersiz) FROM referandum 
+SELECT SUM(gecersiz) FROM referandum
 WHERE il='Ankara' OR il='İstanbul' OR il='İzmir';
 ```
+
 </details>
 
 <details>
   <summary>Cevap2</summary>
 
 ```SQL
-SELECT SUM(gecersiz) FROM referandum 
+SELECT SUM(gecersiz) FROM referandum
 WHERE il IN ('Ankara', 'İstanbul', 'İzmir');
 ```
+
 </details>
 
 ### Adana ve Diyarbakır hariç Evet oylar toplamı
 
 <details>
-  <summary>Cevap</summary>
+  <summary>Cevap1</summary>
 
 ```SQL
-SELECT SUM(evet) FROM referandum 
+SELECT SUM(evet) FROM referandum
 WHERE il NOT IN ('Diyarbakır', 'Adana');
 ```
+
+</details>
+
+<details>
+  <summary>Cevap2</summary>
+
+```SQL
+SELECT SUM(evet) FROM referandum
+WHERE il != "Diyarbakır" AND il != "Adana";
+```
+
+</details>
+
+### Adana ve Diyarbakır için Evet oylar toplamı
+
+<details>
+  <summary>Cevap1</summary>
+
+```SQL
+SELECT SUM(evet) FROM referandum
+WHERE il IN ("Diyarbakır", "Adana");;
+```
+
+</details>
+
+<details>
+  <summary>Cevap2</summary>
+
+```SQL
+SELECT SUM(evet) FROM referandum
+WHERE il = "Diyarbakır" OR il = "Adana";
+```
+
 </details>
 
 ### Her ilin ilçe sayısı
@@ -136,6 +179,7 @@ WHERE il NOT IN ('Diyarbakır', 'Adana');
 ```SQL
 SELECT il AS "İL" , count(1) AS "İLÇE ADEDİ" FROM referandum GROUP BY il;
 ```
+
 </details>
 
 ## Zorluk Seviyesi 3
@@ -146,11 +190,12 @@ SELECT il AS "İL" , count(1) AS "İLÇE ADEDİ" FROM referandum GROUP BY il;
   <summary>Cevap</summary>
 
 ```SQL
-SELECT il, SUM(gecersiz)/SUM(kayitli) AS 'Geçersiz Oy Oranı' FROM referandum 
-GROUP BY il 
+SELECT il, SUM(gecersiz)/SUM(kayitli) AS 'Geçersiz Oy Oranı' FROM referandum
+GROUP BY il
 ORDER BY 2 DESC
 LIMIT 1;
 ```
+
 </details>
 
 ### A, B ve C harfi ile başlayan şehirlerin hayır adedi toplamı
@@ -159,20 +204,22 @@ LIMIT 1;
   <summary>Cevap1</summary>
 
 ```SQL
-SELECT il, SUM(hayir) AS 'Hayır Adedi' FROM referandum 
-WHERE il LIKE 'A%' 
-OR il LIKE 'B%' 
+SELECT il, SUM(hayir) AS 'Hayır Adedi' FROM referandum
+WHERE il LIKE 'A%'
+OR il LIKE 'B%'
 OR il LIKE 'C%';
 ```
+
 </details>
 
 <details>
   <summary>Cevap2</summary>
 
 ```SQL
-SELECT il, SUM(hayir) AS 'Hayır Adedi' FROM referandum 
+SELECT il, SUM(hayir) AS 'Hayır Adedi' FROM referandum
 WHERE LEFT(il,1) IN ('A', 'B', 'C');
 ```
+
 </details>
 
 ## Zorluk Seviyesi 4
@@ -188,6 +235,7 @@ ADD oykullanmayan decimal(7,4) NOT NULL;
 
 UPDATE referandum SET oykullanmayan = kayitli - oykullanan;
 ```
+
 </details>
 
 ### Tabloya, evet_oran ve hayir_oran adlı 2 saha ekleyin. Veri hassasiyeti 4 hane olsun.
@@ -200,6 +248,7 @@ ALTER TABLE referandum
 ADD evet_oran decimal(6,2) NOT NULL,
 ADD hayir_oran decimal(6,2) NOT NULL AFTER evet_oran;
 ```
+
 </details>
 
 ### Bu iki sahanın değerlerini şu formüle göre doldurun:
@@ -216,6 +265,7 @@ hayir_oran = hayir / geçerli * 100;
 UPDATE referandum SET evet_oran = (evet/gecerli)*100;
 UPDATE referandum SET hayir_oran = (hayir/gecerli)*100;
 ```
+
 </details>
 
 ### Veriler üzerinde tutarlılık kontrolleri yapınız
@@ -236,4 +286,5 @@ SELECT * FROM referandum WHERE evet+hayir-gecerli <> 0;
 SELECT * FROM referandum WHERE gecerli+gecersiz < kayitli;
 SELECT * FROM referandum WHERE gecerli+gecersiz-oykullanan != 0;
 ```
+
 </details>
