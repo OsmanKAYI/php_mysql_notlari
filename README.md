@@ -2,10 +2,10 @@
 
 ## Konular
 
-- [ ] [İlk Yapılacaklar](./konular/konu.ilk.yapilacaklar.md)
-- [ ] [VS Code](./konular/konu.vscode.extensions.settings.md)
-- [ ] [Komut Satırı ile MySQL kullanımı](./konular/konu.mysql.cli.md)
-- [ ] [Sık Kullanılan MySQL Komutları](./konular/konu.mysql.ozet.md)
+- [x] [İlk Yapılacaklar](./konular/konu.ilk.yapilacaklar.md)
+- [x] [VS Code](./konular/konu.vscode.extensions.settings.md)
+- [x] [Komut Satırı ile MySQL kullanımı](./konular/konu.mysql.cli.md)
+- [x] [Sık Kullanılan MySQL Komutları](./konular/konu.mysql.ozet.md)
 - [ ] [Referandum Verisi Üzerinden SQL Ödevi](./konular/konu.sql.odev.md)
 - [ ] [PHP PDO CRUD Kullanımı](./konular/konu.pdo.md)
 - [ ] [Tarih İşlemleri](./konular/konu.date.md)
