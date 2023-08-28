@@ -162,8 +162,7 @@ LIMIT 1;
 SELECT il, SUM(hayir) AS 'Hayır Adedi' FROM referandum 
 WHERE il LIKE 'A%' 
 OR il LIKE 'B%' 
-OR il LIKE 'C%'
-GROUP BY il;
+OR il LIKE 'C%';
 ```
 </details>
 
@@ -172,8 +171,7 @@ GROUP BY il;
 
 ```SQL
 SELECT il, SUM(hayir) AS 'Hayır Adedi' FROM referandum 
-WHERE LEFT(il,1) IN ('A', 'B', 'C') 
-GROUP BY il;
+WHERE LEFT(il,1) IN ('A', 'B', 'C');
 ```
 </details>
 
