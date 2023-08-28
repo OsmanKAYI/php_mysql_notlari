@@ -41,7 +41,7 @@
 
 ## Örnek Veritabanları
 
-- [ ] [Referandum Sonuçları 2017](./ornek.veritabanlari/referandum.sql)
+- [x] [Referandum Sonuçları 2017](./ornek.veritabanlari/referandum.sql)
 - [ ] [Üniversite Tercih Robotu Verileri 2019](./ornek.veritabanlari/okullar.sql)
 - [ ] [Otomobil Fiyatları](./ornek.veritabanlari/otomobil_fiyatlari.sql)
 - [ ] [Wordle Oyunu için Türkçe Kelimeler](./ornek.veritabanlari/kelimeler.sql)
