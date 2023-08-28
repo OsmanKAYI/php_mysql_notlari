@@ -32,7 +32,7 @@ SELECT SUM(kayitli) FROM referandum;
 ```
 </details>
 
-### Türkiye toplam geçerli Oy adedi
+### Türkiye toplam geçerli oy adedi
 
 <details>
   <summary>Cevap</summary>
@@ -42,7 +42,7 @@ SELECT SUM(gecerli) AS 'GEÇERLİ OY' FROM referandum;
 ```
 </details>
 
-### Türkiye geneli özet
+### Türkiye geneli özet (toplam seçmen, toplam geçerli, vb.)
 
 <details>
   <summary>Cevap</summary>
@@ -71,7 +71,7 @@ SELECT * FROM referandum WHERE kayitli < 1500;
 
 ## Zorluk Seviyesi 2
 
-### En çok geçersiz oy kullanan il (Adet olarak)
+### En çok geçersiz oy kullanan il ve geçersiz oy sayısı
 
 <details>
   <summary>Cevap</summary>
