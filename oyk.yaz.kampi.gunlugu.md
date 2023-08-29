@@ -70,15 +70,32 @@
   - HTTP (Hyper Text Transmission Protocol) vs HTTPS
     - Wireshark
     - SSL Sertifika
+  - [php.net](https://www.php.net)
   - require, require_once, include, include_once
   - int, float, string, $var, boolean
   - var_dump, print_r
-  - [php.net](https://www.php.net)
-  - Değişken birleştirme "." operatörü
+  - Değişken birleştirme "." operatörü (Concatenation)
   - Tek tırnak değişkenleri göstermez, çift tırnak içinde yazmak daha sağlıklı
   - Escape (\) character
   - Heredoc (<<<)
   - Cast işlemi
   - Type Juggling
+  - Assignment Operatörleri
+  - Comparison Operatörleri
+  - AND/OR Bağlacı
+  - NOT Operatörü
+  - If Statement
+  - Switch
+  - For, foreach, while, do...while
+    - while - koşul sağlanınca çalışır
+    - do...while - her koşulda en az bir kez çalışır
+  - Break, continue
+  - Scope
+  - [PHP Tarih Fonksiyonları](https://github.com/OsmanKAYI/php_mysql_notlari/blob/main/konular/konu.date.md)
+  - Form
+    - GET & POST
+    - die
+- [İki sayının toplanması](https://github.com/OsmanKAYI/php_mysql_notlari/tree/main/ornekler/toplama) örnekleri yapıldı
+- PDO
 
 ===================================================================================================
