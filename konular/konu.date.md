@@ -21,19 +21,19 @@ $SuAnkiZaman = date("Y-m-d H:i:s");
 $IslemZamani = date("Y-m-d H:i:s", ???);
 
 // ??? alanına yazılabilecekler:
-strtotime('now'); // Şimdi
-strtotime('2023-03-21'); // Tarih
-strtotime("+1 day"); // 1 gün sonrası
-strtotime("+1 week"); // 1 hafta sonrası
-strtotime("+1 week 2 days 4 hours 2 seconds"); // ... zaman sonrası
-strtotime("next thursday"); // sonraki perşembe
-strtotime("last monday"); // Aktif ayın son pazartesi günü
-strtotime('first day of next month'); // Gelecek ayın ilk günü
-strtotime('first monday of february 2023');  // 2023 Şubat ayının ilk pazartesi günü
-strtotime('last monday of february 2023'); // 2023 Şubat ayının son pazartesi günü
-strtotime('last day of february 2023'); // 2023 Şubat ayının son günü
-strtotime('last sunday of 2019-08'); // 2019 Ağustos ayının son pazarı
-strtotime('last sunday of 2019-08 -2 day'); // 2019 Ağustos ayının son pazarının 2 gün öncesi
+strtotime('now') // Şimdi
+strtotime('2023-03-21') // Tarih
+strtotime("+1 day") // 1 gün sonrası
+strtotime("+1 week") // 1 hafta sonrası
+strtotime("+1 week 2 days 4 hours 2 seconds") // ... zaman sonrası
+strtotime("next thursday") // sonraki perşembe
+strtotime("last monday") // Aktif ayın son pazartesi günü
+strtotime('first day of next month') // Gelecek ayın ilk günü
+strtotime('first monday of february 2023')  // 2023 Şubat ayının ilk pazartesi günü
+strtotime('last monday of february 2023') // 2023 Şubat ayının son pazartesi günü
+strtotime('last day of february 2023') // 2023 Şubat ayının son günü
+strtotime('last sunday of 2019-08') // 2019 Ağustos ayının son pazarı
+strtotime('last sunday of 2019-08 -2 day') // 2019 Ağustos ayının son pazarının 2 gün öncesi
 ```
 
 ### İki Tarih Arası Tarihleri Üretme (Yöntem 1):
