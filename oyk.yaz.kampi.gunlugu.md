@@ -59,3 +59,25 @@
 - Markdown
 
 ===================================================================================================
+
+# 4. GÜN
+
+- Önceki Günün Tekrarı
+- Adminer Import & Export
+- [PHP](https://www.phptutorial.net/php-tutorial/what-is-php/)
+  - Nasıl çalışır?
+  - HTML
+  - HTTP (Hyper Text Transmission Protocol) vs HTTPS
+    - Wireshark
+    - SSL Sertifika
+  - require, require_once, include, include_once
+  - int, float, string, $var, boolean
+  - var_dump, print_r
+  - [php.net](https://www.php.net)
+  - Değişken birleştirme "." operatörü
+  - Tek tırnak değişkenleri göstermez, çift tırnak içinde yazmak daha sağlıklı
+  - Escape (\) character
+  - Heredoc (<<<)
+  - Cast işlemi
+
+===================================================================================================
