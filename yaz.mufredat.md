@@ -19,11 +19,11 @@ Eğitiminin sonuna doğru, PHP ve Vue.js'i birlikte kullanarak, dinamik ve etkil
   - [x] Editör ve eklentilerinin kurulumu (VS Code)
 - [ ] PHP Temel Eğitimi
   - [ ] PHP Söz dizimi
-  - [ ] Değişken türleri, sabitler, operatörler
-  - [ ] Karar yapıları
-  - [ ] Döngü türleri
+  - [x] Değişken türleri, sabitler, operatörler
+  - [x] Karar yapıları
+  - [x] Döngü türleri
   - [ ] Diziler ve dizi işlemleri
-  - [ ] Tarih işlemleri
+  - [x] Tarih işlemleri
 - [ ] Temel Web Bilgisi
   - [x] Web kavramları
   - [x] Tarayıcılar
@@ -35,16 +35,16 @@ Eğitiminin sonuna doğru, PHP ve Vue.js'i birlikte kullanarak, dinamik ve etkil
   - [x] Temel SQL eğitimi (MySQL üzerinden)
   - [ ] Ajax nedir?
   - [ ] JSON nedir?
-  - [ ] Get/Post metodları
+  - [x] Get/Post metodları
   - [ ] Temel API eğitimi
-  - [ ] HTML Form ve form elemanları
+  - [x] HTML Form ve form elemanları
 - [ ] Gelişmiş PHP Eğitimi
   - [x] MySQL veritabanına giriş
-  - [ ] PDO ile veritabanı kullanımı
+  - [x] PDO ile veritabanı kullanımı
   - [ ] Hata yakalama
   - [ ] Form doğrulama
   - [ ] Dosya yükleme
-  - [ ] PHP ve Sınıflar
+  - [x] PHP ve Sınıflar
   - [ ] PHP ve AJAX
   - [ ] PHP ve XML
   - [ ] PHP ve JSON
