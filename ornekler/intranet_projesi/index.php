@@ -11,6 +11,9 @@ require 'sayfa.ust.php';
   <div class='row text-center'>
     <p><a href='yemek.menu.php' class="btn btn-danger"> Yemek Menüsü </a></p>
   </div>
+  <div class='row text-center'>
+    <p><a href='formyukle.php' class="btn btn-danger"> Form Yönetimi</a></p>
+  </div>
 <?php } ?>
 
 <!-- KULLANICILAR MENÜSÜ -->
