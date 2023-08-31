@@ -15,14 +15,14 @@ require 'sayfa.ust.php'; ?>
 <table class="table table-bordered table-striped">
   <thead>
     <tr>
-      <th scope="col">ID</th>
-      <th scope="col">Adı Soyadı</th>
-      <th scope="col">ePosta Adresi</th>
-      <th scope="col">Unvanı</th>
-      <th scope="col">Birimi</th>
-      <th scope="col">Telefonu</th>
-      <th scope="col">Güncelle</th>
-      <th scope="col">Sil</th>
+      <th>ID</th>
+      <th>Adı Soyadı</th>
+      <th>ePosta Adresi</th>
+      <th>Unvanı</th>
+      <th>Birimi</th>
+      <th>Telefonu</th>
+      <th>Güncelle</th>
+      <th>Sil</th>
     </tr>
   </thead>
   <tbody>
