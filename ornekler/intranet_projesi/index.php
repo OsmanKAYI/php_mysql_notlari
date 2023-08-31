@@ -17,4 +17,11 @@ require 'sayfa.ust.php';
 <div class='row text-center'>
   <p><a href='yemek.list.php' class="btn btn-primary"> Yemek Listesi </a></p>
 </div>
-<?php require 'sayfa.alt.php'; ?>
+<div class='row text-center'>
+  <p><a href='formlar.php' class="btn btn-primary"> Sık Kullanılan Formlar </a></p>
+</div>
+<div class='row text-center'>
+  <p><a href='duyuru.liste.php' class="btn btn-primary"> Duyurular </a></p>
+</div>
+
+<?php require_once 'sayfa.alt.php'; ?>
