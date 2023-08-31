@@ -14,12 +14,10 @@ require 'sayfa.ust.php';
   <div class='row text-center'>
     <p><a href='formyukle.php' class="btn btn-danger"> Form Yönetimi</a></p>
   </div>
-<<<<<<< HEAD
   <div class='row text-center'>
     <p><a href='talep.yonetimi.php' class="btn btn-danger"> Talep Yönetimi</a></p>
   </div>
-=======
->>>>>>> origin/main
+
 <?php } ?>
 
 <!-- KULLANICILAR MENÜSÜ -->
