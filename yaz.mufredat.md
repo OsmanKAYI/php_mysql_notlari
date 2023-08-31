@@ -17,12 +17,12 @@ Eğitiminin sonuna doğru, PHP ve Vue.js'i birlikte kullanarak, dinamik ve etkil
 - [x] Giriş
   - [x] Çalışma ortamı hazırlanması (xampp)
   - [x] Editör ve eklentilerinin kurulumu (VS Code)
-- [ ] PHP Temel Eğitimi
-  - [ ] PHP Söz dizimi
+- [x] PHP Temel Eğitimi
+  - [x] PHP Söz dizimi
   - [x] Değişken türleri, sabitler, operatörler
   - [x] Karar yapıları
   - [x] Döngü türleri
-  - [ ] Diziler ve dizi işlemleri
+  - [x] Diziler ve dizi işlemleri
   - [x] Tarih işlemleri
 - [ ] Temel Web Bilgisi
   - [x] Web kavramları
@@ -43,16 +43,16 @@ Eğitiminin sonuna doğru, PHP ve Vue.js'i birlikte kullanarak, dinamik ve etkil
   - [x] PDO ile veritabanı kullanımı
   - [ ] Hata yakalama
   - [ ] Form doğrulama
-  - [ ] Dosya yükleme
+  - [x] Dosya yükleme
   - [x] PHP ve Sınıflar
   - [ ] PHP ve AJAX
   - [ ] PHP ve XML
   - [ ] PHP ve JSON
-  - [ ] PHP ve Oturum Yönetimi
+  - [x] PHP ve Oturum Yönetimi
   - [ ] JSON ile veri transferi
   - [ ] RSS ve XML kullanımı
 - [ ] Uygulamalar
-  - [ ] MySQL ile CRUD örneği (Telefon rehberi)
+  - [x] MySQL ile CRUD örneği (Telefon rehberi)
   - [ ] Haber sitelerinden RSS çekip yayınlama örneği
   - [ ] JSON cevap üreten API servis hazırlama örneği
   - [ ] dummyjson.com sitesi üzerinden API kullanımına giriş örneği

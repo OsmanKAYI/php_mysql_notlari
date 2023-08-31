@@ -10,11 +10,11 @@
 - [x] [PHP PDO CRUD Kullanımı](./konular/konu.pdo.md)
 - [x] [Tarih İşlemleri](./konular/konu.date.md)
 - [x] [Fonksiyon Kullanımı](./konular/konu.function.md)
-- [ ] [Diziler](./konular/konu.arrays.md)
+- [x] [Diziler](./konular/konu.arrays.md)
 - [ ] [Çerezler](./konular/konu.cookie.md)
 - [x] [Oturum Yönetimi](./konular/konu.session.md)
 - [ ] [Composer Kullanımı](./konular/konu.composer.md)
-- [ ] [Git ve GitHub Kurulumu (Windows)](./konular/konu.git.github.windows.md)
+- [x] [Git ve GitHub Kurulumu (Windows)](./konular/konu.git.github.windows.md)
 - [ ] [Redis Kullanımı](./konular/konu.redis.md)
 
 ## Örnekler

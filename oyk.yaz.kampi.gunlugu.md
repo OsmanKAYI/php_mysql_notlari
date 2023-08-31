@@ -108,3 +108,9 @@
 - [İntranet Projesi](https://github.com/OsmanKAYI/php_mysql_notlari/tree/main/ornekler/intranet_projesi)
 
 ===================================================================================================
+
+# 6. GÜN
+
+- [İntranet Projesi Geliştirildi](https://github.com/OsmanKAYI/php_mysql_notlari/tree/main/ornekler/intranet_projesi)
+
+===================================================================================================
