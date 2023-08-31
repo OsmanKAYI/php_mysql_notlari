@@ -63,7 +63,7 @@ require 'sayfa.ust.php'; ?>
 
 
 <div class='text-center'>
-  <a href='index.php' class='btn btn-warning'>ANASAYFAYA DÖN</a>
+  <a href='index.php' class='btn btn-warning'>ANASAYFAYA</a>
 </div>
 
 <?php require 'sayfa.alt.php'; ?>

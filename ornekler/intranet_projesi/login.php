@@ -1,5 +1,6 @@
 <?php
 @session_start();
+
 if (isset($_SESSION['girisyapti'])) {
   // Oturum açmış
   header("location: index.php");
@@ -41,10 +42,36 @@ if (isset($_POST['eposta_form'])) {
   }
 }
 ?>
-<h1>GİRİŞ EKRANI</h1>
 
-<form method='POST'>
-  <p>Eposta: <input type='text' name='eposta_form'></p>
-  <p>Parola: <input type='password' name='parola_form'></p>
-  <p><input type='submit' value='Giriş Yap'></p>
-</form>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+  </head>
+  <body>
+
+<div class='container'>
+  <div class="offset-3 col-6">
+
+    <div class='row text-center'>
+      <h1 class='alert alert-primary'>GİRİŞ EKRANI</h1>
+    </div>
+
+    <form method="POST">
+        <div class="mb-3">
+          <label for="eposta" class="form-label">Eposta</label>
+          <input type="text" name='eposta_form' class="form-control" id="eposta" aria-describedby="emailHelp">
+        </div>
+        <div class="mb-3">
+          <label for="parola" class="form-label">Parola</label>
+          <input type="password" name='parola_form' class="form-control" id="parola">
+        </div>
+          <button type="submit" class="btn btn-primary">GİRİŞ</button>
+    </form>
+
+  </div>
+
+<?php require 'sayfa.alt.php'; ?>

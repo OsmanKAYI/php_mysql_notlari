@@ -1,6 +1,7 @@
 <?php
 require 'login.kontrol.php';
 require 'yetki.kontrol.php';
+require 'sayfa.ust.php';
 
 require_once('db.php');
 
@@ -42,12 +43,27 @@ $kullanici  = $kullanicilar[0];
 // echo "<pre>"; print_r($kullanicilar);
 ?>
 
-<h1>KAYIT GÜNCELLEME</h1>
 
-<form method='POST'>
-  <p>Kullanıcı Adı: <input type='text' name='adsoyad_form' value='<?php echo $kullanici['adsoyad'];  ?>'></p>
-  <p>Eposta: <input type='text' name='eposta_form' value='<?php echo $kullanici['eposta']; ?>'></p>
-  <p><input type='submit' value='GÜNCELLE'></p>
-</form>
+<div class='container'>
+  <div class="offset-3 col-6">
 
-<p><a href='list.php'>Listeye Dön</a></p>
+    <div class='row text-center'>
+      <h1 class='alert alert-primary'>Kayıt Ekleme</h1>
+    </div>
+
+    <form method="POST">
+        <div class="mb-3">
+          <label for="adsoyad" class="form-label">Kullanıcı Adı:</label>
+          <input type="text" name='adsoyad_form' class="form-control" value='<?php echo $kullanici['adsoyad'];  ?>' id="adsoyad" aria-describedby="emailHelp">
+        </div>
+        <div class="mb-3">
+          <label for="eposta" class="form-label">Eposta:</label>
+          <input type="email" name='eposta_form' class="form-control" value='<?php echo $kullanici['eposta']; ?>' id="eposta">
+        </div>
+          <button type="submit" class="btn btn-primary">Güncelle</button>
+          <a href='list.php' class='btn btn-warning'>Geri Dön</a>
+    </form>
+
+  </div>
+  
+<?php require 'sayfa.alt.php'; ?>

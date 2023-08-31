@@ -2,7 +2,13 @@
 require 'login.kontrol.php';
 require 'sayfa.ust.php';
 require_once 'db.php';
+?>
 
+<div class='row text-center'>
+  <h1 class='alert alert-primary'>Yemek Menüsü</h1>
+</div>
+
+<?php
 if (isset($_POST['gun1_form'])) {
 
   $sql = "UPDATE yemekmenusu SET 
@@ -39,9 +45,6 @@ $MENU = $SORGU->fetchAll(PDO::FETCH_ASSOC);
 // var_dump($MENU);
 
 ?>
-<div class='row text-center'>
-  <h1 class='alert alert-primary'>Yemek Menüsü</h1>
-</div>
 
 <form method="POST">
   <table class="table table-bordered table-striped">
@@ -71,6 +74,11 @@ $MENU = $SORGU->fetchAll(PDO::FETCH_ASSOC);
   </table>
   <input type="submit" class="btn btn-primary" value="Kaydet">
 </form>
+
+<div class='text-center'>
+  <a href='index.php' class='btn btn-warning'>ANASAYFAYA</a>
+</div>
+
 <?php
 require 'sayfa.alt.php';
 ?>

@@ -42,6 +42,10 @@ $GUN = date("N"); // 1-7 arası değer alır. Pazartesi için 1 vb.
   </tbody>
 </table>
 
+<div class='text-center'>
+  <a href='index.php' class='btn btn-warning'>ANASAYFAYA</a>
+</div>
+
 <?php
 require 'sayfa.alt.php';
 ?>
