@@ -12,6 +12,20 @@ SET time_zone = '+00:00';
 SET foreign_key_checks = 0;
 SET sql_mode = 'NO_AUTO_VALUE_ON_ZERO';
 
+DROP TABLE IF EXISTS `duyurular`;
+CREATE TABLE `duyurular` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `baslik` varchar(200) NOT NULL,
+  `duyuru` text NOT NULL,
+  `baslamatarihi` date NOT NULL,
+  `bitistarihi` date NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_turkish_ci;
+
+INSERT INTO `duyurular` (`id`, `baslik`, `duyuru`, `baslamatarihi`, `bitistarihi`) VALUES
+(1,	'Hafta sonu sayımı',	'Hafta sonu sayım yapılacak. Herkes gelmeli. Hafta sonu sayım yapılacak. Herkes gelmeli. Hafta sonu sayım yapılacak. Herkes gelmeli. Hafta sonu sayım yapılacak. Herkes gelmeli. Hafta sonu sayım yapılacak. Herkes gelmeli. Hafta sonu sayım yapılacak. Herkes gelmeli. \r\n\r\nHafta sonu sayım yapılacak. Herkes gelmeli. Hafta sonu sayım yapılacak. Herkes gelmeli. Hafta sonu sayım yapılacak. Herkes gelmeli. Hafta sonu sayım yapılacak. Herkes gelmeli. Hafta sonu sayım yapılacak. Herkes gelmeli. Hafta sonu sayım yapılacak. Herkes gelmeli. \r\n\r\nHafta sonu sayım yapılacak. Herkes gelmeli. Hafta sonu sayım yapılacak. Herkes gelmeli. Hafta sonu sayım yapılacak. Herkes gelmeli. Hafta sonu sayım yapılacak. Herkes gelmeli. Hafta sonu sayım yapılacak. Herkes gelmeli. Hafta sonu sayım yapılacak. Herkes gelmeli. \r\n\r\nHafta sonu sayım yapılacak. Herkes gelmeli. Hafta sonu sayım yapılacak. Herkes gelmeli. Hafta sonu sayım yapılacak. Herkes gelmeli. Hafta sonu sayım yapılacak. Herkes gelmeli. Hafta sonu sayım yapılacak. Herkes gelmeli. Hafta sonu sayım yapılacak. Herkes gelmeli. \r\n\r\nTeşekkürler',	'2023-08-18',	'2023-08-23'),
+(2,	'Salata bar hizmete girdi',	'Çalışanlarımızın kendi salatalarını alabileceği bar yemekhanemizde hizmete girmiştir.\r\n\r\nTabaklarınızı tezgahta alabilirsiniz.',	'2023-08-15',	'2023-09-15');
+
 DROP TABLE IF EXISTS `kullanicilar`;
 CREATE TABLE `kullanicilar` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -43,8 +57,8 @@ CREATE TABLE `yemekmenusu` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_turkish_ci;
 
 INSERT INTO `yemekmenusu` (`id`, `gun1`, `gun2`, `gun3`, `gun4`, `gun5`, `gun6`, `gun7`) VALUES
-(1,	'Çorba\r\nPilav\r\nFasulye\r\nTatlı',	'Ezogelin Çorba\r\nTürlü',	'Mecimek\r\nmakarna',	'Yoğurt\r\nMantı',	'Barbunya',	'Salata Bar',	'Et sote\r\n');
+(1,	'Çorba\r\nPilav\r\nFasulye\r\nTatlı',	'Ezogelin Çorba\r\nTürlü',	'Mecimek\r\nmakarna',	'Yoğurt\r\nMantı',	'Barbunya\r\nÇorba',	'Salata Bar',	'Et sote\r\n');
 
--- 2023-08-30 16:34:31
+-- 2023-08-31 12:43:08
 
 ```
