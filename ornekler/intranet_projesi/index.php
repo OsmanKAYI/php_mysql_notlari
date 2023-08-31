@@ -9,12 +9,12 @@ require 'sayfa.ust.php';
     <p><a href='list.php' class="btn btn-danger"> Personel Yönetimi </a></p>
   </div>
   <div class='row text-center'>
-    <p><a href='yemekmenusu.php' class="btn btn-danger"> Yemek Menüsü </a></p>
+    <p><a href='yemek.menu.php' class="btn btn-danger"> Yemek Menüsü </a></p>
   </div>
 <?php } ?>
 
 <!-- KULLANICILAR MENÜSÜ -->
 <div class='row text-center'>
-  <p><a href='yemeklist.php' class="btn btn-primary"> Yemek Listesi </a></p>
+  <p><a href='yemek.list.php' class="btn btn-primary"> Yemek Listesi </a></p>
 </div>
 <?php require 'sayfa.alt.php'; ?>
