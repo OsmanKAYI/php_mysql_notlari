@@ -37,8 +37,8 @@ CREATE TABLE `duyurular` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_turkish_ci;
 
 INSERT INTO `duyurular` (`id`, `baslik`, `duyuru`, `baslamatarihi`, `bitistarihi`) VALUES
-(1,	'Hafta sonu sayımı',	'Hafta sonu sayım yapılacak. Herkes gelmeli. Hafta sonu sayım yapılacak. Herkes gelmeli. Hafta sonu sayım yapılacak. Herkes gelmeli. Hafta sonu sayım yapılacak. Herkes gelmeli. Hafta sonu sayım yapılacak. Herkes gelmeli. Hafta sonu sayım yapılacak. Herkes gelmeli. \r\n\r\nHafta sonu sayım yapılacak. Herkes gelmeli. Hafta sonu sayım yapılacak. Herkes gelmeli. Hafta sonu sayım yapılacak. Herkes gelmeli. Hafta sonu sayım yapılacak. Herkes gelmeli. Hafta sonu sayım yapılacak. Herkes gelmeli. Hafta sonu sayım yapılacak. Herkes gelmeli. \r\n\r\nHafta sonu sayım yapılacak. Herkes gelmeli. Hafta sonu sayım yapılacak. Herkes gelmeli. Hafta sonu sayım yapılacak. Herkes gelmeli. Hafta sonu sayım yapılacak. Herkes gelmeli. Hafta sonu sayım yapılacak. Herkes gelmeli. Hafta sonu sayım yapılacak. Herkes gelmeli. \r\n\r\nHafta sonu sayım yapılacak. Herkes gelmeli. Hafta sonu sayım yapılacak. Herkes gelmeli. Hafta sonu sayım yapılacak. Herkes gelmeli. Hafta sonu sayım yapılacak. Herkes gelmeli. Hafta sonu sayım yapılacak. Herkes gelmeli. Hafta sonu sayım yapılacak. Herkes gelmeli. \r\n\r\nTeşekkürler',	'2023-08-28',	'2023-09-01'),
-(2,	'Salata bar hizmete girdi',	'Çalışanlarımızın kendi salatalarını alabileceği bar yemekhanemizde hizmete girmiştir.\r\n\r\nTabaklarınızı tezgahta alabilirsiniz.',	'2023-08-15',	'2023-09-15');
+(1,	'Hafta sonu sayımı',	'Hafta sonu sayım yapılacak. Herkes gelmeli.\r\n\r\nTeşekkürler',	'2023-08-28',	'2023-09-01'),
+(2,	'Salata bar hizmete girdi',	'Çalışanlarımızın kendi salatalarını alabileceği bar yemekhanemizde hizmete girmiştir.\r\n\r\nTabaklarınızı tezgahtan alabilirsiniz.',	'2023-08-15',	'2023-09-15');
 
 DROP TABLE IF EXISTS `kullanicilar`;
 CREATE TABLE `kullanicilar` (
