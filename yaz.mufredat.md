@@ -28,7 +28,7 @@ Eğitiminin sonuna doğru, PHP ve Vue.js'i birlikte kullanarak, dinamik ve etkil
   - [x] Web kavramları
   - [x] Tarayıcılar
   - [ ] Çerezler
-  - [ ] Oturum yönetimi
+  - [x] Oturum yönetimi
   - [x] Temel HTML ve CSS (Bootstrap)
   - [ ] Javascript nedir
   - [x] SQL nedir?

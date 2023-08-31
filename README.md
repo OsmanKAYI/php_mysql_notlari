@@ -12,7 +12,7 @@
 - [x] [Fonksiyon Kullanımı](./konular/konu.function.md)
 - [ ] [Diziler](./konular/konu.arrays.md)
 - [ ] [Çerezler](./konular/konu.cookie.md)
-- [ ] [Oturum Yönetimi](./konular/konu.session.md)
+- [x] [Oturum Yönetimi](./konular/konu.session.md)
 - [ ] [Composer Kullanımı](./konular/konu.composer.md)
 - [ ] [Git ve GitHub Kurulumu (Windows)](./konular/konu.git.github.windows.md)
 - [ ] [Redis Kullanımı](./konular/konu.redis.md)
@@ -22,9 +22,10 @@
 - [x] [İki Sayının Toplanması](./ornekler/toplama/)
 - [x] [PHP PDO CRUD Aşama 1](./ornekler/PDO_1/)
 - [x] [PHP PDO CRUD Aşama 2](./ornekler/PDO_2/)
+- [x] [İntranet Projesi](./ornekler/intranet_projesi)
 - [ ] [RSS Kullanımı](./ornekler/rss/)
 - [ ] [XML Kullanımı](./ornekler/xml/)
-- [ ] [Bootstap ile CRUD örneği](./ornekler/bootstrap-php-mysql-crud/)
+- [x] [Bootstap ile CRUD örneği](./ornekler/bootstrap-php-mysql-crud/)
 - [ ] [Resim Yükleme](./ornekler/resim_yukleme/)
 
 ## Composer Örnekleri
