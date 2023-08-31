@@ -65,3 +65,9 @@ require 'sayfa.ust.php'; ?>
 
   </tbody>
 </table>
+
+<div class='text-center'>
+  <a href='index.php' class='btn btn-warning'>ANASAYFA</a>
+</div>
+
+<?php require 'sayfa.alt.php'; ?>

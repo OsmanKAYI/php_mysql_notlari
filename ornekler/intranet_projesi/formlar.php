@@ -23,5 +23,10 @@ if (count($dosyalar) === 0) {
   }
   echo "</ul>";
 }
+?>
 
-require 'sayfa.alt.php';
+<div class='text-center'>
+  <a href='index.php' class='btn btn-warning'>ANASAYFA</a>
+</div>
+
+<?php require 'sayfa.alt.php'; ?>

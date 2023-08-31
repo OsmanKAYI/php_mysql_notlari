@@ -31,4 +31,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   <input type="submit" class="btn btn-primary" value="Yükle">
 </form>
 
+<div class='text-center'>
+  <a href='index.php' class='btn btn-warning'>ANASAYFA</a>
+</div>
+
 <?php require 'sayfa.alt.php'; ?>

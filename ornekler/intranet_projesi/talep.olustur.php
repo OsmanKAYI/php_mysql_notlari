@@ -75,4 +75,8 @@ foreach ($birimler as $birim) {
   <p></p><input type="submit" class="btn btn-primary" value="Talebimi Gönder"></p>
 </form>
 
+<div class='text-center'>
+  <a href='index.php' class='btn btn-warning'>ANASAYFA</a>
+</div>
+
 <?php require 'sayfa.alt.php'; ?>
