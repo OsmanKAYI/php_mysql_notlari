@@ -12,11 +12,11 @@ SET time_zone = '+00:00';
 SET foreign_key_checks = 0;
 SET sql_mode = 'NO_AUTO_VALUE_ON_ZERO';
 
-DROP TABLE IF EXISTS `users`;
-CREATE TABLE `users` (
+DROP TABLE IF EXISTS `kullanicilar`;
+CREATE TABLE `kullanicilar` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `name` varchar(50) NOT NULL,
-  `email` varchar(100) NOT NULL,
+  `adsoyad` varchar(50) NOT NULL,
+  `eposta` varchar(100) NOT NULL,
   `parola` varchar(100) NOT NULL,
   `rol` int(11) NOT NULL DEFAULT 1,
   `unvan` varchar(50) NOT NULL,
@@ -25,7 +25,7 @@ CREATE TABLE `users` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_unicode_ci;
 
-INSERT INTO `users` (`id`, `name`, `email`, `parola`, `rol`, `unvan`, `birim`, `telefon`) VALUES
+INSERT INTO `kullanicilar` (`id`, `adsoyad`, `eposta`, `parola`, `rol`, `unvan`, `birim`, `telefon`) VALUES
 (1,	'Ahmet Yılmaz',	'ahmet@gmail.com',	'1234',	2,	'Şube Müdürü',	'Yönetim',	'4455'),
 (2,	'Veysel Furkan',	'furkan@gmail.com',	'777',	1,	'Memur',	'Satın Alma',	'1123');
 

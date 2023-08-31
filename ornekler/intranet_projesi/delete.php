@@ -11,11 +11,11 @@ require_once('db.php');
 
 $id    = $_GET['id'];
 
-$sql = "DELETE FROM users WHERE id = :id";
+$sql = "DELETE FROM kullanicilar WHERE id = :id";
 $SORGU = $DB->prepare($sql);
 
 $SORGU->bindParam(':id', $id);
 
 $SORGU->execute();
-echo "User deleted";
+echo "Kullanıcı silindi...";
 echo "<p><a href='list.php'>Listeye Dön</a></p>";

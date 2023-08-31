@@ -4,49 +4,49 @@ require 'yetki.kontrol.php';
 
 require_once('db.php');
 
-if (isset($_POST['name'])) {
+if (isset($_POST['adsoyad_form'])) {
   ///////////////////////////////////////
   /////////////////////////////////////// GÜNCELLEME İŞLEMİ
   ///////////////////////////////////////
   // echo "<pre>"; print_r($_POST);
   // echo "<pre>"; print_r($_GET);
 
-  $name  = $_POST['name'];
-  $email = $_POST['email'];
+  $adsoyad  = $_POST['adsoyad_form'];
+  $eposta = $_POST['eposta_form'];
   $id    = $_GET['id'];
 
-  $sql = "UPDATE users SET name = :name, email = :email WHERE id = :id";
+  $sql = "UPDATE kullanicilar SET adsoyad = :adsoyad_form, eposta = :eposta_form WHERE id = :id";
   $SORGU = $DB->prepare($sql);
 
-  $SORGU->bindParam(':name',  $name);
-  $SORGU->bindParam(':email', $email);
+  $SORGU->bindParam(':adsoyad_form',  $adsoyad);
+  $SORGU->bindParam(':eposta_form', $eposta);
   $SORGU->bindParam(':id',    $id);
 
   // die(date("H:i:s"));
   $SORGU->execute();
-  echo "User updated";
+  echo "Kullanıcı güncellendi...";
 }
 
 $id    = $_GET['id'];
 
-$sql = "SELECT * FROM users WHERE id = :id";
+$sql = "SELECT * FROM kullanicilar WHERE id = :id";
 $SORGU = $DB->prepare($sql);
 
 $SORGU->bindParam(':id', $id);
 
 $SORGU->execute();
 
-$users = $SORGU->fetchAll(PDO::FETCH_ASSOC);
-$user  = $users[0];
+$kullanicilar = $SORGU->fetchAll(PDO::FETCH_ASSOC);
+$kullanici  = $kullanicilar[0];
 
-// echo "<pre>"; print_r($users);
+// echo "<pre>"; print_r($kullanicilar);
 ?>
 
 <h1>KAYIT GÜNCELLEME</h1>
 
 <form method='POST'>
-  <p>user name: <input type='text' name='name' value='<?php echo $user['name'];  ?>'></p>
-  <p>user email: <input type='text' name='email' value='<?php echo $user['email']; ?>'></p>
+  <p>Kullanıcı Adı: <input type='text' name='adsoyad_form' value='<?php echo $kullanici['adsoyad'];  ?>'></p>
+  <p>Eposta: <input type='text' name='eposta_form' value='<?php echo $kullanici['eposta']; ?>'></p>
   <p><input type='submit' value='GÜNCELLE'></p>
 </form>
 

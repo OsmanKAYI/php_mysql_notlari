@@ -7,18 +7,18 @@ if (isset($_SESSION['girisyapti'])) {
 }
 
 
-if (isset($_POST['eposta'])) {
+if (isset($_POST['eposta_form'])) {
   // Form gönderildi. Şimdi işimize bakalım
   // 1.DB'na bağlan
   // 2.SQL hazırla ve çalıştır
   // 3.Gelen sonuç 1 satırsa GİRİŞ BAŞARILI değilse, BAŞARISIZ
   require_once('db.php');
 
-  $sql = "SELECT * FROM users WHERE email = :eposta AND parola = :parola";
+  $sql = "SELECT * FROM kullanicilar WHERE eposta = :eposta_form AND parola = :parola_form";
   $SORGU = $DB->prepare($sql);
 
-  $SORGU->bindParam(':eposta', $_POST['eposta']);
-  $SORGU->bindParam(':parola', $_POST['sifre']);
+  $SORGU->bindParam(':eposta_form', $_POST['eposta_form']);
+  $SORGU->bindParam(':parola_form', $_POST['parola_form']);
 
   $SORGU->execute();
 
@@ -29,7 +29,7 @@ if (isset($_POST['eposta'])) {
     //echo "<h1>GİRİŞ BAŞARILI!</h1>";
     @session_start();
     $_SESSION['girisyapti'] = 1;
-    $_SESSION['adi'] = $CEVAP[0]['name']; // Kullanıcının adını alalım
+    $_SESSION['adsoyad'] = $CEVAP[0]['adsoyad']; // Kullanıcının adını alalım
     $_SESSION['id'] = $CEVAP[0]['id']; // Kullanıcının ID'sini alalım
     $_SESSION['rol'] = $CEVAP[0]['rol']; // Kullanıcının ROL'ünü alalım
     header("location: index.php");
@@ -44,7 +44,7 @@ if (isset($_POST['eposta'])) {
 <h1>GİRİŞ EKRANI</h1>
 
 <form method='POST'>
-  <p>eposta: <input type='text' name='eposta'></p>
-  <p>sifre: <input type='password' name='sifre'></p>
+  <p>Eposta: <input type='text' name='eposta_form'></p>
+  <p>Parola: <input type='password' name='parola_form'></p>
   <p><input type='submit' value='Giriş Yap'></p>
 </form>

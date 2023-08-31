@@ -5,8 +5,8 @@ require 'yetki.kontrol.php';
 <h1>KAYIT EKLEME FORMU</h1>
 
 <form method='POST'>
-  <p>user name: <input type='text' name='name'></p>
-  <p>user email: <input type='text' name='email'></p>
+  <p>Kullanıcı Adı: <input type='text' name='adsoyad_form'></p>
+  <p>Eposta: <input type='text' name='eposta_form'></p>
   <p><input type='submit' value='EKLE'></p>
 </form>
 
@@ -14,19 +14,19 @@ require 'yetki.kontrol.php';
 
 <?php
 
-if (isset($_POST['name'])) {
+if (isset($_POST['adsoyad_form'])) {
 
   require_once('db.php');
 
-  $name  = $_POST['name'];
-  $email = $_POST['email'];
+  $adsoyad  = $_POST['adsoyad_form'];
+  $eposta = $_POST['eposta_form'];
 
-  $sql = "INSERT INTO users (name, email) VALUES (:name, :email)";
+  $sql = "INSERT INTO kullanicilar (adsoyad, eposta) VALUES (:adsoyad_form, :eposta_form)";
   $SORGU = $DB->prepare($sql);
 
-  $SORGU->bindParam(':name',  $name);
-  $SORGU->bindParam(':email', $email);
+  $SORGU->bindParam(':adsoyad_form',  $adsoyad);
+  $SORGU->bindParam(':eposta_form', $eposta);
 
   $SORGU->execute();
-  echo "User created";
+  echo "Kullanıcı oluşturuldu...";
 }

@@ -17,10 +17,10 @@ require 'sayfa.ust.php'; ?>
     <tr>
       <th scope="col">ID</th>
       <th scope="col">Adı Soyadı</th>
-      <th scope="col">Unvanı</th>
       <th scope="col">ePosta Adresi</th>
-      <th scope="col">Telefonu</th>
+      <th scope="col">Unvanı</th>
       <th scope="col">Birimi</th>
+      <th scope="col">Telefonu</th>
       <th scope="col">Güncelle</th>
       <th scope="col">Sil</th>
     </tr>
@@ -34,22 +34,22 @@ require 'sayfa.ust.php'; ?>
 
     require_once('db.php');
 
-    $SORGU = $DB->prepare("SELECT * FROM users");
+    $SORGU = $DB->prepare("SELECT * FROM kullanicilar");
     $SORGU->execute();
-    $users = $SORGU->fetchAll(PDO::FETCH_ASSOC);
+    $kullanicilar = $SORGU->fetchAll(PDO::FETCH_ASSOC);
     //echo '<pre>'; print_r($users);
 
-    foreach ($users as $user) {
+    foreach ($kullanicilar as $kullanici) {
       echo "
     <tr>
-      <th>{$user['id']}</th>
-      <td>{$user['name']}</td>
-      <td>{$user['unvan']}</td>
-      <td>{$user['email']}</td>
-      <td>{$user['telefon']}</td>
-      <td>{$user['birim']}</td>
-      <td><a href='update.php?id={$user['id']}' class='btn btn-success btn-sm'>Güncelle</a></td>
-      <td><a href='delete.php?id={$user['id']}' class='btn btn-danger btn-sm'>Sil</a></td>
+      <th>{$kullanici['id']}</th>
+      <td>{$kullanici['adsoyad']}</td>
+      <td>{$kullanici['eposta']}</td>
+      <td>{$kullanici['unvan']}</td>
+      <td>{$kullanici['birim']}</td>
+      <td>{$kullanici['telefon']}</td>
+      <td><a href='update.php?id={$kullanici['id']}' class='btn btn-success btn-sm'>Güncelle</a></td>
+      <td><a href='delete.php?id={$kullanici['id']}' class='btn btn-danger btn-sm'>Sil</a></td>
    </tr> 
   ";
     }

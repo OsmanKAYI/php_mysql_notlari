@@ -3,26 +3,26 @@ require 'login.kontrol.php';
 require 'sayfa.ust.php';
 require_once 'db.php';
 
-if (isset($_POST['form_gun1'])) {
+if (isset($_POST['gun1_form'])) {
 
   $sql = "UPDATE yemekmenusu SET 
-          gun1 = :form_gun1,
-          gun2 = :form_gun2,
-          gun3 = :form_gun3,
-          gun4 = :form_gun4,
-          gun5 = :form_gun5,
-          gun6 = :form_gun6,
-          gun7 = :form_gun7
+          gun1 = :gun1_form,
+          gun2 = :gun2_form,
+          gun3 = :gun3_form,
+          gun4 = :gun4_form,
+          gun5 = :gun5_form,
+          gun6 = :gun6_form,
+          gun7 = :gun7_form
           WHERE id = 1";
   $SORGU = $DB->prepare($sql);
 
-  $SORGU->bindParam(':form_gun1',  $_POST['form_gun1']);
-  $SORGU->bindParam(':form_gun2',  $_POST['form_gun2']);
-  $SORGU->bindParam(':form_gun3',  $_POST['form_gun3']);
-  $SORGU->bindParam(':form_gun4',  $_POST['form_gun4']);
-  $SORGU->bindParam(':form_gun5',  $_POST['form_gun5']);
-  $SORGU->bindParam(':form_gun6',  $_POST['form_gun6']);
-  $SORGU->bindParam(':form_gun7',  $_POST['form_gun7']);
+  $SORGU->bindParam(':gun1_form',  $_POST['gun1_form']);
+  $SORGU->bindParam(':gun2_form',  $_POST['gun2_form']);
+  $SORGU->bindParam(':gun3_form',  $_POST['gun3_form']);
+  $SORGU->bindParam(':gun4_form',  $_POST['gun4_form']);
+  $SORGU->bindParam(':gun5_form',  $_POST['gun5_form']);
+  $SORGU->bindParam(':gun6_form',  $_POST['gun6_form']);
+  $SORGU->bindParam(':gun7_form',  $_POST['gun7_form']);
 
   $SORGU->execute();
   echo '
@@ -58,13 +58,13 @@ $MENU = $SORGU->fetchAll(PDO::FETCH_ASSOC);
     </thead>
     <tbody>
       <tr>
-        <td><textarea name='form_gun1' style="width:100px; height:150px;"><?php echo $MENU[0]['gun1'] ?></textarea></td>
-        <td><textarea name='form_gun2' style="width:100px; height:150px;"><?php echo $MENU[0]['gun2'] ?></textarea></td>
-        <td><textarea name='form_gun3' style="width:100px; height:150px;"><?php echo $MENU[0]['gun3'] ?></textarea></td>
-        <td><textarea name='form_gun4' style="width:100px; height:150px;"><?php echo $MENU[0]['gun4'] ?></textarea></td>
-        <td><textarea name='form_gun5' style="width:100px; height:150px;"><?php echo $MENU[0]['gun5'] ?></textarea></td>
-        <td><textarea name='form_gun6' style="width:100px; height:150px;"><?php echo $MENU[0]['gun6'] ?></textarea></td>
-        <td><textarea name='form_gun7' style="width:100px; height:150px;"><?php echo $MENU[0]['gun7'] ?></textarea></td>
+        <td><textarea name='gun1_form' style="width:100px; height:150px;"><?php echo $MENU[0]['gun1'] ?></textarea></td>
+        <td><textarea name='gun2_form' style="width:100px; height:150px;"><?php echo $MENU[0]['gun2'] ?></textarea></td>
+        <td><textarea name='gun3_form' style="width:100px; height:150px;"><?php echo $MENU[0]['gun3'] ?></textarea></td>
+        <td><textarea name='gun4_form' style="width:100px; height:150px;"><?php echo $MENU[0]['gun4'] ?></textarea></td>
+        <td><textarea name='gun5_form' style="width:100px; height:150px;"><?php echo $MENU[0]['gun5'] ?></textarea></td>
+        <td><textarea name='gun6_form' style="width:100px; height:150px;"><?php echo $MENU[0]['gun6'] ?></textarea></td>
+        <td><textarea name='gun7_form' style="width:100px; height:150px;"><?php echo $MENU[0]['gun7'] ?></textarea></td>
         </td>
       </tr>
     </tbody>

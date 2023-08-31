@@ -11,7 +11,7 @@
 
     <div class='row text-center'>
       <h1><a href='index.php'>İntranet Sayfamız</a></h1>
-      <h5>Kullanıcı: <?php echo $_SESSION['adi']; ?></h5>
+      <h5>Kullanıcı: <?php echo $_SESSION['adsoyad']; ?></h5>
       <div class='row text-end'>
         <p><a href='logout.php' class="btn btn-primary btn-sm"> Oturumu Kapat </a></p>
       </div>
