@@ -12,7 +12,6 @@ SET time_zone = '+00:00';
 SET foreign_key_checks = 0;
 SET sql_mode = 'NO_AUTO_VALUE_ON_ZERO';
 
-<<<<<<< HEAD
 DROP TABLE IF EXISTS `birimler`;
 CREATE TABLE `birimler` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -27,8 +26,6 @@ INSERT INTO `birimler` (`id`, `birimadi`) VALUES
 (4,	'İnsan Kaynakları'),
 (5,	'Depo');
 
-=======
->>>>>>> origin/main
 DROP TABLE IF EXISTS `duyurular`;
 CREATE TABLE `duyurular` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -40,11 +37,7 @@ CREATE TABLE `duyurular` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_turkish_ci;
 
 INSERT INTO `duyurular` (`id`, `baslik`, `duyuru`, `baslamatarihi`, `bitistarihi`) VALUES
-<<<<<<< HEAD
 (1,	'Hafta sonu sayımı',	'Hafta sonu sayım yapılacak. Herkes gelmeli. Hafta sonu sayım yapılacak. Herkes gelmeli. Hafta sonu sayım yapılacak. Herkes gelmeli. Hafta sonu sayım yapılacak. Herkes gelmeli. Hafta sonu sayım yapılacak. Herkes gelmeli. Hafta sonu sayım yapılacak. Herkes gelmeli. \r\n\r\nHafta sonu sayım yapılacak. Herkes gelmeli. Hafta sonu sayım yapılacak. Herkes gelmeli. Hafta sonu sayım yapılacak. Herkes gelmeli. Hafta sonu sayım yapılacak. Herkes gelmeli. Hafta sonu sayım yapılacak. Herkes gelmeli. Hafta sonu sayım yapılacak. Herkes gelmeli. \r\n\r\nHafta sonu sayım yapılacak. Herkes gelmeli. Hafta sonu sayım yapılacak. Herkes gelmeli. Hafta sonu sayım yapılacak. Herkes gelmeli. Hafta sonu sayım yapılacak. Herkes gelmeli. Hafta sonu sayım yapılacak. Herkes gelmeli. Hafta sonu sayım yapılacak. Herkes gelmeli. \r\n\r\nHafta sonu sayım yapılacak. Herkes gelmeli. Hafta sonu sayım yapılacak. Herkes gelmeli. Hafta sonu sayım yapılacak. Herkes gelmeli. Hafta sonu sayım yapılacak. Herkes gelmeli. Hafta sonu sayım yapılacak. Herkes gelmeli. Hafta sonu sayım yapılacak. Herkes gelmeli. \r\n\r\nTeşekkürler',	'2023-08-28',	'2023-09-01'),
-=======
-(1,	'Hafta sonu sayımı',	'Hafta sonu sayım yapılacak. Herkes gelmeli. Hafta sonu sayım yapılacak. Herkes gelmeli. Hafta sonu sayım yapılacak. Herkes gelmeli. Hafta sonu sayım yapılacak. Herkes gelmeli. Hafta sonu sayım yapılacak. Herkes gelmeli. Hafta sonu sayım yapılacak. Herkes gelmeli. \r\n\r\nHafta sonu sayım yapılacak. Herkes gelmeli. Hafta sonu sayım yapılacak. Herkes gelmeli. Hafta sonu sayım yapılacak. Herkes gelmeli. Hafta sonu sayım yapılacak. Herkes gelmeli. Hafta sonu sayım yapılacak. Herkes gelmeli. Hafta sonu sayım yapılacak. Herkes gelmeli. \r\n\r\nHafta sonu sayım yapılacak. Herkes gelmeli. Hafta sonu sayım yapılacak. Herkes gelmeli. Hafta sonu sayım yapılacak. Herkes gelmeli. Hafta sonu sayım yapılacak. Herkes gelmeli. Hafta sonu sayım yapılacak. Herkes gelmeli. Hafta sonu sayım yapılacak. Herkes gelmeli. \r\n\r\nHafta sonu sayım yapılacak. Herkes gelmeli. Hafta sonu sayım yapılacak. Herkes gelmeli. Hafta sonu sayım yapılacak. Herkes gelmeli. Hafta sonu sayım yapılacak. Herkes gelmeli. Hafta sonu sayım yapılacak. Herkes gelmeli. Hafta sonu sayım yapılacak. Herkes gelmeli. \r\n\r\nTeşekkürler',	'2023-08-18',	'2023-08-23'),
->>>>>>> origin/main
 (2,	'Salata bar hizmete girdi',	'Çalışanlarımızın kendi salatalarını alabileceği bar yemekhanemizde hizmete girmiştir.\r\n\r\nTabaklarınızı tezgahta alabilirsiniz.',	'2023-08-15',	'2023-09-15');
 
 DROP TABLE IF EXISTS `kullanicilar`;
@@ -97,14 +90,8 @@ CREATE TABLE `yemekmenusu` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_turkish_ci;
 
 INSERT INTO `yemekmenusu` (`id`, `gun1`, `gun2`, `gun3`, `gun4`, `gun5`, `gun6`, `gun7`) VALUES
-<<<<<<< HEAD
 (1,	'Çorba\r\nPilav\r\nFasulye\r\nTatlı',	'Ezogelin Çorba\r\nTürlü',	'Mecimek\r\nmakarna',	'Yoğurt\r\nMantı',	'Barbunya\r\nÇorba',	'Salata Bar\r\nİskender',	'Et sote\r\n');
 
--- 2023-08-31 16:40:14
-=======
-(1,	'Çorba\r\nPilav\r\nFasulye\r\nTatlı',	'Ezogelin Çorba\r\nTürlü',	'Mecimek\r\nmakarna',	'Yoğurt\r\nMantı',	'Barbunya\r\nÇorba',	'Salata Bar',	'Et sote\r\n');
-
--- 2023-08-31 12:43:08
->>>>>>> origin/main
+-- 2023-08-31 16:45:38
 
 ```
