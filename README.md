@@ -23,8 +23,8 @@
 - [x] [PHP PDO CRUD Aşama 1](./ornekler/PDO_1/)
 - [x] [PHP PDO CRUD Aşama 2](./ornekler/PDO_2/)
 - [x] [İntranet Projesi](./ornekler/intranet_projesi/)
-- [ ] [RSS Kullanımı](./ornekler/rss/)
-- [ ] [XML Kullanımı](./ornekler/xml/)
+- [x] [RSS Kullanımı](./ornekler/rss/)
+- [x] [XML Kullanımı](./ornekler/xml/)
 - [x] [Bootstap ile CRUD örneği](./ornekler/bootstrap-php-mysql-crud/)
 - [ ] [Resim Yükleme](./ornekler/resim_yukleme/)
 
@@ -37,8 +37,8 @@
 
 - [ ] [Ubuntu Kurulumu](./konular/konu.ubuntu.kurulumu.md)
 - [ ] [Adminer Oracle Bağlantısı](./konular/konu.adminer.oracle.md)
-- [ ] [Haritada İşaretçi Gösterimi](./konular/konu.harita.md)
-- [ ] [Telegram Botu'u ile mesaj gönderme](./konular/konu.telegram.md)
+- [x] [Haritada İşaretçi Gösterimi](./konular/konu.harita.md)
+- [x] [Telegram Botu'u ile mesaj gönderme](./konular/konu.telegram.md)
 
 ## Örnek Veritabanları
 

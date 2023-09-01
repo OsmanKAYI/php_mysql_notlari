@@ -114,3 +114,11 @@
 - [İntranet Projesi Geliştirildi](https://github.com/OsmanKAYI/php_mysql_notlari/tree/main/ornekler/intranet_projesi)
 
 ===================================================================================================
+
+# 7. GÜN
+
+- [Haritada İşaretçi Gösterimi](./konular/konu.harita.md)
+- [Telegram Botu'u ile mesaj gönderme](./konular/konu.telegram.md)
+- [RSS Kullanımı](./ornekler/rss/)
+- [XML Kullanımı](./ornekler/xml/)
+- JSON

@@ -30,11 +30,11 @@ Eğitiminin sonuna doğru, PHP ve Vue.js'i birlikte kullanarak, dinamik ve etkil
   - [ ] Çerezler
   - [x] Oturum yönetimi
   - [x] Temel HTML ve CSS (Bootstrap)
-  - [ ] Javascript nedir
+  - [x] Javascript nedir
   - [x] SQL nedir?
   - [x] Temel SQL eğitimi (MySQL üzerinden)
   - [ ] Ajax nedir?
-  - [ ] JSON nedir?
+  - [x] JSON nedir?
   - [x] Get/Post metodları
   - [ ] Temel API eğitimi
   - [x] HTML Form ve form elemanları
@@ -46,14 +46,14 @@ Eğitiminin sonuna doğru, PHP ve Vue.js'i birlikte kullanarak, dinamik ve etkil
   - [x] Dosya yükleme
   - [x] PHP ve Sınıflar
   - [ ] PHP ve AJAX
-  - [ ] PHP ve XML
-  - [ ] PHP ve JSON
+  - [x] PHP ve XML
+  - [x] PHP ve JSON
   - [x] PHP ve Oturum Yönetimi
-  - [ ] JSON ile veri transferi
-  - [ ] RSS ve XML kullanımı
+  - [x] JSON ile veri transferi
+  - [x] RSS ve XML kullanımı
 - [ ] Uygulamalar
   - [x] MySQL ile CRUD örneği (Telefon rehberi)
-  - [ ] Haber sitelerinden RSS çekip yayınlama örneği
+  - [x] Haber sitelerinden RSS çekip yayınlama örneği
   - [ ] JSON cevap üreten API servis hazırlama örneği
   - [ ] dummyjson.com sitesi üzerinden API kullanımına giriş örneği
   - [ ] VueJS ile PHP kullanımı
