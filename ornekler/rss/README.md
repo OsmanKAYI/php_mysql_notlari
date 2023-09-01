@@ -120,7 +120,7 @@ Array
     foreach ($Haberler as $key => $haber) {
         $c++;
         if($c > 6) continue;
-        $resim = $haber['thumbnail']['@attributes']['url'];
+        $resim = $haber['enclosure']['@attributes']['url'];
         $link  = $haber['link'];
         $baslik= $haber['title'];
         $ozet  = $haber['description'];
@@ -144,7 +144,7 @@ Array
     foreach ($Haberler as $key => $haber) {
         $c++;
         if($c > 6) continue;
-        $resim = $haber['thumbnail']['@attributes']['url'];
+        $resim = $haber['enclosure']['@attributes']['url'];
         $link  = $haber['link'];
         $baslik= $haber['title'];
         $ozet  = $haber['description'];
