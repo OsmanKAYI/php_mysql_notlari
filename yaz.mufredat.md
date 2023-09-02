@@ -33,7 +33,7 @@ Eğitiminin sonuna doğru, PHP ve Vue.js'i birlikte kullanarak, dinamik ve etkil
   - [x] Javascript nedir
   - [x] SQL nedir?
   - [x] Temel SQL eğitimi (MySQL üzerinden)
-  - [ ] Ajax nedir?
+  - [x] Ajax nedir?
   - [x] JSON nedir?
   - [x] Get/Post metodları
   - [ ] Temel API eğitimi
@@ -41,11 +41,11 @@ Eğitiminin sonuna doğru, PHP ve Vue.js'i birlikte kullanarak, dinamik ve etkil
 - [ ] Gelişmiş PHP Eğitimi
   - [x] MySQL veritabanına giriş
   - [x] PDO ile veritabanı kullanımı
-  - [ ] Hata yakalama
-  - [ ] Form doğrulama
+  - [x] Hata yakalama
+  - [x] Form doğrulama
   - [x] Dosya yükleme
   - [x] PHP ve Sınıflar
-  - [ ] PHP ve AJAX
+  - [x] PHP ve AJAX
   - [x] PHP ve XML
   - [x] PHP ve JSON
   - [x] PHP ve Oturum Yönetimi
