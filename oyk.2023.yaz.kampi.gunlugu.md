@@ -132,3 +132,27 @@
 - [AI](https://osmankayi.com/ai/)
 
 ===================================================================================================
+
+# 9. GÜN
+
+- MySQL Index
+- MySQL Foreign Key
+- MySQL Transaction
+  - InnoDB destekler
+  - MyISAM desteklemez
+- Çerezler
+- Şifre vs Parola
+  - HASH (Parmak İzi)
+    - MD5
+    - SHA1
+- Wakatime
+- Vue Components
+- Vue UI Kits
+  - [Bootstrap Vue](https://bootstrap-vue.org/)
+  - [Vuetify JS](https://vuetifyjs.com/en/)
+- Update Sayfası
+- Hosting
+- etc/host
+- [Git](https://github.com/OsmanKAYI/php_mysql_notlari/blob/main/konular/konu.git.github.windows.md)
+
+===================================================================================================
