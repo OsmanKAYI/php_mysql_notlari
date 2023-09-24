@@ -17,7 +17,6 @@ require 'sayfa.ust.php';
   <div class='row text-center'>
     <p><a href='talep.yonetimi.php' class="btn btn-danger"> Talep Yönetimi</a></p>
   </div>
-
 <?php } ?>
 
 <!-- KULLANICILAR MENÜSÜ -->
