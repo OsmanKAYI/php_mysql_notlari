@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Vue.js Hello World</title>
+  </head>
+  <body>
+    <div id="app">
+      <h1>{{ ISIM }}</h1>
+      <p>İsim: <input type="text" v-model="ISIM" /></p>
+      <b>Şehirler:</b>
+      <ul v-for="sehir in sehirler">
+        <li>{{sehir}}</li>
+      </ul>
+      <input type="button" value="Değiştir!" @click="mesaj='Nuri' " />
+      <ul v-for="i in tekrar" :key="i">
+        <li>{{ mesaj }} {{sayac}}</li>
+      </ul>
+      <hr />
+      <p>Sayaç adlı değişkenin değeri: {{sayac}}</p>
+      <input type="button" value="Arttır" @click=" sayac += 1 " />
+      <input type="button" value="Eksilt" @click=" sayac -= 1 " />
+      <input type="button" value="sayac = 15" @click=" sayac = 15 " />
+      <hr />
+      <button @click="veriAl">PHP'den Veriyi Al</button>
+      <p>Müşteri ADI: {{musteri.ad}}</p>
+      <p>Müşteri SOYADI: {{musteri.soyad}}</p>
+      <b>Müşteri Hobileri:</b>
+      <ul v-for="hobi in musteri.hobiler">
+        <li>{{hobi}}</li>
+      </ul>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@3.2.13/dist/vue.global.min.js"></script>
+    <script>
+      const app = Vue.createApp({
+        data() {
+          return {
+            mesaj: "Mustafa Akgül Özgür yazılım Kampı",
+            sayac: 0,
+            tekrar: 3,
+            ISIM: "Nuri",
+            musteri: { ad: "", soyad: "", hobiler: [] },
+            sehirler: ["Ankara", "Bursa", "İstanbul"],
+          };
+        },
+        methods: {
+          veriAl() {
+            // PHP'den veri çekme işlemini yapalım
+            fetch("ornek.veri.php")
+              .then((response) => {
+                return response.json(); // JSON veriyi çözümle
+              })
+              .then((data) => {
+                this.musteri = data;
+              });
+          },
+        },
+      });
+
+      app.mount("#app");
+    </script>
+  </body>
+</html>

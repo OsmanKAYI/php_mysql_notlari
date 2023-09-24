@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Vue.js Hello World</title>
+  </head>
+  <body>
+    <div id="app">
+      <p><button @click="veriAl">PHP'den Veriyi Al</button></p>
+      <div v-if="sehirler.length == 0">
+        <h1>Verileri görmek için düğmeye tıklayınız</h1>
+      </div>
+      <div v-else>
+        <b>Şehirler: ({{sehirler.length}} Adet)</b>
+        <table border="1" cellspacing="0" cellpadding="3">
+          <tr>
+            <th>Sıra#</th>
+            <th>Şehir</th>
+            <th>Enlem</th>
+            <th>Boylam</th>
+            <th>Nufus</th>
+          </tr>
+          <tr v-for="(sehir, i) in sehirler" :key="i">
+            <td>{{ i+1 }}</td>
+            <td>{{sehir.sehir}}</td>
+            <td>{{sehir.enlem}}</td>
+            <td>{{sehir.boylam}}</td>
+            <td>{{sehir.nufus}}</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@3.2.13/dist/vue.global.min.js"></script>
+    <script>
+      const app = Vue.createApp({
+        data() {
+          return {
+            sehirler: [],
+          };
+        },
+        methods: {
+          veriAl() {
+            // PHP'den veri çekme işlemini yapalım
+            fetch("../export.php")
+              .then((response) => {
+                return response.json(); // JSON veriyi çözümle
+              })
+              .then((data) => {
+                this.sehirler = data;
+              });
+          },
+        },
+        mounted() {
+          // this.veriAl(); // Sayfa yüklendiğinde otomatik olarak veriAl methodunu çağırın
+        },
+      });
+
+      app.mount("#app");
+    </script>
+  </body>
+</html>

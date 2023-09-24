@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Vue.js Hello World</title>
+  </head>
+  <body>
+    <div id="app">
+      <h3>Yeni Birim Ekle:</h3>
+      <form method="POST" @submit.prevent="veriGonder">
+        <p>Birim Adı <input type="text" v-model="birimAdi" /></p>
+        <p>Sorumlu Kişi <input type="text" v-model="sorumluKisi" /></p>
+        <input type="submit" value="Ekle..." />
+      </form>
+      <h3>Kayıtlı Birimler:</h3>
+      <ul v-for="(birim, i) in birimler" :key="i">
+        <li>
+          {{birim.id}}, <span style="color: darkred">{{birim.birimadi}}</span>,
+          {{birim.sorumlusu}}
+        </li>
+      </ul>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@3.2.13/dist/vue.global.min.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
